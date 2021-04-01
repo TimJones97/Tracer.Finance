@@ -1,0 +1,156 @@
+/*-----------------GENERAL STYLES-----------------*/
+@font-face {
+    font-family: 'Akkurat Light';
+    src: url('../fonts/Akkurat-Light.woff2') format('woff2'),
+        url('../fonts/Akkurat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Akkurat';
+    src: url('../fonts/Akkurat.woff2') format('woff2'),
+        url('../fonts/Akkurat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Akkurat Bold';
+    src: url('../fonts/Akkurat-Bold.woff2') format('woff2'),
+        url('../fonts/Akkurat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+a, a:hover {
+    text-decoration: none;
+}
+*::focus {
+    outline: none;
+}
+p {
+    color: #fff;
+}
+h1, h2 {
+    font-family: 'Akkurat';
+    color: #fff;
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 32px;
+}
+/*-----------------HOME PAGE STYLES-----------------*/
+
+/*-----Nav styles-----*/
+.nav-container {
+    margin: 0 auto;
+    padding: 0px 80px;
+}
+.navbar {
+    height: 100px;
+    padding: 0;
+}
+.navbar-brand {
+    width: 120px;
+}
+.navbar-brand img {
+    width: 100%;
+}
+.navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+}
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+.nav-item .nav-link {
+    margin: 5px 25px;
+    color: #fff;
+    font-family: 'Akkurat';
+}
+.nav-item .nav-link:hover {
+    color: #3b3b3b;
+}
+.nav-item.exchange {
+    border: 2px solid #fff;
+    padding: 0px 5px;
+    border-radius: 50px;
+}
+
+/*-----Main Section styles----*/
+.main {
+    height: 100%;
+    max-height: 70vh;
+    padding: 0px 80px;
+}
+.text-container {
+    max-width: 
+}
+.main header {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+}
+.main header h1 {
+    max-width: 800px;
+    font-size: 80px;
+}
+.main header p {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+.tracer-btn {
+    height: 60px;
+    width: 158px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+}
+.main header .tracer-btn {
+    margin-top: 20px;
+}
+.main header .tracer-btn:first-of-type {
+    margin-right: 30px;
+}
+/*-----Main Section styles----*/
+section.eco-system {
+    background: #1026c9;
+}
+.text-container {
+    position: relative;
+    width: 100%;
+    padding: 40px 80px;
+    box-sizing: padding-box;
+    overflow: hidden;
+}
+.text-container hr {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: calc(100% - 160px);
+    border-top: 2px solid #7FD8F7;
+    margin: 0px;
+}
+section.eco-system p {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.left-container,
+.right-container {
+    display: inline-block;
+    width: 25%;
+}
+.right-container {
+    width: 75%;
+}
+
