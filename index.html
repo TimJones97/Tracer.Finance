@@ -16,30 +16,56 @@
 			  <a class="navbar-brand" href="#">
 			  	<img src="./media/images/tracer-logo.png">
 			  </a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
+			  <button class="navbar-toggler x" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 			    <ul class="navbar-nav">
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Govern</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Trade</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Learn</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Build</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Blog</a>
-			      </li>
-			      <li class="nav-item exchange">
-			        <a class="nav-link" href="#">Tracer Exchange</a>
-			      </li>
+			    	<li class="nav-item menu">
+			    	  Menu
+			    	</li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Govern</a>
+				      </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Trade</a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Learn</a>
+				      </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Build</a>
+				    </li>
+				    <li class="nav-item blog">
+			        	<a class="nav-link" href="#">Blog</a>
+				    </li>
+				    <li class="nav-item exchange">
+				        <a class="nav-link" href="#">Tracer Exchange</a>
+				    </li>
+				    <li class="bottom-nav">
+				    	<ul>
+				    		<li class="nav-item">
+			        			<a class="nav-link" href="#"><img src="./media/images/tracer-logo.png">&nbsp;Governance</a>
+				    		</li>
+				    		<li class="nav-item">
+			        			<a class="nav-link" href="#"><img src="./media/images/tracer-logo.png">&nbsp;Blog</a>
+				    		</li>
+    			    		<li class="nav-item social-links">
+    			    			<div class="flex-container">
+			        				<a class="nav-link social" href="#"><img src="./media/images/nav/messenger.svg"></a>
+			        				<a class="nav-link social" href="#"><img src="./media/images/nav/github.svg"></a>
+			        				<a class="nav-link social" href="#"><img src="./media/images/nav/discord.svg"></a>
+			        				<a class="nav-link social" href="#"><img src="./media/images/nav/twitter.svg"></a>
+			        			</div>
+    			    		</li>
+				    	</ul>
+				    </li>
 			    </ul>
+			    <video class="video-bg" muted loop="loop" autoplay playsinline>
+			        <source src="./media/images/tracer_home.mp4" type="video/mp4">
+			    </video>
 			  </div>
 			</nav>
 	  	</div>
@@ -47,12 +73,16 @@
   			<header>
   				<h1>The railway tracks for financial innovation.</h1>
   				<p>Financial infrastructure that stands to be the backbone of a decentralised globally secure financial network.</p>
-  				<a href="#">
-  					<button class="tracer-btn">Govern</button>
-  				</a>
-  				<a href="#">
-  					<button class="tracer-btn">Trade</button>
-  				</a>
+  				<div class="button-container">
+	  				<a href="#">
+	  					<button class="tracer-btn">Govern</button>
+	  				</a>
+	  			</div>
+  				<div class="button-container">
+	  				<a href="#">
+	  					<button class="tracer-btn">Trade</button>
+	  				</a>
+	  			</div>
 	  		</header>		
 	  	</section>
 	  	<section class="eco-system">
@@ -68,8 +98,13 @@
 		  			</a>
 		  		</div>
 	  			<div class="right-container">
+	  				<p>How it works</p>
+		  			<h2>The Tracer Eco-System</h2>
 	  				<div class="tracer-icons">
 	  					<div class="connector-lines">
+	  						<h3>Governs (Optional)</h3>
+	  					</div>
+	  					<div class="connector-lines right">
 	  						<h3>Governs (Optional)</h3>
 	  					</div>
 	  					<figure>
@@ -78,10 +113,11 @@
 	  						</div>
 	  						<figcaption><img src="./media/images/tracer-logo.png"> DAO</figcaption>
 	  					</figure>
-	  					<div class="arrow-right">
+	  					<div class="arrow-flow">
 	  						<div class="arrow-container">
-  								<img src='./media/images/home_icons/arrow_right.svg'>
+  								<img class="right-arrow" src='./media/images/home_icons/arrow_right.svg'>
   								<p>Governs</p>
+  								<img class="down-arrow" src='./media/images/home_icons/arrow_down_sml.svg'>
   							</div>
 	  					</div>
 	  					<figure>
@@ -90,10 +126,11 @@
 	  						</div>
 	  						<figcaption><img src="./media/images/tracer-logo.png"> Factory</figcaption>
 	  					</figure>
-	  					<div class="arrow-right">
+	  					<div class="arrow-flow">
 	  						<div class="arrow-container">
-  								<img src='./media/images/home_icons/arrow_right.svg'>
+  								<img class="right-arrow" src='./media/images/home_icons/arrow_right.svg'>
   								<p>Deploys</p>
+  								<img class="down-arrow" src='./media/images/home_icons/arrow_down_sml.svg'>
   							</div>
 	  					</div>
 	  					<figure>
@@ -107,63 +144,79 @@
 	  		</div>
 	  	</section>
 	  	<section class="partners">
-	  		<h2>Partners</h2>
-	  		<figure>
-  				<img src='./media/images/partners/lions_mane_logo.svg'>
-	  		</figure>
-	  		<figure>
-  				<img src='./media/images/partners/RMIT_BIH_logo.svg'>
-	  		</figure>
-	  		<figure>
-  				<img src='./media/images/partners/sigma_prime_logo.svg'>
-	  		</figure>
+	  		<div class="text-container">
+		  		<h2>Partners</h2>
+		  		<div class="flex-container">
+			  		<figure>
+		  				<img src='./media/images/partners/lions_mane_logo.svg'>
+			  		</figure>
+			  		<figure class="rmit">
+		  				<img src='./media/images/partners/RMIT_BIH_logo.svg'>
+			  		</figure>
+			  		<figure class="sigma">
+		  				<img src='./media/images/partners/sigma_prime_logo.svg'>
+			  		</figure>
+		  		</div>
+	  		</div>
 	  	</section>
 	  	<footer>
 			<div class="text-container">
 				<hr>
-				<div class="logo-container">
-					<img src="./media/images/footer/tracer_logo_blue.svg">
-					<p>&copy;&nbsp;<span class="year"></span> Tracer Ltd</p>
-				</div>
-				<div class="sitemap">
-					<p class="title"><b>Sitemap</b></p>
-					<div class="sitemap-links">
-						<a href="#">
-							<p>Govern</p>
-						</a>
-						<a href="#">
-							<p>Trade</p>
-						</a>
-						<a href="#">
-							<p>Learn</p>
-						</a>
-						<a href="#">
-							<p>Build</p>
-						</a>
-						<a href="#">
-							<p>Blog</p>
-						</a>
+				<div class="left-container">
+					<div class="logo-container">
+						<img src="./media/images/footer/tracer_logo_blue.svg">
+						<p>&copy;&nbsp;<span class="year"></span> Tracer Ltd</p>
 					</div>
 				</div>
-				<div class="sitemap legal">
-					<p class="title"><b>Legal</b></p>
-					<div class="sitemap-links">
-						<a href="#">
-							<p>Privacy Policy</p>
-						</a>
-						<a href="#">
-							<p>Terms of Use</p>
-						</a>
+				<div class="right-container">
+					<div class="sitemap">
+						<p class="title"><b>Sitemap</b></p>
+						<div class="sitemap-links">
+							<a href="#">
+								<p>Govern</p>
+							</a>
+							<a href="#">
+								<p>Trade</p>
+							</a>
+							<a href="#">
+								<p>Learn</p>
+							</a>
+							<a href="#">
+								<p>Build</p>
+							</a>
+							<a href="#" class="blog">
+								<p>Blog</p>
+							</a>
+						</div>
 					</div>
-				</div>
-				<a class="inline" href="#">
-					<button class="tracer-btn blue">Subscribe to Mailing list</button>
-				</a>
-				<input class="tracer-btn search" placeholder="Search">
-				<div class="ellipse-container">
-					<img src="./media/images/footer/ellipse.svg">
-					<img src="./media/images/footer/ellipse.svg">
-					<img src="./media/images/footer/ellipse.svg">
+					<div class="sitemap legal">
+						<p class="title"><b>Legal</b></p>
+						<div class="sitemap-links">
+							<a href="#" class="mobile-links">
+								<p>Tracer Governance</p>
+							</a>
+							<a href="#" class="mobile-links">
+								<p>Tracer Blog</p>
+							</a>
+							<a href="#">
+								<p>Privacy Policy</p>
+							</a>
+							<a href="#">
+								<p>Terms of Use</p>
+							</a>
+						</div>
+					</div>
+					<div class="pull-right">
+						<a class="inline" href="#">
+							<button class="tracer-btn blue">Subscribe to Mailing list</button>
+						</a>
+						<input class="tracer-btn search" placeholder="Search">
+						<div class="ellipse-container">
+							<img src="./media/images/footer/ellipse.svg">
+							<img src="./media/images/footer/ellipse.svg">
+							<img src="./media/images/footer/ellipse.svg">
+						</div>
+					</div>
 				</div>
 			</div>
 	  	</footer>
@@ -174,7 +227,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
 		<!-- Bootstrap JS -->
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="./media/js/bootstrap.modified.js"></script>
 
 		<!-- Local scripts -->
 		<script>
