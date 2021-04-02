@@ -55,6 +55,8 @@ h2 {
     width: 100%;
     transition: background 0.3s ease;
     z-index: 999;
+    display: flex;
+    justify-content: flex-end;
 }
 .navbar {
     height: 100px;
@@ -66,8 +68,8 @@ h2 {
 .navbar-brand {
     width: 120px;
     position: fixed;
-    left: 20px;
-    top: 15px;
+    left: 80px;
+    top: 25px;
     opacity: 1;
     transition: all 0.2s ease;
     z-index: 1;
@@ -93,7 +95,8 @@ h2 {
 .nav-item:not(.menu):hover {
     background: #3DA8F5;
 }
-.nav-item.menu:hover {
+.nav-item.menu:hover,
+.nav-item.dropdown:hover {
     background: transparent;
 }
 /*Hide the menu text on desktop*/
@@ -201,10 +204,10 @@ h2 {
     display: flex;
     align-items: center;
 }
-.bottom-nav .nav-link.social {
+.nav-link.social {
     padding: 15px 25px 15px 35px;
 }
-.bottom-nav .nav-link.social img {
+.nav-link.social img {
     width: 25px;
     height: 25px;
     padding-right: unset;
@@ -215,6 +218,67 @@ h2 {
 }
 .bottom-nav .flex-container {
     margin-top: 0;
+}
+/*Dropdown menu for Tracer links*/
+.nav-item.dropdown {
+    list-style: none;
+}
+.nav-link.dropdown-toggle img {
+    height: 40px;
+    width: 40px;
+    transition: all 0.4s ease-in-out;
+}
+.nav-link.dropdown-toggle {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    z-index: 2;
+}
+.dropdown-menu {
+    display: block;
+    pointer-events: none;
+    background: #3372e8;
+    position: fixed;
+    top: 0;
+    left: 65px;
+    width: 300px;
+    z-index: 0; 
+    padding-top: 80px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.dropdown-menu.show {
+    pointer-events: all;
+    opacity: 1;
+}
+.dropdown-toggle[aria-expanded="true"] img {
+    transform: rotate(180deg);
+    margin-top: 10px;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu .nav-item {
+    border-top: 1px solid #3998f1;
+}
+.dropdown-menu .nav-item .nav-link img {
+    width: 120px;
+}
+.dropdown-menu .nav-item .nav-link.social img {
+    width: 40px;
+    height: 40px;
+}
+.dropdown-menu .nav-item .nav-link {
+    margin: unset;
+    padding: 10px 12px;
+}
+.dropdown-menu .nav-item .nav-link.social {
+    padding: 10px;
+}
+.dropdown-menu.show .flex-container {
+    margin: 0px;
 }
 /*-----Main Section styles----*/
 .video-bg {
@@ -377,7 +441,7 @@ section.eco-system .right-container h2 {
     left: unset;
     font-size: 15px;
     transform: translate(-65px, -50%) rotate(90deg);
-    width: max-content;
+    width: 160px;
 }
 .tracer-icons figure {
     height: 200px;
@@ -473,6 +537,7 @@ section.partners figure img {
     display: flex;
     justify-content: flex-start;
     margin-top: 40px;
+    transition: margin 0.3s ease;
 }
 /*--------FOOTER SECTION--------*/
 footer {
@@ -562,6 +627,7 @@ footer .text-container a.inline {
     color: #3b3b3b;
     padding-left: 25px;
     caret-color: #3b3b3b;
+    box-shadow: unset;
 }
 .tracer-btn.search:placeholder {
     color: #3b3b3b;
@@ -632,13 +698,14 @@ footer .text-container a.inline {
     .ellipse-container {
         display: none;
     }
-    /*Eco-sytem overrides*/
+    /*Eco-sytem*/
     section.eco-system .text-container {
         display: flex;
         flex-direction: column-reverse;
     }
     section.eco-system .right-container p {
         display: block;
+        font-size: 16px;
     }
     section.eco-system .right-container h2 {
         display: block;
@@ -660,6 +727,24 @@ footer .text-container a.inline {
     .tracer-icons .connector-lines.right {
         display: block;
     }
+    .tracer-icons figure {
+        height: 180px;
+        width: 240px;
+    }
+    .text-container hr {
+        width: calc(100% - 80px);
+    }
+    .tracer-icons figure .icon {
+        margin-top: 20px;
+    }
+    .tracer-icons figure figcaption {
+        margin-top: 20px;
+    }
+    .nav-item.dropdown {
+        opacity: 0;
+        pointer-events: none;
+        /*display: none;*/
+    }
 }
 @media only screen and (max-width: 767px){
     .main header h1 {
@@ -678,14 +763,14 @@ footer .text-container a.inline {
     .nav-container {
         padding: 0px;
         background: #160bc3;
+        display: block;
+        justify-content: unset;
     }
     .main {
         height: 100%;
         max-height: 95vh;
     }
-    .text-container hr {
-        width: calc(100% - 80px);
-    }
+    /*Partners*/
     section.partners figure {
         display: inline-block;
         width: 100%;
@@ -702,12 +787,16 @@ footer .text-container a.inline {
     section.partners .text-container .flex-container {
         display: block;
     }
-    /*Navbar style overrides*/
+    /*Navbar*/
     .nav-container {
         height: 70px;
     }
     .navbar {
         height: 100%;
+    }
+    .navbar-brand {
+        left: 20px;
+        top: 15px;
     }
     .navbar-collapse .video-bg {
         opacity: 1;
@@ -790,6 +879,8 @@ footer .text-container a.inline {
     }
     footer .text-container .logo-container p {
         font-size: 14px;
+        width: 100%;
+        text-align: right;
     }
     footer .text-container .sitemap {
         width: 50%;
