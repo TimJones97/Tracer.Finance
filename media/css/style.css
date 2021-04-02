@@ -466,6 +466,7 @@ section.eco-system .right-container h2 {
     width: 60%;
     display: block;
     margin: 0 auto;
+    margin-top: 10px;
 }
 .tracer-icons figure img.tracer-image {
     position: absolute;
