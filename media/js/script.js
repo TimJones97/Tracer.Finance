@@ -33,6 +33,20 @@ function navBGScroll(){
 // 		}
 // 	});
 // }
+
+
+// Change button text on Trade page 
+// from "Read the Whitepaper" to
+// "Whitepaper" on mobile and vice
+// versa
+function changeButtonText(){
+	if($(window).width() < 991){
+		
+	}
+}
+$(window).resize(function(){
+
+});
 $(document).ready(function(){
 	setCopyrightYear();
 	navBGScroll();

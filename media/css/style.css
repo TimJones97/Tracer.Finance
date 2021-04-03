@@ -975,12 +975,12 @@ footer .social-icons .social-link:hover {
 
 /*-------------------MEDIA QUERIES-------------------*/
 
-/*---MAIN HEADER---*/
+/*-----MAIN HEADER-----*/
+
 .main.trade {
     position: relative;
     height: 60vh;
     min-height: 600px;
-    overflow: hidden;
 }
 .main.trade header {
     top: 100px;
@@ -1013,16 +1013,6 @@ footer .social-icons .social-link:hover {
 .main.trade header .sml-blue:first-of-type {
     margin-bottom: 20px;
 }
-.main.trade .tracer-tablet {
-    position: absolute;
-    top: 125px;
-    right: -100px;
-    z-index: 1;
-    width: 1000px;
-}
-.main.trade .tracer-tablet img {
-    width: 100%;
-}
 
 /*------PERPETUAL MARKETS SECTION------*/
 
@@ -1034,6 +1024,20 @@ footer .social-icons .social-link:hover {
     height: auto;
     background-position: top;
     padding-top: 300px;
+}
+/*Tracer tablet graphic*/
+.perpetuals .tracer-tablet {
+    position: absolute;
+    top: -420px;
+    right: 0px;
+    z-index: 1;
+    width: 900px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.perpetuals .tracer-tablet img {
+    width: 1000px;
+    transition: all 0.5s ease;
 }
 .perpetuals .text-container {
     padding: 0px 65px 40px 65px;
@@ -1480,24 +1484,34 @@ footer .social-icons .social-link:hover {
     }
 
     /*-----GOVERNANCE-----*/
+
     .governance .text-container .flex-container .governance-info {
-        width: 100%;
-        padding-right: 0px;
+        width: 50%;
         margin-bottom: 30px;
     }
     .governance .text-container .flex-container {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     /*-------------TRADE PAGE-------------*/
 
     /*-----MAIN SECTION-----*/
-    .main.trade .tracer-tablet {
-        top: 180px;
-        width: 650px;
-    }
 
+    .main.trade {
+        height: 60vh;
+        min-height: 515px;
+    }
+    
     /*-----PERPETUALS-----*/
+
+    .perpetuals .tracer-tablet {
+        top: -420px;
+        width: 50%;
+        right: 0px;
+    }
+    .perpetuals .tracer-tablet img {
+        width: 700px;
+    }
     .perpetuals .text-container h2 {
         font-size: 24px;
     }
@@ -1514,10 +1528,42 @@ footer .social-icons .social-link:hover {
         padding-right: 37px;
     }
 
+    /*-----PERPETUALS INFO BLOCKS-----*/
 
+    .perpetuals-info .text-container .flex-container {
+        flex-wrap: wrap
+    }
+    .perpetuals-info .text-container .flex-container .info-block {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .perpetuals-info .text-container .flex-container .info-block p.perp-text {
+        max-width: 500px;
+    }
+}
+/*---TABLET SCREEN WIDTH---*/
+@media only screen and (max-width: 991px){
+
+    /*-------------TRADE PAGE-------------*/
+
+    /*-----MAIN SECTION-----*/
+
+    .main.trade header .button-container {
+        width: 100%;
+    }
+
+    /*-----PERPETUALS-----*/
+
+    .perpetuals .tracer-tablet {
+        top: -220px;
+        width: 50%;
+        right: 0px;
+    }
 }
 @media only screen and (max-width: 767px){
+
     /*-------------NAVBAR-------------*/
+
     .bottom-nav ul .nav-item .nav-link {
         padding: 18px 35px 18px 18px;
     }
@@ -1544,6 +1590,7 @@ footer .social-icons .social-link:hover {
     }
 
     /*-----MAIN HERO SECTION-----*/
+
     .main header {
         top: 300px;
         left: 40px;
@@ -1675,6 +1722,19 @@ footer .social-icons .social-link:hover {
         bottom: 15px;
     }
 
+    /*-----GOVERNANCE-----*/
+
+    .governance .text-container .flex-container {
+        flex-direction: column;
+    }
+    .governance .text-container .flex-container .governance-info {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
+    .governance .text-container .flex-container .governance-info p {
+        max-width: 500px;
+    }
     /*-------------TRADE PAGE-------------*/
 
     /*-----PERPETUALS-----*/
@@ -1682,10 +1742,6 @@ footer .social-icons .social-link:hover {
     .perpetuals .text-container .live-perpetual-markets thead tr th {
         display: none;
     }
-/*    .perpetuals .text-container .live-perpetual-markets thead tr th.proposals-header {
-        display: block;
-        padding-left: 20px;
-    }*/
     .perpetuals .text-container .live-perpetual-markets .coin-info-row {
         display: inline-flex;
         flex-direction: column;
@@ -1715,6 +1771,20 @@ footer .social-icons .social-link:hover {
         display: inline;
         position: relative;
         padding-right: 10px;
+    }
+
+    /*-----PERPETUALS INFO BLOCKS-----*/
+
+    .perpetuals-info .text-container .flex-container {
+        flex-direction: column;
+    }
+    .perpetuals-info .text-container .flex-container .info-block {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
+    .perpetuals-info .text-container .flex-container .info-block p.perp-text {
+        max-width: 500px;
     }
 }
 @media only screen and (max-width: 479px){
