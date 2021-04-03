@@ -36,5 +36,8 @@ function navBGScroll(){
 $(document).ready(function(){
 	setCopyrightYear();
 	navBGScroll();
+	new universalParallax().init({
+	  speed: 2.0
+	});
 	// fadeNavBrandOnMenuOpen();
 });

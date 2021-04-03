@@ -61,9 +61,11 @@ h2 {
 .navbar {
     height: 100px;
     padding: 0;
+    max-width: 1080px;
 }
 .nav-container.solid {
-    background: #160bc3;
+    /*background: #160bc3;*/
+    background: #03065e;
 }
 .navbar-brand {
     width: 150px;
@@ -71,7 +73,7 @@ h2 {
     left: 80px;
     top: 15px;
     opacity: 1;
-    transition: all 0.2s ease;
+    /*transition: all 0.2s ease;*/
     z-index: 1;
 }
 .navbar-brand img {
@@ -230,7 +232,7 @@ h2 {
     padding: 0;
     position: fixed;
     left: 420px;
-    top: 20px;
+    top: 15px;
     z-index: 2;
 }
 .dropdown-menu {
@@ -395,8 +397,9 @@ section.eco-system {
 .text-container {
     position: relative;
     width: 100%;
-    padding: 40px 80px;
+    padding: 40px 100px;
     overflow: hidden;
+    margin: 0 auto;
 }
 .text-container hr {
     position: absolute;
@@ -691,6 +694,239 @@ footer .text-container a.inline {
 .ellipse-container img {
     width: calc(33% - 10px);
 }
+
+/*-------------------GOVERN PAGE-------------------*/
+.parallax-wrapper {
+  z-index: -1;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+}
+.parallax__container {
+  clip: rect(0,auto,auto,0);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+.parallax {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform: translateZ(0px) !important;
+  width: 100%;
+  opacity: 1;
+  transition: height 0.7s ease, transform 0.7s ease, opacity 0.7s ease;
+}
+
+/*Main header*/
+.main.govern {
+    height: 30vh;
+    min-height: 400px;
+}
+.main.govern header {
+    top: 100px;
+}
+/*Tracer DAO image container*/
+.main.govern header .tracer-DAO-container {
+    display: flex;
+    align-items: center;
+}
+.main.govern header .tracer-DAO-container img {
+    width: 210px;
+    padding-right: 10px;
+}
+.main.govern header .tracer-DAO-container p {
+    font-size: 40px;
+    font-family: 'Akkurat Light', serif;
+    margin: 0;
+}
+.main.govern header .tracer-btn.governance-app {
+    width: 215px;
+}
+.main.govern header .tracer-btn.governance-app:hover {
+    width: 270px;
+}
+.main.govern header .sml-blue {
+    color: #3DA8F5;
+    font-size: 16px;
+    max-width: 360px;
+}
+.main.govern header .sml-blue:first-of-type {
+    margin-bottom: 20px;
+}
+
+/*Proposals section*/
+.proposals {
+    position: relative;
+    background: url('../images/govern/proposals_bg.png');
+    /* overflow: hidden; */
+    background-size: cover;
+    height: auto;
+    background-position: top;
+    padding-top: 300px;
+}
+.proposals .text-container {
+    padding: 0px 70px 40px 70px;
+}
+/*.proposals:before {
+    content: "";
+    background: #fff;
+    height: 210px;
+    transform: skewY(-6deg);
+    position: absolute;
+    top: -90px;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}*/
+.proposals .text-container table.live-proposals {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    margin: 0 auto;
+    font-family: 'Akkurat', serif;
+    border: none;
+    transition: all 0.5s ease;
+}
+.proposals .text-container .live-proposals .proposal-row {
+    height: 62px;
+    background: #fff;
+    box-shadow: 0px 3px 10px #00000033;
+    border-radius: 16px;
+    font-size: 20px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.proposals .text-container .live-proposals .proposal-row:hover {
+    transform: scale3d(1.02, 1.02, 1);
+    background: #03065E;
+    border: 2px solid #333;
+}
+/*Apply appropriate color to the headers*/
+.proposals .text-container .live-proposals th {
+    font-size: 24px;
+    font-family: 'Akkurat Light', serif;
+    padding-bottom: 10px;
+}
+.proposals .text-container .live-proposals th.proposals-header {
+    font-size: 32px;
+    color: #050CBD;
+    padding-left: 37px;
+}
+.proposals .text-container .live-proposals th.time-header {
+    color: #A3A3A3;
+    text-align: right;
+}
+.proposals .text-container .live-proposals th.status-header {
+    color: #333333;
+    text-align: right;
+}
+.proposals .text-container .live-proposals th.voting-header {
+    color: #333333;
+}
+/*Apply border radius to first and last elements in table row*/
+.proposals .text-container .live-proposals .proposal-row td:first-of-type {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding-left: 37px;
+}
+.proposals .text-container .live-proposals .proposal-row td:last-of-type {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    text-align: right;
+}
+.proposals .text-container .live-proposals .proposal-row td {
+    border: none;
+}
+/*Place the sub text on its own line underneath proposal title*/
+.proposals .text-container .live-proposals .proposal-row td.proposal-title span.sub-text {
+    display: block;
+    color: #92ACAC;
+    font-size: 16px;
+}
+/*Color the diferent elements*/
+.proposals .text-container .live-proposals .proposal-row td.time-left {
+    color: #A3A3A3;
+    text-align: right;
+}
+.proposals .text-container .live-proposals .proposal-row td.status {
+    color: #EA8700;
+    text-align: right;
+}
+.proposals .text-container .live-proposals .proposal-row td.vote-yes {
+    text-align: right;
+    color: #01AE67;
+    padding-right: 20px;
+}
+.proposals .text-container .live-proposals .proposal-row td.vote-no {
+    color: #FF2D4A;
+    text-align: left;
+}
+/*td hover effects*/
+.proposals .text-container .live-proposals .proposal-row td {
+    transition: all 0.5s ease;
+}
+.proposals .text-container .live-proposals .proposal-row:hover td {
+    background: #03065E;
+}
+.proposals .text-container .live-proposals .proposal-row:hover .proposal-title {
+    color: #fff;
+}
+.proposals .text-container .live-proposals .proposal-row:hover .time-left,
+.proposals .text-container .live-proposals .proposal-row:hover .proposal-title span.sub-text {
+    color: #3DA8F5;   
+}
+
+/*Governance Section*/
+
+.governance {
+    background: #fff;
+}
+.governance .text-container h2 {
+    color: #050CBD;
+}
+.governance .text-container .flex-container {
+    padding-bottom: 75px;
+}
+.governance .text-container .flex-container .governance-info {
+    width: 33%;
+    padding-right: 80px;
+}
+.governance .text-container .flex-container .governance-info img {
+    background: #F7F7F7;
+    border-radius: 50%;
+    padding: 20px;
+    width: 120px;
+}
+.governance .text-container .flex-container .governance-info p.title {
+    font-size: 24px;
+    margin-top: 30px;
+}
+.governance .text-container .flex-container .governance-info p {
+    color: #2E4848;
+}
+.governance .text-container .flex-container .governance-info .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+}
+.governance .text-container .flex-container .governance-info .tracer-btn:hover {
+    color: #fff;
+}
 /*-------------------MEDIA QUERIES-------------------*/
 /*Break here for menu*/
 @media only screen and (max-width: 1600px){
@@ -714,7 +950,7 @@ footer .text-container a.inline {
     }
 }
 /*Media queries break at 1100px instead of standard tablet width of 991px for homepage graphic*/
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1200px){
     /*Main section*/
     .main header h1 {
         font-size: 55px;
@@ -824,6 +1060,7 @@ footer .text-container a.inline {
     .navbar-brand {
         left: 20px;
         top: 15px;
+        width: 120px;
     }
     .navbar-collapse .video-bg {
         opacity: 1;
@@ -859,7 +1096,7 @@ footer .text-container a.inline {
         opacity: 0;
         height: auto !important;
         display: block !important;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
         z-index: 2;
         pointer-events: none;
     }
@@ -888,25 +1125,32 @@ footer .text-container a.inline {
         width: 45%;
         margin-top: 10px;
     }
+
+    /*Govern section*/
+
+    /*Proposals table*/
+    .proposals .text-container .live-proposals th.proposals-header {
+        font-size: 24px;
+    }
+    .proposals .text-container .live-proposals th {
+        font-size: 16px;
+    }
+    .proposals .text-container .live-proposals .proposal-row {
+        font-size: 14px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td.proposal-title span.sub-text {
+        font-size: 12px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td:first-of-type {
+        padding-left: 37px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td.vote-yes {
+        padding-right: 37px;
+    }
 }
 @media only screen and (max-width: 767px){
-    .main header h1 {
-        max-width: 400px;
-    }
-    h1 {
-        font-size: 36px !important;
-    }
-    .text-container {
-        padding: 40px 40px;
-    }
-    .main header {
-        top: 300px;
-        left: 40px;
-    }
-    .main {
-        height: 100%;
-        max-height: 95vh;
-    }
+    /*Main section*/
+    
     /*Partners*/
     section.partners figure {
         display: inline-block;
@@ -925,8 +1169,23 @@ footer .text-container a.inline {
         display: block;
     }
     /*Main section*/
-    section.main header {
+    .main header {
+        top: 300px;
+        left: 40px;
         width: 80vw;
+    }
+    .main {
+        height: 100%;
+        max-height: 95vh;
+    }
+    .main header h1 {
+        max-width: 400px;
+    }
+    h1 {
+        font-size: 36px !important;
+    }
+    .text-container {
+        padding: 40px 40px;
     }
     .button-container {
         width: 156px;
@@ -939,7 +1198,6 @@ footer .text-container a.inline {
     .tracer-btn:hover {
         width: 150px;
     }
-
     /*Footer*/
     footer .text-container .right-container {
         margin-top: 50px;
