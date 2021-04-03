@@ -853,6 +853,11 @@ footer .text-container a.inline {
 .proposals .text-container .live-proposals .proposal-row td {
     border: none;
 }
+/*Hide all of the span elements for show on mobile only*/
+.proposals .text-container .live-proposals .proposal-row td span {
+    display: none;
+    color: #000;
+}
 /*Place the sub text on its own line underneath proposal title*/
 .proposals .text-container .live-proposals .proposal-row td.proposal-title span.sub-text {
     display: block;
@@ -923,6 +928,7 @@ footer .text-container a.inline {
 .governance .text-container .flex-container .governance-info .tracer-btn {
     color: #3DA8F5;
     border: 2px solid #3DA8F5;
+    margin-top: 10px;
 }
 .governance .text-container .flex-container .governance-info .tracer-btn:hover {
     color: #fff;
@@ -1047,7 +1053,7 @@ footer .text-container a.inline {
     }
     .nav-container {
         padding: 0px;
-        background: #160bc3;
+        background: #03065e;
         display: block;
         justify-content: unset;
     }
@@ -1126,9 +1132,9 @@ footer .text-container a.inline {
         margin-top: 10px;
     }
 
-    /*Govern section*/
+    /*-------------GOVERN PAGE-------------*/
 
-    /*Proposals table*/
+    /*-----PROPOSALS-----*/
     .proposals .text-container .live-proposals th.proposals-header {
         font-size: 24px;
     }
@@ -1146,6 +1152,16 @@ footer .text-container a.inline {
     }
     .proposals .text-container .live-proposals .proposal-row td.vote-yes {
         padding-right: 37px;
+    }
+
+    /*-----GOVERNANCE-----*/
+    .governance .text-container .flex-container .governance-info {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
+    .governance .text-container .flex-container {
+        flex-direction: column;
     }
 }
 @media only screen and (max-width: 767px){
@@ -1245,5 +1261,52 @@ footer .text-container a.inline {
     footer .text-container .right-container .pull-right .tracer-btn.search {
         text-align: center;
         padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 479px){
+    /*-----PROPOSALS-----*/
+    .proposals .text-container .live-proposals thead tr th {
+        display: none;
+    }
+    .proposals .text-container .live-proposals thead tr th.proposals-header {
+        display: block;
+    }
+    .proposals .text-container .live-proposals .proposal-row {
+        display: inline-flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td {
+        font-size: 16px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td.proposal-title {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td.proposal-title span.sub-text {
+        font-size: 16px;
+    }
+    .proposals .text-container {
+        padding: 0px 20px 40px 20px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td span:not(.sub-text) {
+        position: absolute;
+        left: 20px;
+        display: inline;
+    }
+    .proposals .text-container .live-proposals .proposal-row td.vote-yes {
+        display: inline;
+        position: relative;
+        padding-right: 90px;
+    }
+    .proposals .text-container .live-proposals .proposal-row td.vote-no {
+        position: absolute;
+        right: 0px;
+        bottom: 15px;
     }
 }

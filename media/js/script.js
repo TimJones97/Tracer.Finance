@@ -37,7 +37,7 @@ $(document).ready(function(){
 	setCopyrightYear();
 	navBGScroll();
 	new universalParallax().init({
-	  speed: 2.0
+	  speed: 3.0
 	});
 	// fadeNavBrandOnMenuOpen();
 });
