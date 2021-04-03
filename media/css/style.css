@@ -419,7 +419,7 @@ section.eco-system {
 .text-container {
     position: relative;
     width: 100%;
-    padding: 40px 100px;
+    padding: 40px 80px;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -612,6 +612,9 @@ footer {
 }
 footer.grey {
     background: #F7F7F7;
+}
+footer .text-container {
+    padding-left: 80px;
 }
 footer .text-container p,
 footer .text-container a, {
@@ -819,7 +822,7 @@ footer .social-icons .social-link:hover {
     padding-top: 300px;
 }
 .proposals .text-container {
-    padding: 0px 70px 40px 70px;
+    padding: 0px 45px 40px 45px;
 }
 /*.proposals:before {
     content: "";
@@ -925,7 +928,7 @@ footer .social-icons .social-link:hover {
 }
 /*td hover effects*/
 .proposals .text-container .live-proposals .proposal-row td {
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
 }
 .proposals .text-container .live-proposals .proposal-row:hover {
     background: #03065E;
@@ -975,7 +978,7 @@ footer .social-icons .social-link:hover {
     color: #fff;
 }
 
-/*-------------------MEDIA QUERIES-------------------*/
+/*-------------------TRADE PAGE-------------------*/
 
 /*-----MAIN HEADER-----*/
 
@@ -1042,7 +1045,7 @@ footer .social-icons .social-link:hover {
     transition: all 0.5s ease;
 }
 .perpetuals .text-container {
-    padding: 0px 65px 40px 65px;
+    padding: 0px 45px 40px 45px;
 }
 .perpetuals .text-container p {
     font-size: 16px;
@@ -1175,7 +1178,7 @@ footer .social-icons .social-link:hover {
 }
 /*td hover effects*/
 .perpetuals .text-container .live-perpetual-markets .coin-info-row td {
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
 }
 .perpetuals .text-container .live-perpetual-markets .coin-info-row:hover {
     background: #03065E;
@@ -1259,9 +1262,161 @@ footer .social-icons .social-link:hover {
     color: #fff;
 }
 
+/*-----------------HOME PAGE STYLES-----------------*/
 
+/*-----MAIN SECTION-----*/
+
+.main.learn {
+    height: 40vh;
+}
+
+.main.learn .text-container {
+    height: 100%;
+}
+.main.learn .text-container h2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 40px;
+}
+
+/*-------WHITEPAPERS SECTION-------*/
+
+.whitepapers {
+    position: relative;
+    background: #F7F7F7;
+    height: 62vh;
+}
+.whitepapers .text-container {
+    overflow: unset;
+}
+
+/*-----LEFT CONTAINER FOR TEXT-----*/
+.whitepapers .text-container .left-container h2 {
+    color: #050CBD;
+}
+.whitepapers .text-container .left-container p {
+    color: #295B5B;
+    max-width: 260px;
+}
+
+/*-----RIGHT CONTAINER FOR WHITEPAPER DOWNLOADS-----*/
+
+.whitepapers .text-container .right-container  {
+    position: absolute;
+    right: 80px;
+    top: -100px;
+    width: 60%;
+}
+.whitepapers .text-container .right-container .flex-container {
+    position: relative;
+    width: 100%;
+}
+.whitepapers .text-container .right-container article.whitepaper-download {
+    padding: 10px;
+    text-align: center;
+    width: 33%;
+}
+.whitepapers .text-container .right-container article.whitepaper-download picture.whitepaper-image {
+    display: block;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 7px;
+}
+.whitepapers .text-container .right-container article.whitepaper-download picture.whitepaper-image img {
+    border-radius: 7px;
+    width: 100%;
+}
+.whitepapers .text-container .right-container article.whitepaper-download p {
+    color: #050CBD;
+    margin-top: 22px;
+}
+.whitepapers .text-container .right-container article.whitepaper-download .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+    margin: 0 auto;
+}
+.whitepapers .text-container .right-container article.whitepaper-download .tracer-btn:hover {
+    color: #fff;
+}
+
+/*Scroll prompt for mobile for whitepaper scrolling*/
+
+.whitepapers .text-container .right-container .flex-container .scroll-prompt {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    background: #3DA8F5;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    opacity: 0;
+    animation: slideIn 3s ease-in-out forwards;
+}
+.whitepapers .text-container .right-container .flex-container .scroll-prompt img {
+    height: 20px;
+    margin-left: 15px;
+}
+.whitepapers .text-container .right-container .flex-container .scroll-prompt p {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 5px;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(30px, -50%);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(0px, -50%);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(0px, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(30px, -50%);
+    }
+}
+/*-------DOCUMENTATION SECTION-------*/
+
+.documentation {
+    background: #FFF;
+}
+.documentation .text-container h2 {
+    color: #050CBD;
+}
+.documentation .text-container .flex-container {
+    padding-bottom: 25px;
+    margin-top: 5px;
+}
+.documentation .text-container .flex-container .info-block {
+    width: 50%;
+    max-width: 500px;
+    padding-right: 80px;
+}
+.documentation .text-container .flex-container .info-block p.title {
+    color: #333333;
+    margin-bottom: 10px;
+    font-family: 'Akkurat Bold', serif;
+}
+.documentation .text-container .flex-container .info-block p.documentation-text {
+    color: #2E4848;
+}
+.documentation .text-container .flex-container .info-block .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+    margin-top: 10px;
+}
+.documentation .text-container .flex-container .info-block .tracer-btn:hover {
+    color: #fff;
+}
 /*-------------------MEDIA QUERIES-------------------*/
-/*Break here for menu*/
 @media only screen and (max-width: 1600px){
     /*Make right-container in eco-system full-width*/
     section.eco-system .text-container .right-container {
@@ -1548,6 +1703,26 @@ footer .social-icons .social-link:hover {
     .perpetuals-info .text-container .flex-container .info-block p.perp-text {
         max-width: 500px;
     }
+
+    /*-------------LEARN PAGE-------------*/
+
+    /*-----WHITEPAPERS SECTION-----*/
+
+    .whitepapers {
+        height: auto;
+    }
+    .whitepapers .text-container {
+        overflow: hidden;
+    }
+    /*-----RIGHT CONTAINER FOR WHITEPAPER DOWNLOADS-----*/
+
+    .whitepapers .text-container .right-container {
+        position: relative;
+        width: 80%;
+        right: unset;
+        top: unset;
+        padding-left: unset;
+    }
 }
 /*---TABLET SCREEN WIDTH---*/
 @media only screen and (max-width: 991px){
@@ -1747,6 +1922,10 @@ footer .social-icons .social-link:hover {
 
     /*-----PERPETUALS-----*/
 
+    /*TABLE*/
+    .perpetuals .text-container table.live-perpetual-markets {
+        width: auto;
+    }
     .perpetuals .text-container .live-perpetual-markets thead tr th {
         display: none;
     }
@@ -1757,11 +1936,26 @@ footer .social-icons .social-link:hover {
         width: 100%;
         margin-bottom: 20px;
         padding-bottom: 15px;
+        padding-top: 5px;
     }
     .perpetuals .text-container .live-perpetual-markets .coin-info-row td {
         font-size: 16px;
         padding-right: 10px;
         padding-bottom: 5px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td.ticker-pair {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 20px 10px;
+        padding-left: 20px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td.ticker-pair span.pair-text {
+        font-size: 20px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td.ticker-pair img {
+        height: 50px;
+        width: 50px;
     }
     .perpetuals .text-container .live-perpetual-markets .coin-info-row td.market-title {
         padding: 10px 20px;
@@ -1794,8 +1988,28 @@ footer .social-icons .social-link:hover {
     .perpetuals-info .text-container .flex-container .info-block p.perp-text {
         max-width: 500px;
     }
+
+    /*-------------LEARN PAGE-------------*/
+
+    /*-----RIGHT CONTAINER FOR WHITEPAPER DOWNLOADS-----*/
+
+    .whitepapers .text-container .right-container {
+        width: 100%;
+        height: 480px;
+    }
+    /*Enable scroll for whitepapers*/
+    .whitepapers .text-container .right-container .flex-container {
+        overflow-x: scroll;
+    }
+    .whitepapers .text-container .right-container .flex-container .scroll-prompt {
+        display: flex;
+    }
+    .whitepapers .text-container .right-container article.whitepaper-download {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 479px){
+
     /*-------------GOVERN PAGE-------------*/
 
     /*-----MAIN SECTION-----*/
@@ -1804,10 +2018,12 @@ footer .social-icons .social-link:hover {
         height: 30vh;
         min-height: 275px;
     }
-    .main.govern header .tracer-DAO-container img {
+    .main.govern header .tracer-DAO-container picture img,
+    .main.trade header .tracer-perpetuals-container picture img {
         width: 150px;
     }
-    .main.govern header .tracer-DAO-container p {
+    .main.govern header .tracer-DAO-container p,
+    .main.trade header .tracer-perpetuals-container p {
         font-size: 32px;
     }
 
@@ -1817,6 +2033,13 @@ footer .social-icons .social-link:hover {
         padding-top: 220px;
     }
 
+    /*-------------PERPETUALS PAGE-------------*/
+
+    /*-----MAIN SECTION-----*/
+    .perpetuals .tracer-tablet {
+        top: -180px;
+        width: 45%;
+    }
 
     /*-------------FOOTER-------------*/
     footer .text-container {
