@@ -54,7 +54,7 @@ body {
     width: 7px;
 } 
 ::-webkit-scrollbar-track {
-    background: rgba(255,255,255,0.3); 
+    background: rgba(0,0,0,0.7); 
 } 
 ::-webkit-scrollbar-thumb {
     background: rgba(0,0,0,0.7); 
@@ -144,11 +144,12 @@ body {
 .navbar-toggler {
     border: none;
     position: fixed;
-    right: 10px;
+    right: 40px;
     top: 15px;
     height: 30px;
     transition: all 0.5s ease;
     z-index: 999;
+    padding: 0;
 }
 .navbar-toggler:hover {
     background: transparent !important;
@@ -776,6 +777,7 @@ footer .social-icons .social-link:hover {
 }
 .main.govern header {
     top: 100px;
+    z-index: 1;
 }
 /*Tracer DAO image container*/
 .main.govern header .tracer-DAO-container {
@@ -925,7 +927,7 @@ footer .social-icons .social-link:hover {
 .proposals .text-container .live-proposals .proposal-row td {
     transition: all 0.5s ease;
 }
-.proposals .text-container .live-proposals .proposal-row:hover td {
+.proposals .text-container .live-proposals .proposal-row:hover {
     background: #03065E;
 }
 .proposals .text-container .live-proposals .proposal-row:hover .proposal-title {
@@ -1104,7 +1106,7 @@ footer .social-icons .social-link:hover {
 }
 .perpetuals .text-container .live-perpetual-markets th.fluctuation-header {
     color: #333333;
-    padding-right: 20px;
+    padding-right: 35px;
 }
 
 /*Apply border radius to first and last elements in table row*/
@@ -1163,7 +1165,7 @@ footer .social-icons .social-link:hover {
     color: #333333;
 }
 .perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation {
-    padding-right: 20px;
+    padding-right: 35px;
 }
 .perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation.down {
     color: #FF2D4A;
@@ -1175,7 +1177,7 @@ footer .social-icons .social-link:hover {
 .perpetuals .text-container .live-perpetual-markets .coin-info-row td {
     transition: all 0.5s ease;
 }
-.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td {
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover {
     background: #03065E;
 }
 .perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td.ticker-pair span.pair-text,
@@ -1196,7 +1198,8 @@ footer .social-icons .social-link:hover {
     color: #050CBD;
 }
 .perpetuals-info .text-container .flex-container {
-    padding-bottom: 75px;
+    margin-top: 25px;
+    padding-bottom: 25px;
 }
 .perpetuals-info .text-container .flex-container .info-block {
     width: 33%;
@@ -1232,7 +1235,7 @@ footer .social-icons .social-link:hover {
     color: #050CBD;
 }
 .join .text-container .flex-container {
-    padding-bottom: 75px;
+    padding-bottom: 25px;
     margin-top: 5px;
 }
 .join .text-container .flex-container .info-block {
@@ -1393,8 +1396,8 @@ footer .social-icons .social-link:hover {
         max-width: unset;
     }
     .navbar-brand {
-        left: 20px;
-        top: 15px;
+        left: 40px;
+        top: 10px;
         width: 120px;
     }
     .navbar-collapse .video-bg {
@@ -1530,13 +1533,18 @@ footer .social-icons .social-link:hover {
 
     /*-----PERPETUALS INFO BLOCKS-----*/
 
+    .join .text-container .flex-container,
     .perpetuals-info .text-container .flex-container {
         flex-wrap: wrap
+    }
+    .join .text-container .flex-container .info-block {
+        width: 100%;
     }
     .perpetuals-info .text-container .flex-container .info-block {
         width: 50%;
         margin-bottom: 30px;
     }
+    .join .text-container .flex-container .info-block p.sign-up-text,
     .perpetuals-info .text-container .flex-container .info-block p.perp-text {
         max-width: 500px;
     }
@@ -1792,16 +1800,23 @@ footer .social-icons .social-link:hover {
 
     /*-----MAIN SECTION-----*/
 
+    .main.govern {
+        height: 30vh;
+        min-height: 275px;
+    }
     .main.govern header .tracer-DAO-container img {
         width: 150px;
     }
     .main.govern header .tracer-DAO-container p {
         font-size: 32px;
     }
+
     /*-----PROPOSALS-----*/
+
     section.proposals {
-        top: -140px;
+        padding-top: 220px;
     }
+
 
     /*-------------FOOTER-------------*/
     footer .text-container {
