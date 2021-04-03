@@ -35,13 +35,19 @@ function navBGScroll(){
 // }
 
 
+function createScrollReveal(){
+	// Reveals the scroll-prompt when the users 
+	// scrolls it into view on the Learn page
+	ScrollReveal({ duration: 1000 });
+	ScrollReveal().reveal('.scroll-prompt', { delay: 1000 });
+}
 // Change button text on Trade page 
 // from "Read the Whitepaper" to
 // "Whitepaper" on mobile and vice
 // versa
 function changeButtonText(){
 	if($(window).width() < 991){
-		
+		$('.tracer-btn.read-whitepaper').text('Whitepaper')
 	}
 }
 $(window).resize(function(){
@@ -50,6 +56,7 @@ $(window).resize(function(){
 $(document).ready(function(){
 	setCopyrightYear();
 	navBGScroll();
+	createScrollReveal();
 	new universalParallax().init({
 	  speed: 3.0
 	});

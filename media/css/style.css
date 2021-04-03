@@ -54,11 +54,11 @@ body {
     width: 7px;
 } 
 ::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.7); 
+    background: rgba(0,0,0,0); 
 } 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.7); 
-    border-radius: 6px;
+    background: rgba(0,0,0,0.8); 
+    border-radius: 10px;
 }
 
 /*-----------------HOME PAGE STYLES-----------------*/
@@ -848,7 +848,7 @@ footer .social-icons .social-link:hover {
     height: 62px;
     background: #fff;
     box-shadow: 0px 3px 10px #00000033;
-    border-radius: 16px;
+    border-radius: 10px;
     font-size: 20px;
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -1075,7 +1075,7 @@ footer .social-icons .social-link:hover {
     height: 60px;
     background: #fff;
     box-shadow: 0px 3px 10px #00000033;
-    border-radius: 16px;
+    border-radius: 10px;
     font-size: 20px;
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -1309,7 +1309,6 @@ footer .social-icons .social-link:hover {
     width: 60%;
 }
 .whitepapers .text-container .right-container .flex-container {
-    position: relative;
     width: 100%;
 }
 .whitepapers .text-container .right-container article.whitepaper-download {
@@ -1353,8 +1352,12 @@ footer .social-icons .social-link:hover {
     align-items: center;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
-    opacity: 0;
-    animation: slideIn 3s ease-in-out forwards;
+    transition: transform 1s ease-in-out;
+    animation: slideOut 3s ease-in-out forwards;
+}
+.whitepapers .text-container .right-container .flex-container .scroll-prompt:hover {
+    animation: none;
+    transform: translate(0px, -50%);
 }
 .whitepapers .text-container .right-container .flex-container .scroll-prompt img {
     height: 20px;
@@ -1365,22 +1368,15 @@ footer .social-icons .social-link:hover {
     margin: 0;
     padding-left: 5px;
 }
-@keyframes slideIn {
+@keyframes slideOut {
     0% {
-        opacity: 0;
-        transform: translate(30px, -50%);
-    }
-    20% {
-        opacity: 1;
         transform: translate(0px, -50%);
     }
     80% {
-        opacity: 1;
         transform: translate(0px, -50%);
     }
     100% {
-        opacity: 0;
-        transform: translate(30px, -50%);
+        transform: translate(60px, -50%);
     }
 }
 /*-------DOCUMENTATION SECTION-------*/
@@ -1418,7 +1414,9 @@ footer .social-icons .social-link:hover {
 }
 /*-------------------MEDIA QUERIES-------------------*/
 @media only screen and (max-width: 1600px){
+
     /*Make right-container in eco-system full-width*/
+
     section.eco-system .text-container .right-container {
         width: 100%;
         margin-top: 70px;
@@ -1443,13 +1441,16 @@ footer .social-icons .social-link:hover {
     /*---------------HOME PAGE--------------*/
 
     /*-----MAIN SECTION-----*/
+
     .main header h1 {
         font-size: 55px;
     }
     .main header {
         top: 315px;
     }
-    /*Eco-system*/
+
+    /*-----ECO-SYSTEM SECTION-----*/
+
     .tracer-icons {
         display: block;
     }
@@ -1519,7 +1520,9 @@ footer .social-icons .social-link:hover {
     .tracer-icons figure figcaption {
         margin-top: 20px;
     }
-    /*Navbar*/
+
+    /*-------------NAVBAR-------------*/
+
     .nav-item.dropdown {
         opacity: 0;
         pointer-events: none;
@@ -1607,7 +1610,9 @@ footer .social-icons .social-link:hover {
     .bottom-nav {
         display: block;
     }
-    /*Footer*/
+
+    /*-------------FOOTER-------------*/
+
     footer .text-container .right-container .pull-right {
         width: 100%;
         display: block;
@@ -1622,6 +1627,7 @@ footer .social-icons .social-link:hover {
     /*-------------GOVERN PAGE-------------*/
 
     /*-----PROPOSALS-----*/
+
     .proposals .text-container .live-proposals th.proposals-header {
         font-size: 24px;
     }
@@ -1996,6 +2002,7 @@ footer .social-icons .social-link:hover {
     .whitepapers .text-container .right-container {
         width: 100%;
         height: 480px;
+        overflow-x: hidden;
     }
     /*Enable scroll for whitepapers*/
     .whitepapers .text-container .right-container .flex-container {
@@ -2007,8 +2014,25 @@ footer .social-icons .social-link:hover {
     .whitepapers .text-container .right-container article.whitepaper-download {
         width: 100%;
     }
+
+    /*-----DOCUMENTATION SECTION-----*/
+
+    .documentation .text-container .flex-container {
+        flex-direction: column;
+    }
+    .documentation .text-container .flex-container .info-block {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
 }
 @media only screen and (max-width: 479px){
+
+    /*-------------BACKGROUND VIDEO-------------*/
+
+    .video-bg {
+        left: -50%;
+    }
 
     /*-------------GOVERN PAGE-------------*/
 
