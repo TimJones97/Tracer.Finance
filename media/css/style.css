@@ -66,10 +66,10 @@ h2 {
     background: #160bc3;
 }
 .navbar-brand {
-    width: 120px;
+    width: 150px;
     position: fixed;
     left: 80px;
-    top: 25px;
+    top: 15px;
     opacity: 1;
     transition: all 0.2s ease;
     z-index: 1;
@@ -93,7 +93,7 @@ h2 {
     transition: all 0.5s ease;
 }
 .nav-item .nav-link:hover {
-    color: #9b9b9b;
+    color: #3DA8F5;
 }
 
 /*Hide the menu text on desktop*/
@@ -229,7 +229,7 @@ h2 {
     margin: 0;
     padding: 0;
     position: fixed;
-    left: 300px;
+    left: 420px;
     top: 20px;
     z-index: 2;
 }
@@ -239,10 +239,11 @@ h2 {
     background: #3372e8;
     position: fixed;
     top: 0;
-    left: 65px;
-    width: 300px;
+    left: 45px;
+    width: 450px;
     z-index: 0; 
     padding-top: 80px;
+    padding-bottom: 0px;
     transition: all 0.5s ease;
     opacity: 0;
 }
@@ -261,30 +262,55 @@ h2 {
     border-top: 1px solid #3998f1;
 }
 .dropdown-menu .nav-item .nav-link img {
-    width: 120px;
+    width: 150px;
+    padding-right: 10px;
 }
 .dropdown-menu .nav-item .nav-link.social img {
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
+    transition: all 0.5s ease;
 }
 .dropdown-menu .nav-item .nav-link {
+    font-family: 'Akkurat Light', serif;
+    font-size: 30px;
     margin: unset;
-    padding: 20px 12px;
+    padding: 20px 0px 20px 63px;
     transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+/*Any dropdown item that is not the social element container*/
+.dropdown-menu .nav-item .nav-link:not(.social) {
+    display: flex;
+    align-items: center;
 }
 .dropdown-menu .nav-item .nav-link.social {
-    padding: 10px;
+    padding: 20px 10px 20px 33px;
+    opacity: 1;
 }
 /*Extra dropdown styles that apply 
   when dropdown is open*/
 .dropdown-menu.show .flex-container {
     margin: 0px;
 }
-.dropdown-menu.show .nav-item .nav-link {
-    padding: 10px 12px;
+.dropdown-menu.show .nav-item:nth-child(1) .nav-link:not(.social) {
+    transition: all 0.3s ease-in-out 0s;
 }
-.dropdown-menu.show .nav-item .nav-link:hover {
+.dropdown-menu.show .nav-item:nth-child(2) .nav-link:not(.social) {
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.dropdown-menu.show .nav-item:nth-child(3) .nav-link:not(.social) {
+    transition: all 0.3s ease-in-out 0.4s;
+}
+.dropdown-menu.show .nav-item .nav-link:not(.social) {
+    padding: 20px 33px;
+    opacity: 1;
+}
+.dropdown-menu.show .nav-item .nav-link:not(.social):hover {
     background: #3DA8F5;
+    color: #fff;
+}
+.dropdown-menu.show .nav-item .nav-link.social:hover img {
+    transform: scale(1.1);
 }
 /*-----Main Section styles----*/
 .video-bg {
@@ -689,6 +715,14 @@ footer .text-container a.inline {
 }
 /*Media queries break at 1100px instead of standard tablet width of 991px for homepage graphic*/
 @media only screen and (max-width: 1100px){
+    /*Main section*/
+    .main header h1 {
+        font-size: 55px;
+    }
+    .main header {
+        top: 315px;
+    }
+    /*Eco-system*/
     .tracer-icons {
         display: block;
     }
