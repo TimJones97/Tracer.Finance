@@ -145,7 +145,7 @@ body {
     border: none;
     position: fixed;
     right: 40px;
-    top: 15px;
+    top: 20px;
     height: 30px;
     transition: all 0.5s ease;
     z-index: 999;
@@ -612,6 +612,9 @@ footer {
 }
 footer.grey {
     background: #F7F7F7;
+}
+footer.darkblue {
+    background: #03065E;
 }
 footer .text-container {
     padding-left: 80px;
@@ -1262,14 +1265,13 @@ footer .social-icons .social-link:hover {
     color: #fff;
 }
 
-/*-----------------HOME PAGE STYLES-----------------*/
+/*------------------LEARN PAGE------------------*/
 
 /*-----MAIN SECTION-----*/
 
 .main.learn {
     height: 40vh;
 }
-
 .main.learn .text-container {
     height: 100%;
 }
@@ -1354,6 +1356,7 @@ footer .social-icons .social-link:hover {
     border-bottom-left-radius: 100px;
     transition: transform 1s ease-in-out;
     animation: slideOut 3s ease-in-out forwards;
+    display: none;
 }
 .whitepapers .text-container .right-container .flex-container .scroll-prompt:hover {
     animation: none;
@@ -1412,6 +1415,33 @@ footer .social-icons .social-link:hover {
 .documentation .text-container .flex-container .info-block .tracer-btn:hover {
     color: #fff;
 }
+
+/*------------------BUILD PAGE------------------*/
+
+/*-----MAIN SECTION-----*/
+
+.main.build {
+    height: 40vh;
+}
+.main.build .text-container {
+    height: 100%;
+}
+.main.build .text-container h2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 40px;
+}
+
+/*-----BUILD INFO SECTION-----*/
+
+.build-info {
+    background: #03065E;
+    overflow: hidden;
+}
+/*WebGL for later*/
+/*https://codepen.io/spidoche/full/grePMG*/
+
 /*-------------------MEDIA QUERIES-------------------*/
 @media only screen and (max-width: 1600px){
 
@@ -1547,7 +1577,7 @@ footer .social-icons .social-link:hover {
         justify-content: unset;
     }
     .nav-container {
-        height: 70px;
+        height: 85px;
     }
     .navbar {
         height: 100%;
@@ -1555,7 +1585,7 @@ footer .social-icons .social-link:hover {
     }
     .navbar-brand {
         left: 40px;
-        top: 10px;
+        top: 17px;
         width: 120px;
     }
     .navbar-collapse .video-bg {
@@ -1761,6 +1791,7 @@ footer .social-icons .social-link:hover {
     /*-------------HOME PAGE-------------*/
 
     /*-----PARTNERS-----*/
+
     section.partners figure {
         display: inline-block;
         width: 100%;
@@ -1995,9 +2026,15 @@ footer .social-icons .social-link:hover {
         max-width: 500px;
     }
 
-    /*-------------LEARN PAGE-------------*/
+    /*---------------LEARN PAGE----------------*/
 
-    /*-----RIGHT CONTAINER FOR WHITEPAPER DOWNLOADS-----*/
+    /*-----MAIN SECTION-----*/
+
+    .main.learn .text-container h2 {
+        margin-top: 30px;
+    }
+
+    /*-----RIGHT CONTAINER - WHITEPAPERS-----*/
 
     .whitepapers .text-container .right-container {
         width: 100%;
