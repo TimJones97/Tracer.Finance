@@ -43,9 +43,28 @@ h1 {
 h2 {
     font-size: 32px;
 }
+body {
+    overflow-x: hidden;
+}
+
+/*----CUSTOM SCROLLBAR----*/
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+} 
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.7); 
+    border-radius: 6px;
+}
+
 /*-----------------HOME PAGE STYLES-----------------*/
 
-/*-----Nav styles-----*/
+/*-----NAVBAR-----*/
+
 .nav-container {
     margin: 0 auto;
     padding: 0px 80px;
@@ -71,7 +90,7 @@ h2 {
     width: 150px;
     position: fixed;
     left: 80px;
-    top: 15px;
+    top: 20px;
     opacity: 1;
     /*transition: all 0.2s ease;*/
     z-index: 1;
@@ -94,6 +113,7 @@ h2 {
     font-family: 'Akkurat';
     transition: all 0.5s ease;
 }
+.nav-item.active .nav-link,
 .nav-item .nav-link:hover {
     color: #3DA8F5;
 }
@@ -207,18 +227,19 @@ h2 {
     padding: 15px 25px 15px 35px;
 }
 .nav-link.social img {
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     padding-right: unset;
 }
-.bottom-nav .nav-link img {
+.bottom-nav .nav-link:not(.social) img {
     width: 120px;
     padding-right: 5px;
 }
 .bottom-nav .flex-container {
     margin-top: 0;
 }
-/*Dropdown menu for Tracer links*/
+/*------DROPDOWN MENU FOR TRACER LINKS------*/
+
 .nav-item.dropdown {
     list-style: none;
 }
@@ -232,7 +253,7 @@ h2 {
     padding: 0;
     position: fixed;
     left: 420px;
-    top: 15px;
+    top: 20px;
     z-index: 2;
 }
 .dropdown-menu {
@@ -295,13 +316,13 @@ h2 {
     margin: 0px;
 }
 .dropdown-menu.show .nav-item:nth-child(1) .nav-link:not(.social) {
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0.1s;
 }
 .dropdown-menu.show .nav-item:nth-child(2) .nav-link:not(.social) {
-    transition: all 0.3s ease-in-out 0.2s;
+    transition: all 0.3s ease-in-out 0.3s;
 }
 .dropdown-menu.show .nav-item:nth-child(3) .nav-link:not(.social) {
-    transition: all 0.3s ease-in-out 0.4s;
+    transition: all 0.3s ease-in-out 0.5s;
 }
 .dropdown-menu.show .nav-item .nav-link:not(.social) {
     padding: 20px 33px;
@@ -582,9 +603,14 @@ section.partners figure img {
     margin-top: 40px;
     transition: margin 0.3s ease;
 }
+
 /*--------FOOTER SECTION--------*/
+
 footer {
     background: #fff;
+}
+footer.grey {
+    background: #F7F7F7;
 }
 footer .text-container p,
 footer .text-container a, {
@@ -694,7 +720,20 @@ footer .text-container a.inline {
 .ellipse-container img {
     width: calc(33% - 10px);
 }
-
+footer .social-icons {
+    display: none;
+    justify-content: flex-start;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+footer .social-icons .social-link {
+    margin-right: 50px;
+    transition: all 0.5s ease;
+}
+footer .social-icons .social-link:hover {
+    transform: scale(1.1);
+}
 /*-------------------GOVERN PAGE-------------------*/
 .parallax-wrapper {
   z-index: -1;
@@ -770,7 +809,7 @@ footer .text-container a.inline {
 /*Proposals section*/
 .proposals {
     position: relative;
-    background: url('../images/govern/proposals_bg.png');
+    background: url('../images/govern/proposals_bg.svg');
     /* overflow: hidden; */
     background-size: cover;
     height: auto;
@@ -812,7 +851,7 @@ footer .text-container a.inline {
     transition: all 0.5s ease;
     cursor: pointer;
 }
-.proposals .text-container .live-proposals .proposal-row:hover {
+.proposals .text-container .live-proposals .coin-info-row:hover {
     transform: scale3d(1.02, 1.02, 1);
     background: #03065E;
     border: 2px solid #333;
@@ -856,7 +895,7 @@ footer .text-container a.inline {
 /*Hide all of the span elements for show on mobile only*/
 .proposals .text-container .live-proposals .proposal-row td span {
     display: none;
-    color: #000;
+    color: #333333;
 }
 /*Place the sub text on its own line underneath proposal title*/
 .proposals .text-container .live-proposals .proposal-row td.proposal-title span.sub-text {
@@ -886,18 +925,18 @@ footer .text-container a.inline {
 .proposals .text-container .live-proposals .proposal-row td {
     transition: all 0.5s ease;
 }
-.proposals .text-container .live-proposals .proposal-row:hover td {
+.proposals .text-container .live-proposals .coin-info-row:hover td {
     background: #03065E;
 }
-.proposals .text-container .live-proposals .proposal-row:hover .proposal-title {
+.proposals .text-container .live-proposals .coin-info-row:hover .proposal-title {
     color: #fff;
 }
-.proposals .text-container .live-proposals .proposal-row:hover .time-left,
-.proposals .text-container .live-proposals .proposal-row:hover .proposal-title span.sub-text {
+.proposals .text-container .live-proposals .coin-info-row:hover .time-left,
+.proposals .text-container .live-proposals .coin-info-row:hover .proposal-title span.sub-text {
     color: #3DA8F5;   
 }
 
-/*Governance Section*/
+/*------GOVERNANCE SECTION------*/
 
 .governance {
     background: #fff;
@@ -933,6 +972,287 @@ footer .text-container a.inline {
 .governance .text-container .flex-container .governance-info .tracer-btn:hover {
     color: #fff;
 }
+
+/*-------------------MEDIA QUERIES-------------------*/
+
+/*---MAIN HEADER---*/
+.main.trade {
+    position: relative;
+    height: 60vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+.main.trade header {
+    top: 100px;
+}
+/*Tracer Perpetuals image container*/
+.main.trade header .tracer-perpetuals-container {
+    display: flex;
+    align-items: center;
+}
+.main.trade header .tracer-perpetuals-container img {
+    width: 210px;
+    padding-right: 10px;
+}
+.main.trade header .tracer-perpetuals-container p {
+    font-size: 40px;
+    font-family: 'Akkurat Light', serif;
+    margin: 0;
+}
+.main.trade header .tracer-btn.read-whitepaper {
+    width: 215px;
+}
+.main.trade header .tracer-btn.read-whitepaper:hover {
+    width: 270px;
+}
+.main.trade header .sml-blue {
+    color: #3DA8F5;
+    font-size: 16px;
+    max-width: 360px;
+}
+.main.trade header .sml-blue:first-of-type {
+    margin-bottom: 20px;
+}
+.main.trade .tracer-tablet {
+    position: absolute;
+    top: 125px;
+    right: -100px;
+    z-index: 1;
+    width: 1000px;
+}
+.main.trade .tracer-tablet img {
+    width: 100%;
+}
+
+/*------PERPETUAL MARKETS SECTION------*/
+
+.perpetuals {
+    position: relative;
+    background: url('../images/govern/proposals_bg.svg');
+    /* overflow: hidden; */
+    background-size: cover;
+    height: auto;
+    background-position: top;
+    padding-top: 300px;
+}
+.perpetuals .text-container {
+    padding: 0px 65px 40px 65px;
+}
+.perpetuals .text-container p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.perpetuals .text-container h2 {
+    color: #050CBD;
+}
+.perpetuals .text-container h2,
+.perpetuals .text-container p {
+    padding-left: 35px;
+}
+
+/*-----PERPETUALS TABLE-----*/
+
+.perpetuals .text-container table.live-perpetual-markets {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    margin: 0 auto;
+    font-family: 'Akkurat', serif;
+    border: none;
+    transition: all 0.5s ease;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row {
+    height: 60px;
+    background: #fff;
+    box-shadow: 0px 3px 10px #00000033;
+    border-radius: 16px;
+    font-size: 20px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    border: 2px solid transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover {
+    transform: scale3d(1.02, 1.02, 1);
+    background: #03065E;
+    border: 2px solid #333;
+}
+/*Apply appropriate color to the headers*/
+.perpetuals .text-container .live-perpetual-markets th {
+    font-size: 24px;
+    font-family: 'Akkurat Light', serif;
+    padding-bottom: 10px;
+    color: #A3A3A3;
+    text-align: right;
+}
+.perpetuals .text-container .live-perpetual-markets th.market-header {
+    padding-left: 37px;
+    text-align: left;
+}
+.perpetuals .text-container .live-perpetual-markets th.cumulative-header {
+}
+.perpetuals .text-container .live-perpetual-markets th.quantity-header {
+}
+.perpetuals .text-container .live-perpetual-markets th.price-header {
+    color: #333333;
+}
+.perpetuals .text-container .live-perpetual-markets th.fluctuation-header {
+    color: #333333;
+    padding-right: 20px;
+}
+
+/*Apply border radius to first and last elements in table row*/
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td:first-of-type {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding-left: 37px;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td:last-of-type {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/*General rules for td in table*/
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td {
+    border: none;
+    text-align: right;
+    color: #A3A3A3;
+}
+
+/*Hide all of the span elements for show on mobile only*/
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td span {
+    display: none;
+    color: #333333;
+}
+/*Light grey colour for cumulative and quantity span elements*/
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.cumulative span,
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.quantity span {
+    color: #A3A3A3;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.ticker-pair {
+    text-align: left;
+    display: table-cell;
+    height: 60px;
+}
+/*Ticker image*/
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.ticker-pair img {
+    height: 44px;
+    width: 44px;
+    margin-right: 20px;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.ticker-pair span.pair-text {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/*Color the diferent table elements*/
+
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.cumulative {
+    color: #A3A3A3;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.quantity {
+    color: #A3A3A3;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.price {
+    color: #333333;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation {
+    padding-right: 20px;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation.down {
+    color: #FF2D4A;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation.up {
+    color: #01AE67;
+}
+/*td hover effects*/
+.perpetuals .text-container .live-perpetual-markets .coin-info-row td {
+    transition: all 0.5s ease;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td {
+    background: #03065E;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td.ticker-pair span.pair-text,
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td.price {
+    color: #fff;
+}
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover .time-left,
+.perpetuals .text-container .live-perpetual-markets .coin-info-row:hover .proposal-title span.sub-text {
+    color: #3DA8F5;   
+}
+
+/*-----PERPETUALS INFO SECTION-----*/
+
+.perpetuals-info {
+    background: #fff;
+}
+.perpetuals-info .text-container h2 {
+    color: #050CBD;
+}
+.perpetuals-info .text-container .flex-container {
+    padding-bottom: 75px;
+}
+.perpetuals-info .text-container .flex-container .info-block {
+    width: 33%;
+    padding-right: 80px;
+}
+.perpetuals-info .text-container .flex-container .info-block h3.title {
+    font-size: 24px;
+    color: #050CBD;
+    margin-bottom: 10px;
+}
+.perpetuals-info .text-container .flex-container .info-block p.sub-heading {
+    color: #333333;
+    margin-bottom: 5px;
+}
+.perpetuals-info .text-container .flex-container .info-block p.perp-text {
+    color: #2E4848;
+}
+.perpetuals-info .text-container .flex-container .info-block .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+    margin-top: 10px;
+}
+.perpetuals-info .text-container .flex-container .info-block .tracer-btn:hover {
+    color: #fff;
+}
+
+/*-------JOIN SECTION-------*/
+
+.join {
+    background: #F7F7F7;
+}
+.join .text-container h2 {
+    color: #050CBD;
+}
+.join .text-container .flex-container {
+    padding-bottom: 75px;
+    margin-top: 5px;
+}
+.join .text-container .flex-container .info-block {
+    width: 33%;
+    padding-right: 80px;
+}
+.join .text-container .flex-container .info-block p.title {
+    color: #333333;
+    margin-bottom: 10px;
+    font-family: 'Akkurat Bold', serif;
+}
+.join .text-container .flex-container .info-block p.sign-up-text {
+    color: #2E4848;
+}
+.join .text-container .flex-container .info-block .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+    margin-top: 10px;
+}
+.join .text-container .flex-container .info-block .tracer-btn:hover {
+    color: #fff;
+}
+
+
 /*-------------------MEDIA QUERIES-------------------*/
 /*Break here for menu*/
 @media only screen and (max-width: 1600px){
@@ -955,9 +1275,12 @@ footer .text-container a.inline {
         margin-top: 70px;
     }
 }
-/*Media queries break at 1100px instead of standard tablet width of 991px for homepage graphic*/
+/*Media queries break at 1200px instead of standard tablet width of 991px for large graphics*/
 @media only screen and (max-width: 1200px){
-    /*Main section*/
+
+    /*---------------HOME PAGE--------------*/
+
+    /*-----MAIN SECTION-----*/
     .main header h1 {
         font-size: 55px;
     }
@@ -1048,6 +1371,7 @@ footer .text-container a.inline {
     .nav-item.dropdown:hover {
         background: transparent;
     }
+    .nav-item.active .nav-link,
     .nav-item .nav-link:hover {
         color: #fff;
     }
@@ -1062,6 +1386,7 @@ footer .text-container a.inline {
     }
     .navbar {
         height: 100%;
+        max-width: unset;
     }
     .navbar-brand {
         left: 20px;
@@ -1163,11 +1488,44 @@ footer .text-container a.inline {
     .governance .text-container .flex-container {
         flex-direction: column;
     }
+
+    /*-------------TRADE PAGE-------------*/
+
+    /*-----MAIN SECTION-----*/
+    .main.trade .tracer-tablet {
+        top: 180px;
+        width: 650px;
+    }
+
+    /*-----PERPETUALS-----*/
+    .perpetuals .text-container h2 {
+        font-size: 24px;
+    }
+    .perpetuals .text-container .live-perpetual-markets th {
+        font-size: 16px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row {
+        font-size: 14px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td:first-of-type {
+        padding-left: 37px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation {
+        padding-right: 37px;
+    }
+
+
 }
 @media only screen and (max-width: 767px){
-    /*Main section*/
-    
-    /*Partners*/
+    /*-------------NAVBAR-------------*/
+    .bottom-nav ul .nav-item .nav-link {
+        padding: 18px 35px 18px 18px;
+    }
+
+
+    /*-------------HOME PAGE-------------*/
+
+    /*-----PARTNERS-----*/
     section.partners figure {
         display: inline-block;
         width: 100%;
@@ -1184,7 +1542,8 @@ footer .text-container a.inline {
     section.partners .text-container .flex-container {
         display: block;
     }
-    /*Main section*/
+
+    /*-----MAIN HERO SECTION-----*/
     .main header {
         top: 300px;
         left: 40px;
@@ -1214,7 +1573,9 @@ footer .text-container a.inline {
     .tracer-btn:hover {
         width: 150px;
     }
-    /*Footer*/
+
+    /*-------------FOOTER-------------*/
+
     footer .text-container .right-container {
         margin-top: 50px;
     }
@@ -1262,14 +1623,17 @@ footer .text-container a.inline {
         text-align: center;
         padding-left: 0px;
     }
-}
-@media only screen and (max-width: 479px){
+
+    /*-------------GOVERN PAGE-------------*/
+
     /*-----PROPOSALS-----*/
+
     .proposals .text-container .live-proposals thead tr th {
         display: none;
     }
     .proposals .text-container .live-proposals thead tr th.proposals-header {
         display: block;
+        padding-left: 20px;
     }
     .proposals .text-container .live-proposals .proposal-row {
         display: inline-flex;
@@ -1290,6 +1654,7 @@ footer .text-container a.inline {
     }
     .proposals .text-container .live-proposals .proposal-row td.proposal-title span.sub-text {
         font-size: 16px;
+        padding-top: 3px;
     }
     .proposals .text-container {
         padding: 0px 20px 40px 20px;
@@ -1308,5 +1673,71 @@ footer .text-container a.inline {
         position: absolute;
         right: 0px;
         bottom: 15px;
+    }
+
+    /*-------------TRADE PAGE-------------*/
+
+    /*-----PERPETUALS-----*/
+
+    .perpetuals .text-container .live-perpetual-markets thead tr th {
+        display: none;
+    }
+/*    .perpetuals .text-container .live-perpetual-markets thead tr th.proposals-header {
+        display: block;
+        padding-left: 20px;
+    }*/
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row {
+        display: inline-flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td {
+        font-size: 16px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td.market-title {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    .perpetuals .text-container {
+        padding: 0px 20px 40px 20px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td span:not(.pair-text) {
+        position: absolute;
+        left: 20px;
+        display: inline;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row td.fluctuation {
+        display: inline;
+        position: relative;
+        padding-right: 10px;
+    }
+}
+@media only screen and (max-width: 479px){
+    /*-------------GOVERN PAGE-------------*/
+
+    /*-----MAIN SECTION-----*/
+
+    .main.govern header .tracer-DAO-container img {
+        width: 150px;
+    }
+    .main.govern header .tracer-DAO-container p {
+        font-size: 32px;
+    }
+    /*-----PROPOSALS-----*/
+    section.proposals {
+        top: -140px;
+    }
+
+    /*-------------FOOTER-------------*/
+    footer .text-container {
+        padding: 40px 40px 0px 40px;
+    }
+    footer .social-icons {
+        display: flex;
     }
 }
