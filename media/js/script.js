@@ -56,7 +56,6 @@ $(window).resize(function(){
 $(document).ready(function(){
 	setCopyrightYear();
 	navBGScroll();
-	createScrollReveal();
 	new universalParallax().init({
 	  speed: 3.0
 	});
