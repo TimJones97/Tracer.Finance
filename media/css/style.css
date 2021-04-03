@@ -851,7 +851,7 @@ footer .social-icons .social-link:hover {
     transition: all 0.5s ease;
     cursor: pointer;
 }
-.proposals .text-container .live-proposals .coin-info-row:hover {
+.proposals .text-container .live-proposals .proposal-row:hover {
     transform: scale3d(1.02, 1.02, 1);
     background: #03065E;
     border: 2px solid #333;
@@ -925,14 +925,14 @@ footer .social-icons .social-link:hover {
 .proposals .text-container .live-proposals .proposal-row td {
     transition: all 0.5s ease;
 }
-.proposals .text-container .live-proposals .coin-info-row:hover td {
+.proposals .text-container .live-proposals .proposal-row:hover td {
     background: #03065E;
 }
-.proposals .text-container .live-proposals .coin-info-row:hover .proposal-title {
+.proposals .text-container .live-proposals .proposal-row:hover .proposal-title {
     color: #fff;
 }
-.proposals .text-container .live-proposals .coin-info-row:hover .time-left,
-.proposals .text-container .live-proposals .coin-info-row:hover .proposal-title span.sub-text {
+.proposals .text-container .live-proposals .proposal-row:hover .time-left,
+.proposals .text-container .live-proposals .proposal-row:hover .proposal-title span.sub-text {
     color: #3DA8F5;   
 }
 
