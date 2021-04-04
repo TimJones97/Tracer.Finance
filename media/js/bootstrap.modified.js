@@ -816,16 +816,16 @@
         t
     }();
     e(document).on("click.bs.collapse.data-api", '[data-toggle="collapse"]', (function(t) {
-        // "A" === t.currentTarget.tagName && t.preventDefault();
-        // var n = e(this)
-        //   , i = a.getSelectorFromElement(this)
-        //   , o = [].slice.call(document.querySelectorAll(i));
-        // e(o).each((function() {
-        //     var t = e(this)
-        //       , i = t.data("bs.collapse") ? "toggle" : n.data();
-        //     C._jQueryInterface.call(t, i)
-        // }
-        // ))
+        "A" === t.currentTarget.tagName && t.preventDefault();
+        var n = e(this)
+          , i = a.getSelectorFromElement(this)
+          , o = [].slice.call(document.querySelectorAll(i));
+        e(o).each((function() {
+            var t = e(this)
+              , i = t.data("bs.collapse") ? "toggle" : n.data();
+            C._jQueryInterface.call(t, i)
+        }
+        ))
     }
     )),
     e.fn[y] = C._jQueryInterface,
@@ -2560,4 +2560,3 @@
     })
 }
 ));
-//# sourceMappingURL=bootstrap.min.js.map
