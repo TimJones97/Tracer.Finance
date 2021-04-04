@@ -56,7 +56,7 @@ camera.position.z = 220;
 var greyMat = new THREE.MeshPhongMaterial({
   // color: new THREE.Color("rgb(125,127,129)"),
   // opacity: 0.1,
-  opacity: 1,
+  opacity: 0,
   shading: THREE.FlatShading,
   transparent: true,
   vertexColors: true
