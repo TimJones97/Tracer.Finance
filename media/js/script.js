@@ -50,7 +50,6 @@ function changeButtonText(){
 		$('.tracer-btn.read-whitepaper').text('Whitepaper')
 	}
 }
-
 // For use for the blog posts for cutting 
 // down the text displayed on the preview
 function truncate(input) {

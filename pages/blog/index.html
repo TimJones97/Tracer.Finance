@@ -101,6 +101,9 @@
 	  	</section>
   	  	<section class="blog-posts">
   	  		<div class="text-container">
+  	  			<a href="#">
+  	  				<button class="tracer-btn filter">Filter</button>
+  	  			</a>
   	  			<div class="left-container">
   	  				<div class="category">
 	  	  				<p class="title">Latest Articles</p>
@@ -418,6 +421,13 @@
 		  	document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')
 		</script>
 		<script>
+			//Function to open the filters element
+			function openFilters(){
+				$('.tracer-btn.filter').click(function(){
+					$('.left-container').toggleClass('show');
+				})
+			}
+			openFilters();
 		  	// Only create ScrollReveal on this page
 			createScrollReveal();
 		</script>
