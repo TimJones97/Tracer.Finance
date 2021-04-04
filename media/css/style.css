@@ -1540,6 +1540,10 @@ footer .social-icons .social-link:hover {
 .build-anim #container {
     width: 100%;
 }
+.build-anim #container canvas {
+    margin: 0 auto;
+    display: block;
+}
 .build-anim p {
     font-family: 'Akkurat Light';
     text-align: center;

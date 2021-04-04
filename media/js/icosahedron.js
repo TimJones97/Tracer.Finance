@@ -8,16 +8,16 @@ var renderer = new THREE.WebGLRenderer({
 var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
 var scene = new THREE.Scene();
 var Ico;
-var pollInterval;
 
 scene.add(camera);
 renderer.setSize(600, 600);
 
 // Making the canvas responsive
-function onWindowResize() {
+function onWindowResize(){
+    console.log('hi');
 
   var screenWidth = $(window).width();
-  if (screenWidth <= 400) {
+  if (screenWidth <= 440) {
     renderer.setSize(310, 310);
   } else if (screenWidth <= 479) {
     renderer.setSize(400, 400);
@@ -34,16 +34,7 @@ function onWindowResize() {
 }
 onWindowResize();
 $(window).resize(function(){
-	onWindowResize();
-	// Set up a polling interval to check for new screen
-	// widths in case device is slow to resize
-	pollInterval = setInterval(function(){
-		onWindowResize();
-	}, 100);
-	setTimeout(function(){
-		// Stop polling for screen resize widths after 1 second
-		clearInterval(pollInterval);
-	}, 1000);
+  onWindowResize();
 });
 
 
@@ -91,6 +82,14 @@ orbit.minPolarAngle = Math.PI * 0.3; // radians
 orbit.maxPolarAngle = Math.PI * 0.7; // radians
 orbit.minAzimuthAngle = - Math.PI / 2 * 0.6 // radians
 orbit.maxAzimuthAngle = (Math.PI / 2) * 0.6; // radians
+
+var hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
+hemiLight.position.set( 0, 300, 0 );
+scene.add( hemiLight );
+
+var dirLight = new THREE.DirectionalLight( 0xffffff );
+dirLight.position.set( 75, 300, -75 );
+scene.add( dirLight );
 
 // sprites
 var txtLoader = new THREE.TextureLoader();
