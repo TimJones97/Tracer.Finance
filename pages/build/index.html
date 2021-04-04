@@ -56,10 +56,10 @@
 				    <li class="nav-item">
 				        <a class="nav-link" href="#">Trade</a>
 				    </li>
-				    <li class="nav-item active">
+				    <li class="nav-item">
 				        <a class="nav-link" href="#">Learn</a>
 				      </li>
-				    <li class="nav-item">
+				    <li class="nav-item active">
 				        <a class="nav-link" href="#">Build</a>
 				    </li>
 				    <li class="nav-item blog">
@@ -107,20 +107,26 @@
 	  			<div class="left-container">
 	  				<div class="flex-container">
 	  					<div class="build-text">
+	  						<div class="logo-spacer.empty">
+	  						</div>
 	  						<p class="title">Build with the DAO</p>
 	  						<p class="text">
 	  							Tracer is entirely governed by the Tracer DAO. The Tracer DAO is composed of individuals from diverse backgrounds, including: traders, developers, economists, market makers and designers. This collective of creatives are scattered around the globe, but are untied through the common goal of building financial tools that better the individual.
 	  						</p>
 	  					</div>
 	  					<div class="build-text">
-	  						<img src="../../media/images/partners/lions_mane_logo.svg">
+	  						<div class="logo-spacer">
+	  							<img src="../../media/images/partners/lions_mane_logo_white.svg">
+	  						</div>
 	  						<p class="title">Software Development</p>
 	  						<p class="text">
 	  							Lion’s Mane are a software development company who are working for the Tracer DAO. The team consists of many economists, hackers and creatives who have been building in the DeFi space for the past few years. They are currently looking for more hungry individuals to join their pride.
 	  						</p>
 	  					</div>
 	  					<div class="build-text">
-	  						<img src="../../media/images/partners/RMIT_BIH_logo.svg">
+	  						<div class="logo-spacer">
+	  							<img class="rmit" src="../../media/images/partners/RMIT_BIH_logo_dark.svg">
+	  						</div>
 	  						<p class="title">Research & Development</p>
 	  						<p class="text">
 	  							Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
@@ -129,24 +135,10 @@
 	  				</div>
 	  			</div>
 		  		<div class="right-container">
-		  			<!-- <div class="build-anim">
-		  				<div class="ring-outer">
-	        				<img src="../../media/images/build/circle_outer.svg">
-		  				</div>
-		  				<div class="hex-inner">
-			        		<img class="hex-img" src="../../media/images/build/hexagon.svg"/>
-			        		<img class="circle-img" src="../../media/images/build/circle.svg"/>
-			        		<img class="circle-inner-img" src="../../media/images/build/circle_inner.svg"/>
-			        		<div class="logo-middle">
-			        			<img class="logo" src="../../media/images/general/tracer_factory.svg"/>
-			        			<div class="tracer-factory-text">
-			        				<img src="../../media/images/general/tracer_logo.svg">
-			        				<p>Factory</p>
-			        			</div>
-			        		</div>
-		  				</div>
-		  			</div> -->
-		  			<div id="container"></div>
+		  			<div class="build-anim">
+		  				<div id="container"></div>
+		  				<p>DAO Governors</p>
+		  			</div>
 		  		</div>	
 	  		</div>
 	  	</section>
@@ -155,7 +147,7 @@
 				<hr>
 				<div class="left-container">
 					<div class="logo-container">
-						<img src="../../media/images/footer/tracer_logo_blue.svg">
+						<img src="../../media/images/footer/tracer_logo_white.svg">
 						<p>&copy;&nbsp;<span class="year"></span> Tracer Ltd</p>
 					</div>
 				</div>
@@ -203,9 +195,9 @@
 						</a>
 						<input class="tracer-btn search" placeholder="Search">
 						<div class="ellipse-container">
-							<img src="../../media/images/footer/ellipse.svg">
-							<img src="../../media/images/footer/ellipse.svg">
-							<img src="../../media/images/footer/ellipse.svg">
+							<img src="../../media/images/footer/ellipse_white.svg">
+							<img src="../../media/images/footer/ellipse_white.svg">
+							<img src="../../media/images/footer/ellipse_white.svg">
 						</div>
 					</div>
 				</div>
@@ -232,162 +224,12 @@
 		<!-- P5 WebGL -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ==" crossorigin="anonymous"></script>
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js" integrity="sha512-UPS93nFm3rHFvozU2gLyVZdwMj38GhGqO/zA5r9UxEd4pIkubkIn8brpvM0DPi6XKiQ6KPrfpK/c8YDC2VglKw==" crossorigin="anonymous"></script>
 
 		<!-- Local scripts -->
-	 	<script type="module">
-
-			import * as THREE from '../../media/js/three.module.js';
-
-			let container;
-
-			let camera, scene, renderer;
-
-			let mouseX = 0, mouseY = 0;
-
-			let windowHalfX = window.innerWidth / 2;
-			let windowHalfY = window.innerHeight / 2;
-
-			init();
-			animate();
-
-			function init() {
-
-				container = document.getElementById( 'container' );
-
-				camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.z = 1800;
-
-				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xffffff );
-
-				const light = new THREE.DirectionalLight( 0xffffff );
-				light.position.set( 0, 0, 1 );
-				scene.add( light );
-
-				// shadow
-
-				const canvas = document.createElement( 'canvas' );
-				canvas.width = 128;
-				canvas.height = 128;
-
-				const context = canvas.getContext( '2d' );
-				const gradient = context.createRadialGradient( canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2 );
-				gradient.addColorStop( 0.1, 'rgba(210,210,210,1)' );
-				gradient.addColorStop( 1, 'rgba(255,255,255,1)' );
-
-				context.fillStyle = gradient;
-				context.fillRect( 0, 0, canvas.width, canvas.height );
-
-				const shadowTexture = new THREE.CanvasTexture( canvas );
-
-				const shadowMaterial = new THREE.MeshBasicMaterial( { map: shadowTexture } );
-				const shadowGeo = new THREE.PlaneGeometry( 300, 300, 1, 1 );
-
-				let shadowMesh;
-
-				shadowMesh = new THREE.Mesh( shadowGeo, shadowMaterial );
-				shadowMesh.position.y = - 250;
-				shadowMesh.rotation.x = - Math.PI / 2;
-				scene.add( shadowMesh );
-
-				shadowMesh = new THREE.Mesh( shadowGeo, shadowMaterial );
-				shadowMesh.position.y = - 250;
-				shadowMesh.position.x = - 400;
-				shadowMesh.rotation.x = - Math.PI / 2;
-				scene.add( shadowMesh );
-
-				shadowMesh = new THREE.Mesh( shadowGeo, shadowMaterial );
-				shadowMesh.position.y = - 250;
-				shadowMesh.position.x = 400;
-				shadowMesh.rotation.x = - Math.PI / 2;
-				scene.add( shadowMesh );
-
-				const radius = 200;
-
-				const geometry1 = new THREE.IcosahedronGeometry( radius, 1 );
-
-				const count = geometry1.attributes.position.count;
-				geometry1.setAttribute( 'color', new THREE.BufferAttribute( new Float32Array( count * 3 ), 3 ) );
-
-				const geometry2 = geometry1.clone();
-				const geometry3 = geometry1.clone();
-
-				const color = new THREE.Color();
-				const positions1 = geometry1.attributes.position;
-				const positions2 = geometry2.attributes.position;
-				const positions3 = geometry3.attributes.position;
-				const colors1 = geometry1.attributes.color;
-				const colors2 = geometry2.attributes.color;
-				const colors3 = geometry3.attributes.color;
-
-				for ( let i = 0; i < count; i ++ ) {
-
-					color.setHSL( ( positions1.getY( i ) / radius + 1 ) / 2, 1.0, 0.5 );
-					colors1.setXYZ( i, color.r, color.g, color.b );
-
-					color.setHSL( 0, ( positions2.getY( i ) / radius + 1 ) / 2, 0.5 );
-					colors2.setXYZ( i, color.r, color.g, color.b );
-
-					color.setRGB( 1, 0.8 - ( positions3.getY( i ) / radius + 1 ) / 2, 0 );
-					colors3.setXYZ( i, color.r, color.g, color.b );
-
-				}
-
-				const material = new THREE.MeshPhongMaterial( {
-					color: 0xffffff,
-					flatShading: true,
-					vertexColors: true,
-					shininess: 0
-				} );
-
-				const wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x000000, wireframe: true, transparent: true } );
-
-				let mesh = new THREE.Mesh( geometry1, material );
-				let wireframe = new THREE.Mesh( geometry1, wireframeMaterial );
-
-				mesh = new THREE.Mesh( geometry3, material );
-				wireframe = new THREE.Mesh( geometry3, wireframeMaterial );
-				mesh.add( wireframe );
-				scene.add( mesh );
-
-				renderer = new THREE.WebGLRenderer( { antialias: true } );
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				container.appendChild( renderer.domElement );
-
-				document.addEventListener( 'mousemove', onDocumentMouseMove );
-
-				window.addEventListener( 'resize', onWindowResize );
-			}
-
-			function onWindowResize() {
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-			}
-
-			function onDocumentMouseMove( event ) {
-				mouseX = ( event.clientX - windowHalfX );
-				mouseY = ( event.clientY - windowHalfY );
-			}
-
-			function animate() {
-				requestAnimationFrame( animate );
-				render();
-			}
-
-			function render() {
-				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
-
-				camera.lookAt( scene.position );
-				renderer.render( scene, camera );
-			}
-		</script>
+		<script type="module" src="../../media/js/OrbitControls.js"></script>
+		<script src="../../media/js/TrackballControls.js"></script>
+		<script type="module" src="../../media/js/icosahedron.js"></script>
 		<script>
 		  document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')
 		</script>

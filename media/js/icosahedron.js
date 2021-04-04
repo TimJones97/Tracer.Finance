@@ -1,119 +1,122 @@
-let canvas;
-let mesh;
-let xRotationGlobal = 0;
-let yRotationGlobal = 0.1;
-let zRotationGlobal = 0;
+import { OrbitControls } from './OrbitControls.js';
+
+var $container = $('#container');
+var renderer = new THREE.WebGLRenderer({
+  antialias: true,
+  alpha: true
+});
+var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
+var scene = new THREE.Scene();
+var Ico;
 
 
-// New
-let xRotate = 0;
-let yRotate = 0;
-function setup()
-{
-    canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-    canvas.position(0,0); clear();
-    
-    if(height < width)
-      mesh = new Isocahedron(height * 0.3);
-    else 
-      mesh = new Isocahedron(width * 0.3);
+scene.add(camera);
+renderer.setSize(600, 600);
+
+// Making the canvas responsive
+function onWindowResize() {
+
+  var screenWidth = $(window).width();
+  if (screenWidth <= 479) {
+    renderer.setSize(350, 350);
+  } else if (screenWidth <= 767) {
+    renderer.setSize(450, 450);
+  } else if (screenWidth <= 991) {
+    renderer.setSize(500, 500);
+  } else if (screenWidth <= 1200) {
+    renderer.setSize(600, 600);
+  } else if (screenWidth <= 1366) {
+    renderer.setSize(650, 650);
+  }
+  camera.updateProjectionMatrix();
 }
-function draw()
-{
-    clear();
-    handleRotation();
-    orbitControl();
-    noFill();
-    mesh.draw();
-}
-// document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+onWindowResize();
+window.addEventListener('resize', onWindowResize, false);
 
-// function onDocumentMouseMove( event ) {
-//     mouseX = event.clientX - window.innerWidth / 2;
-//     mouseY = event.clientY - window.innerHeight / 2;
-// }
 
-function handleRotation()
-{   
-    xRotate =  -mouseY / 500;
-    yRotate = mouseX / 500;
-    rotateX(xRotate);
-    rotateY(yRotate);
-    // rotateZ(zRotationGlobal);
-  
-    xRotationGlobal+= 0.01;
-    if(xRotationGlobal >= TWO_PI)
-    {
-      xRotationGlobal = 0;
-    }
-}
-class Isocahedron
-{
-    constructor(radius)
-    {
-        this.radius = radius;
+$container.append(renderer.domElement);
 
-        let goldenRatio = (1 + Math.sqrt(5)) / 2;
-        // First angle displacement from north or south pole
-        let alpha = 1 / 2; 
-        // Second angle displacement from north or south pole
-        var beta = 1 / (2 * goldenRatio); 
-    
-        // Vertices defined by applying the alpha and beta angles
-        this.vertices = [
-            createVector(  0,  beta, -alpha),
-            createVector(  beta,  alpha,  0),
-            createVector( -beta,  alpha,  0),
-            createVector(  0,  beta,  alpha),
-            createVector(  0, -beta,  alpha),
-            createVector( -alpha,  0,  beta),
-            createVector(  alpha,  0,  beta),
-            createVector(  0, -beta, -alpha),
-            createVector(  alpha,  0, -beta),
-            createVector( -alpha,  0, -beta),
-            createVector(  beta, -alpha,  0),
-            createVector( -beta, -alpha,  0)
-          ];
-        
-        // Vertices are normalized and multiplied by radius
-        this.vertices = this.vertices.map(function(v) { return v.normalize().mult(radius); })
-        
-        // faces are a set of triangles made up of 3 vertices
-        this.faces = [
-            [  1,  0,  2 ],
-            [  2,  3,  1 ],
-            [  4,  3,  5 ],
-            [  6,  3,  4 ],
-            [  7,  0,  8 ],
-            [  9,  0,  7 ],
-            [ 10,  4, 11 ],
-            [ 11,  7, 10 ],
-            [  5,  2,  9 ],
-            [  9, 11,  5 ],
-            [  8,  1,  6 ],
-            [  6, 10,  8 ],
-            [  5,  3,  2 ],
-            [  1,  3,  6 ],
-            [  2,  0,  9 ],
-            [  8,  0,  1 ],
-            [  9,  7, 11 ],
-            [ 10,  7,  8 ],
-            [ 11,  4,  5 ],
-            [  6,  4, 10 ]
-          ];
-    }
-    draw()
-    {
-        this.faces.forEach(triangle =>{
-            beginShape();
-            for(let i = 0; i <= 2; i++)
-            {
-                stroke(61, 168, 245);
-                strokeWeight(2);
-                let v = this.vertices[triangle[i]];
-                vertex(v.x, v.y, v.z)
-            }
-            endShape();
-        })
-    }
+// Camera
+camera.position.z = 220;
+
+// Material
+var greyMat = new THREE.MeshPhongMaterial({
+  // color: new THREE.Color("rgb(125,127,129)"),
+  // opacity: 0.1,
+  opacity: 0,
+  shading: THREE.FlatShading,
+  transparent: true,
+  vertexColors: true
+});
+
+// instantiate a loader
+var group = new THREE.Object3D();
+scene.add(group);
+var image = '../../media/images/build/tracer_factory.png';
+var loader = new THREE.TextureLoader();
+loader.load( image, function ( texture ) {
+    var geometry = new THREE.PlaneGeometry(100, 100);
+    var material = new THREE.MeshBasicMaterial( { map: texture } );
+    var mesh = new THREE.Mesh( geometry, material );
+    group.add( mesh );
+});
+
+var L2 = new THREE.PointLight();
+L2.position.z = 1900;
+L2.position.y = 1850;
+L2.position.x = 1000;
+scene.add(L2);
+camera.add(L2);
+
+var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(125, 1), greyMat);
+Ico.rotation.z = 0.5;
+
+const wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x3DA8F5, wireframe: true, transparent: true } );
+
+let wireframe = new THREE.Mesh( new THREE.IcosahedronGeometry(125, 1), wireframeMaterial );
+
+Ico.add( wireframe );
+
+scene.add(Ico);
+var trackballControl = new THREE.TrackballControls(camera, renderer.domElement);
+trackballControl.rotateSpeed = 1.0; 
+trackballControl.noZoom = true;
+
+const orbit = new OrbitControls( camera, renderer.domElement );
+orbit.enableZoom = false;
+orbit.minPolarAngle = Math.PI * 0.3; // radians
+orbit.maxPolarAngle = Math.PI * 0.7; // radians
+orbit.minAzimuthAngle = - Math.PI / 2 * 0.6 // radians
+orbit.maxAzimuthAngle = (Math.PI / 2) * 0.6; // radians
+
+// sprites
+var txtLoader = new THREE.TextureLoader();
+txtLoader.setCrossOrigin("");
+var textures = [
+  "../../media/images/build/person.png",
+  "../../media/images/build/person.png"
+];
+var direction = new THREE.Vector3();
+Ico.geometry.vertices.forEach(function(vertex, index){
+	var texture = txtLoader.load(textures[index % 3]);
+	var spriteMaterial = new THREE.SpriteMaterial({map: texture});
+	var sprite = new THREE.Sprite(spriteMaterial);
+  sprite.scale.setScalar(15);
+  direction.copy(vertex).normalize();
+  sprite.position.copy(vertex).addScaledVector(direction, 10);
+  Ico.add(sprite);
+});
+
+function update() {
+  Ico.rotation.x += 2 / 2000;
+  Ico.rotation.y += 2 / 2000;
 }
+
+// Render
+function render() {
+  trackballControl.update();
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+  update();
+}
+render();
