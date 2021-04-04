@@ -518,7 +518,7 @@ section.eco-system .right-container h2 {
     box-sizing: border-box;
     border-radius: 10px;
     margin-bottom: unset;
-    transition: all 0.5s ease;
+    /*transition: all 0.5s ease;*/
 }
 .tracer-icons figure:hover {
     background: #3DA8F5;
@@ -1900,74 +1900,16 @@ a.post-link-container {
 
     /*-----ECO-SYSTEM SECTION-----*/
 
-    .tracer-icons {
-        display: block;
-    }
-    .arrow-flow .arrow-container {
-        width: calc(50% + 8px); /* 8 for the half arrow width*/
-        padding: 7px 0px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .arrow-flow .arrow-container .right-arrow {
-        display: none;
-    }
-    .arrow-flow .arrow-container .down-arrow,
-    .arrow-flow .arrow-container p {
-        display: block;
-    }
-    .arrow-flow .arrow-container p {
-        text-align: right;
-        padding-right: 10px;
-    }
-    .arrow-flow .arrow-container .down-arrow {
-        margin: 0 auto;
-    }
-    .ellipse-container {
-        display: none;
-    }
-    /*Eco-sytem*/
-    section.eco-system .text-container {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    section.eco-system .right-container p {
-        display: block;
-        font-size: 16px;
-    }
-    section.eco-system .right-container h2 {
-        display: block;
-    }
-    section.eco-system .left-container h2 {
-        display: none;
-    }
-    .tracer-icons .connector-lines_right {
-        position: absolute;
-        display: block;
-    }
-    .tracer-icons {
-        position: relative;
-        padding-top: 0px;
-    }
-    .tracer-icons .connector-lines {
-        display: none;
-    }
-    .tracer-icons .connector-lines.right {
-        display: block;
-    }
     .tracer-icons figure {
         height: 180px;
-        width: 240px;
+        width: 180px;
     }
-    .text-container hr {
-        width: calc(100% - 80px);
+    .tracer-icons figure figcaption img,
+    .tracer-icons figure figcaption p {
+        display: block;
     }
-    .tracer-icons figure .icon {
-        margin-top: 20px;
-    }
-    .tracer-icons figure figcaption {
-        margin-top: 20px;
+    .tracer-icons figure figcaption img {
+        margin: 0 auto;
     }
 
     /*-------------NAVBAR-------------*/
@@ -2219,6 +2161,84 @@ a.post-link-container {
 }
 /*---TABLET SCREEN WIDTH---*/
 @media only screen and (max-width: 991px){
+
+    /*---------------HOME PAGE--------------*/
+
+    /*-----ECO-SYSTEM SECTION-----*/
+
+    .tracer-icons {
+        display: block;
+    }
+    .arrow-flow .arrow-container {
+        width: calc(50% + 8px); /* 8 for the half arrow width*/
+        padding: 7px 0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .arrow-flow .arrow-container .right-arrow {
+        display: none;
+    }
+    .arrow-flow .arrow-container .down-arrow,
+    .arrow-flow .arrow-container p {
+        display: block;
+    }
+    .arrow-flow .arrow-container p {
+        text-align: right;
+        padding-right: 10px;
+    }
+    .arrow-flow .arrow-container .down-arrow {
+        margin: 0 auto;
+    }
+    .ellipse-container {
+        display: none;
+    }
+    /*Eco-sytem*/
+    section.eco-system .text-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    section.eco-system .right-container p {
+        display: block;
+        font-size: 16px;
+    }
+    section.eco-system .right-container h2 {
+        display: block;
+    }
+    section.eco-system .left-container h2 {
+        display: none;
+    }
+    .tracer-icons .connector-lines_right {
+        position: absolute;
+        display: block;
+    }
+    .tracer-icons {
+        position: relative;
+        padding-top: 0px;
+    }
+    .tracer-icons .connector-lines {
+        display: none;
+    }
+    .tracer-icons .connector-lines.right {
+        display: block;
+    }
+    .tracer-icons figure {
+        height: 180px;
+        width: 240px;
+    }
+    .text-container hr {
+        width: calc(100% - 80px);
+    }
+    .tracer-icons figure .icon {
+        margin-top: 20px;
+    }
+    .tracer-icons figure figcaption {
+        margin-top: 20px;
+    }
+    .tracer-icons figure figcaption img,
+    .tracer-icons figure figcaption p {
+        display: inline;
+    }
 
     /*-------------TRADE PAGE-------------*/
 
