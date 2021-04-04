@@ -989,6 +989,7 @@ footer .social-icons .social-link:hover {
 
 .governance {
     background: #fff;
+    margin-top: -10px;
 }
 .governance .text-container h2 {
     color: #050CBD;
