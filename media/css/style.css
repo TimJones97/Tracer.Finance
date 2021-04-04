@@ -767,7 +767,7 @@ footer .text-container a.inline {
     align-items: end;
 }
 .ellipse-container img {
-    width: calc(33% - 10px);
+    width: calc(40% - 10px);
 }
 footer .social-icons {
     display: none;
