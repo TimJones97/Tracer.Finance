@@ -2340,25 +2340,6 @@ a.post-link-container {
 
     /*-------------HOME PAGE-------------*/
 
-    /*-----PARTNERS-----*/
-
-    section.partners figure {
-        display: inline-block;
-        width: 100%;
-        height: 150px;
-        margin-right: 20px;
-    }
-    section.partners figure.rmit {
-        width: 50%;
-        max-width: 100px;
-    }
-    section.partners figure.sigma {
-        width: 50%;
-    }
-    section.partners .text-container .flex-container {
-        display: block;
-    }
-
     /*-----MAIN SECTION-----*/
 
     .main header {
@@ -2390,6 +2371,29 @@ a.post-link-container {
     .tracer-btn:hover {
         width: 150px;
     }   
+    .tracer-btn:after {
+        content: "";
+    }
+    
+    /*-----PARTNERS-----*/
+
+    section.partners figure {
+        display: inline-block;
+        width: 100%;
+        height: 150px;
+        margin-right: 20px;
+    }
+    section.partners figure.rmit {
+        width: 50%;
+        max-width: 100px;
+    }
+    section.partners figure.sigma {
+        width: 50%;
+    }
+    section.partners .text-container .flex-container {
+        display: block;
+    }
+
 
     /*-------------GOVERN PAGE-------------*/
 
