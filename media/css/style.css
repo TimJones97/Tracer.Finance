@@ -1835,14 +1835,10 @@ a.post-link-container {
         width: 100%;
     }
 
-    /*---------------FOOTER--------------*/
+    /*---------------TRADE PAGE--------------*/
 
-    footer .text-container .right-container {
-        width: 100%;
-        float: none;
-        padding-left: 0px;
-        justify-content: flex-start;
-        margin-top: 70px;
+    .perpetuals .tracer-tablet {
+        width: 60%;
     }
 
     /*---------------BUILD PAGE--------------*/
@@ -1879,6 +1875,16 @@ a.post-link-container {
     }
     .related-content .blog-post {
         max-height: 405px;
+    }
+
+    /*---------------FOOTER--------------*/
+
+    footer .text-container .right-container {
+        width: 100%;
+        float: none;
+        padding-left: 0px;
+        justify-content: flex-start;
+        margin-top: 70px;
     }
 }
 /*Media queries break at 1200px instead of standard tablet width of 991px for large graphics*/

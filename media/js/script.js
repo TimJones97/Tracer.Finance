@@ -1,3 +1,12 @@
+function isCollapsed(){
+	if($(window).width() < 1200){
+		return true;
+	}
+	else {
+		return false;
+	}
+
+}
 function setCopyrightYear(){
 	var theDate = new Date(); 
 	$(".year").text(theDate.getFullYear());
@@ -26,21 +35,40 @@ function truncate(input) {
    }
    return input;
 };
+// Get the current URL page
+function getPathname(){
+	var pathname_arr = window.location.pathname.split('/');
+	var pathname = pathname_arr[pathname_arr.length - 2];
+	return pathname;
+}
+function setNavHeight(){
+	if(isCollapsed()){
+		$('.navbar-nav').css('height', $(window).innerHeight() + 'px');
+	}
+	console.log($(window).height());
+}
 $(window).scroll(function(){
 	//Check on the navbar on start
 	navBGScroll();
 });
 $(window).resize(function(){
-
+	setNavHeight();
 });
 $(document).ready(function(){
 	setCopyrightYear();
 
+	// Set nav menu height on load if on mobile
+	setNavHeight();
+
+	var pathname = getPathname();
+	if(pathname == 'govern' || pathname == 'trade' || pathname == 'build'){
+		// Only run parallax on certain pages
+		new universalParallax().init({
+		  speed: 3.0
+		});
+	}
 	// Set navbar colour on load if page has been scrolled
 	navBGScroll();
 
-	// Only run parallax on certain pages
-	new universalParallax().init({
-	  speed: 3.0
-	});
+	
 });

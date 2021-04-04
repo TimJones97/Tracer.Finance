@@ -9,7 +9,6 @@ var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
 var scene = new THREE.Scene();
 var Ico;
 
-
 scene.add(camera);
 renderer.setSize(600, 600);
 
@@ -17,7 +16,6 @@ renderer.setSize(600, 600);
 function onWindowResize() {
 
   var screenWidth = $(window).width();
-  console.log(screenWidth);
   if (screenWidth <= 479) {
     renderer.setSize(350, 350);
   } else if (screenWidth <= 767) {
