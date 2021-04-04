@@ -48,7 +48,14 @@ body {
     overflow-x: hidden;
     background: #03065E;
 }
-
+html, body{
+   width: 100%;
+   height: 100%;
+}
+*::selection { 
+  background: #03065e;
+  color: white;
+}
 /*----CUSTOM SCROLLBAR----*/
 
 ::-webkit-scrollbar {
@@ -141,7 +148,9 @@ body {
     transition: opacity 0.5s ease;
     pointer-events: none;
 }
+
 /*----Hamburger menu animation----*/
+
 .navbar .navbar-toggler .icon-bar {
     background-color: #fff;
 }
@@ -243,6 +252,7 @@ body {
 .bottom-nav .flex-container {
     margin-top: 0;
 }
+
 /*------DROPDOWN MENU FOR TRACER LINKS------*/
 
 .nav-item.dropdown {
@@ -340,7 +350,9 @@ body {
 .dropdown-menu.show .nav-item .nav-link.social:hover img {
     transform: scale(1.1);
 }
-/*-----Main Section styles----*/
+
+/*-----MAIN SECTION-----*/
+
 .video-bg {
     position: fixed;
     top: 0;
@@ -369,6 +381,9 @@ body {
     max-width: 400px;
 }
 .tracer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 60px;
     width: 158px;
@@ -377,17 +392,20 @@ body {
     border-radius: 50px;
     color: #fff;
     transition: all 0.2s ease-in-out;
+    text-align: center;
 }
 .tracer-btn:after {
-    content: url("../images/arrow_right_sml.svg");
+    content: url("../images/general/arrow_right_sml.svg");
     position: absolute;
     right: 20px;
+    margin-top: 4px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
 }
 .tracer-btn:hover {
     width: 181px;
     background: #3DA8F5;
+    color: #fff;
     border: 2px solid #3DA8F5;
 }
 .tracer-btn:hover:after {
@@ -403,9 +421,6 @@ body {
 .button-container {
     display: inline-block;
     width: 200px;
-}
-.button-container a {
-    display: block;
 }
 .main header .tracer-btn {
     margin-top: 20px;
@@ -652,7 +667,7 @@ footer.darkblue .text-container .tracer-btn.search::placeholder {
 /*---End Darkblue styles---*/
 
 footer .text-container p,
-footer .text-container a, {
+footer .text-container a {
     /*color: #050CBD !important;*/
     font-size: 14px;
 }
@@ -722,7 +737,7 @@ footer .text-container .right-container .pull-right {
 }
 /*Anchor container for the subscribe button*/
 footer .text-container a.inline {
-    display: inline;
+    display: inline-flex;
     flex: 0 0 260px;
     margin-right: 10px;
 }
@@ -745,7 +760,7 @@ footer .text-container a.inline {
     caret-color: #3b3b3b;
     box-shadow: unset;
 }
-.tracer-btn.search:placeholder {
+.tracer-btn.search::placeholder {
     color: #3b3b3b;
 }
 .tracer-btn.blue:after,
@@ -790,7 +805,7 @@ footer .social-icons .social-link:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url('../images/static_bg.svg');
+  background: url('../images/general/static_bg.svg');
 }
 /*Main header*/
 .main.govern {
@@ -2427,7 +2442,7 @@ a.post-link-container {
     .governance .text-container .flex-container .governance-info {
         width: 100%;
         padding-right: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     .governance .text-container .flex-container .governance-info p {
         max-width: 500px;
@@ -2565,7 +2580,7 @@ a.post-link-container {
     /*-----BLOG POSTS SECTION-----*/
 
     .blog-posts .tracer-btn.filter {
-        display: block;
+        display: flex;
     }
     .blog-posts .text-container {
         display: block;
@@ -2611,7 +2626,7 @@ a.post-link-container {
     /*-----BLOG POST-----*/
 
     .blog-posts .tracer-btn.view-all {
-        display: block;
+        display: flex;
     }
 
     /*-----RELATED CONTENT-----*/
