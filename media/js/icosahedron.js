@@ -17,6 +17,7 @@ renderer.setSize(600, 600);
 function onWindowResize() {
 
   var screenWidth = $(window).width();
+  console.log(screenWidth);
   if (screenWidth <= 479) {
     renderer.setSize(350, 350);
   } else if (screenWidth <= 767) {
@@ -31,7 +32,12 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
 }
 onWindowResize();
-window.addEventListener('resize', onWindowResize, false);
+$(window).resize(function(){
+	onWindowResize();
+	setTimeout(function(){
+		onWindowResize();
+	}, 500);
+});
 
 
 $container.append(renderer.domElement);
@@ -78,9 +84,6 @@ let wireframe = new THREE.Mesh( new THREE.IcosahedronGeometry(125, 1), wireframe
 Ico.add( wireframe );
 
 scene.add(Ico);
-var trackballControl = new THREE.TrackballControls(camera, renderer.domElement);
-trackballControl.rotateSpeed = 1.0; 
-trackballControl.noZoom = true;
 
 const orbit = new OrbitControls( camera, renderer.domElement );
 orbit.enableZoom = false;
@@ -114,7 +117,6 @@ function update() {
 
 // Render
 function render() {
-  trackballControl.update();
   requestAnimationFrame(render);
   renderer.render(scene, camera);
   update();

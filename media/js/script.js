@@ -50,6 +50,15 @@ function changeButtonText(){
 		$('.tracer-btn.read-whitepaper').text('Whitepaper')
 	}
 }
+
+// For use for the blog posts for cutting 
+// down the text displayed on the preview
+function truncate(input) {
+   if (input.length > 110) {
+      return input.substring(0, 110) + '...';
+   }
+   return input;
+};
 $(window).resize(function(){
 
 });
@@ -59,5 +68,4 @@ $(document).ready(function(){
 	new universalParallax().init({
 	  speed: 3.0
 	});
-	// fadeNavBrandOnMenuOpen();
 });

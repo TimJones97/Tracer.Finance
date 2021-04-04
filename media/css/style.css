@@ -44,6 +44,7 @@ h2 {
     font-size: 32px;
 }
 body {
+    overflow: overlay;
     overflow-x: hidden;
 }
 
@@ -54,10 +55,11 @@ body {
     width: 7px;
 } 
 ::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0); 
+    background: rgba(0, 0, 0, 0.0); 
+    opacity: 0;
 } 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.8); 
+    background: #03065E; 
     border-radius: 10px;
 }
 
@@ -145,7 +147,7 @@ body {
 .navbar-toggler {
     border: none;
     position: fixed;
-    right: 40px;
+    right: 33px;
     top: 20px;
     height: 30px;
     transition: all 0.5s ease;
@@ -626,6 +628,7 @@ footer.darkblue .text-container hr {
 }
 footer.darkblue .text-container .logo-container p {
     color: #fff;
+    font-family: 'Akkurat Light', serif;
 }
 footer.darkblue .text-container .sitemap p {
     color: #fff;
@@ -644,7 +647,7 @@ footer.darkblue .text-container .tracer-btn.search {
     color: #fff;
     caret-color: #fff;
 }
-footer.darkblue .text-container .tracer-btn.search:placeholder {
+footer.darkblue .text-container .tracer-btn.search::placeholder {
     color: #e7e7e7;
 }
 /*---End Darkblue styles---*/
@@ -675,10 +678,7 @@ footer .text-container .logo-container p {
 }
 /*Sitemap*/
 footer .right-container {
-    width: 70%;
-    display: flex;
     justify-content: unset;
-    padding-left: 50px;
     flex-wrap: unset;
 }
 footer .text-container .sitemap {
@@ -775,8 +775,9 @@ footer .social-icons {
     display: none;
     justify-content: flex-start;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
+    padding-left: 5px;
 }
 footer .social-icons .social-link {
     margin-right: 50px;
@@ -1318,12 +1319,12 @@ footer .social-icons .social-link:hover {
 }
 .main.learn .text-container {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .main.learn .text-container h2 {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    font-size: 40px;
+    margin-top: 30px;
 }
 
 /*-------WHITEPAPERS SECTION-------*/
@@ -1386,7 +1387,7 @@ footer .social-icons .social-link:hover {
 
 /*Scroll prompt for mobile for whitepaper scrolling*/
 
-.whitepapers .text-container .right-container .flex-container .scroll-prompt {
+.scroll-prompt {
     position: absolute;
     top: 50%;
     right: 0;
@@ -1401,18 +1402,26 @@ footer .social-icons .social-link:hover {
     transition: transform 1s ease-in-out;
     animation: slideOut 3s ease-in-out forwards;
     display: none;
+    z-index: 1;
 }
-.whitepapers .text-container .right-container .flex-container .scroll-prompt:hover {
+.scroll-prompt:hover {
     animation: none;
     transform: translate(0px, -50%);
 }
-.whitepapers .text-container .right-container .flex-container .scroll-prompt img {
+.scroll-prompt img {
+/*    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%, 0%);*/
     height: 20px;
     margin-left: 15px;
+    /*animation: bounce 3s linear infinite forwards;*/
 }
-.whitepapers .text-container .right-container .flex-container .scroll-prompt p {
+.scroll-prompt p {
     font-size: 12px;
     margin: 0;
+    /*position: absolute;*/
+    /*left: 20px;*/
     padding-left: 5px;
 }
 @keyframes slideOut {
@@ -1426,6 +1435,17 @@ footer .social-icons .social-link:hover {
         transform: translate(60px, -50%);
     }
 }
+/*@keyframes bounce {
+    0% {
+        margin-left: 10px;
+    }
+    50% {
+        margin-left: 15px;
+    }
+    100% {
+        margin-left: 10px;
+    }
+}*/
 /*-------DOCUMENTATION SECTION-------*/
 
 .documentation {
@@ -1483,6 +1503,7 @@ footer .social-icons .social-link:hover {
 .build-info {
     background: #03065E;
     overflow: hidden;
+    padding-bottom: 40px;
 }
 .build-info .text-container .left-container {
     width: 40%;
@@ -1533,6 +1554,133 @@ footer .social-icons .social-link:hover {
     font-size: 19px;
     margin-top: 20px;
 }
+
+/*------------------BLOG PAGE------------------*/
+
+/*-----MAIN SECTION-----*/
+
+.main.blog {
+    height: 40vh;
+}
+.main.blog .text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main.blog .text-container h2 {
+    margin-top: 30px;
+}
+
+
+/*-----BLOG POSTS SECTION-----*/
+
+.blog-posts {
+    background: #ffffff;
+    height: 100%;
+}
+.blog-posts .text-container {
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*--LEFT - CATEGORIES--*/
+
+.blog-posts .left-container {
+    width: 15%;
+}
+.blog-posts .left-container .category {
+    margin-bottom: 20px;
+}
+.blog-posts .left-container .category p.title {
+    color: #050CBD;
+    font-size: 24px;
+}
+.blog-posts .left-container .category p {
+    color: #2E4848;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+/*--RIGHT - POSTS--*/
+.blog-posts .right-container {
+    width: 85%;
+    max-width: 1260px;
+    display: block;
+}
+.blog-posts .right-container .flex-container {
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-top: 0px;
+}
+.blog-posts .right-container .flex-container a.post-link-container {
+    width: 32%;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 1%;
+}
+.blog-post {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    min-height: 405px;
+    box-shadow: 0px 3px 6px #00000029;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.blog-post:hover {
+    transform: scale3d(1.03, 1.03, 1);
+}
+.blog-post .caption-img {
+    position: relative;
+    width: 100%;
+    height: 56.25%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+.blog-post .caption-img picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.blog-post .caption-img picture img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+.blog-post .blog-text {
+    width: 100%;
+    height: 43.75%;
+    padding: 10px 22px;
+    background: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+.blog-post .blog-text p {
+    font-size: 16px;
+    margin: 0;
+}
+.blog-post .blog-text p.post-time {
+    color: #A3A3A3;
+    margin-bottom: 5px;
+}
+.blog-post .blog-text p.post-title {
+    font-size: 24px;
+    color: #050CBD;
+    margin-bottom: 5px;
+}
+.blog-post .blog-text p.post-text {
+    font-size: 16px;
+    color: #333333;
+}
 /*-------------------MEDIA QUERIES-------------------*/
 @media only screen and (max-width: 1600px){
 
@@ -1568,6 +1716,17 @@ footer .social-icons .social-link:hover {
 
     .build-info .text-container .left-container {
         width: 30%;
+    }
+
+    /*---------------BLOG PAGE--------------*/
+
+    /*-----BLOG POSTS-----*/
+    
+    .blog-posts .right-container .flex-container a.post-link-container {
+        width: auto;
+    }
+    .blog-posts .right-container .flex-container {
+        justify-content: flex-end;
     }
 }
 /*Media queries break at 1200px instead of standard tablet width of 991px for large graphics*/
@@ -1925,6 +2084,8 @@ footer .social-icons .social-link:hover {
 
     footer .text-container .right-container {
         margin-top: 50px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
     }
     footer .text-container .right-container .title {
         display: none;
@@ -1976,8 +2137,8 @@ footer .social-icons .social-link:hover {
     /*-------------NAVBAR-------------*/
 
     .navbar-brand {
-        left: 40px;
-        top: 17px;
+        left: 33px;
+        top: 20px;
         width: 120px;
     }
     .bottom-nav ul .nav-item .nav-link {
@@ -2024,7 +2185,7 @@ footer .social-icons .social-link:hover {
         font-size: 36px !important;
     }
     .text-container {
-        padding: 40px 40px;
+        padding: 40px 33px;
     }
     .button-container {
         width: 156px;
@@ -2178,7 +2339,7 @@ footer .social-icons .social-link:hover {
     /*-----MAIN SECTION-----*/
 
     .main.learn .text-container h2 {
-        margin-top: 30px;
+        margin-top: 60px;
     }
 
     /*-----RIGHT CONTAINER - WHITEPAPERS-----*/
@@ -2192,7 +2353,7 @@ footer .social-icons .social-link:hover {
     .whitepapers .text-container .right-container .flex-container {
         overflow-x: scroll;
     }
-    .whitepapers .text-container .right-container .flex-container .scroll-prompt {
+    .scroll-prompt {
         display: flex;
     }
     .whitepapers .text-container .right-container article.whitepaper-download {
@@ -2209,6 +2370,65 @@ footer .social-icons .social-link:hover {
         padding-right: 0px;
         margin-bottom: 30px;
     }
+
+    /*---------------BUILD PAGE----------------*/
+
+    .build-info .text-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .build-info .text-container .right-container {
+        margin-top: 0px;
+    }
+
+    /*---------------BLOG PAGE----------------*/
+
+    /*-----MAIN SECTION-----*/
+
+    .main.blog h2 {
+        margin-top: 60px;
+    }
+
+    /*-----BLOG POSTS-----*/
+
+    .blog-posts .text-container {
+        display: block;
+        justify-content: unset;
+    }
+
+    /*--CATEGORY LISTINGS--*/
+
+    .blog-posts .left-container {
+        width: 100%;
+    }
+
+    /*--BLOG POST--*/
+
+    .blog-posts .right-container {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .blog-posts .right-container .flex-container a.post-link-container {
+        margin: 0 auto;
+    }
+    .blog-post {
+        min-height: 425px;
+    }
+    /*Enable scroll for blog posts*/
+    /*.blog-posts .text-container .right-container {
+        width: 100%;
+        height: 480px;
+        overflow-x: hidden;
+        padding-left: 0px;
+    }
+    .blog-posts .text-container .right-container .flex-container {
+        overflow-x: scroll;
+        flex-wrap: unset;
+        justify-content: left;
+    }
+    .blog-post {
+        width: 290px;
+    }*/
 }
 @media only screen and (max-width: 479px){
 
@@ -2255,5 +2475,9 @@ footer .social-icons .social-link:hover {
     }
     footer .social-icons {
         display: flex;
+    }
+    footer .text-container .tracer-btn.blue,
+    footer .text-container .tracer-btn.search {
+        height: 60px;
     }
 }
