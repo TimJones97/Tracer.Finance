@@ -783,40 +783,15 @@ footer .social-icons .social-link:hover {
     transform: scale(1.1);
 }
 /*-------------------GOVERN PAGE-------------------*/
-.parallax-wrapper {
+.fixed-bg {
   z-index: -1;
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
+  background: url('../images/static_bg.svg');
 }
-.parallax__container {
-  clip: rect(0,auto,auto,0);
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -100;
-}
-.parallax {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transform: translateZ(0px) !important;
-  width: 100%;
-  opacity: 1;
-  transition: height 0.7s ease, transform 0.7s ease, opacity 0.7s ease;
-}
-
 /*Main header*/
 .main.govern {
     height: 30vh;

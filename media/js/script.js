@@ -36,16 +36,19 @@ function truncate(input) {
    return input;
 };
 // Get the current URL page
-function getPathname(){
-	var pathname_arr = window.location.pathname.split('/');
-	var pathname = pathname_arr[pathname_arr.length - 2];
-	return pathname;
-}
+// function getPathname(){
+// 	var pathname_arr = window.location.pathname.split('/');
+// 	var pathname = pathname_arr[pathname_arr.length - 2];
+// 	return pathname;
+// }
 function setNavHeight(){
 	if(isCollapsed()){
-		$('.navbar-nav').css('height', window.screen.height + 'px');
+		$('.navbar-nav').css('height', window.screen.availHeight + 'px');
 	}
-	console.log(window.screen.height);
+	else {
+		$('.navbar-nav').css('height', 'auto');
+	}
+	console.log('Available height: ' + window.screen.availHeight);
 }
 $(window).scroll(function(){
 	//Check on the navbar on start
@@ -59,16 +62,7 @@ $(document).ready(function(){
 
 	// Set nav menu height on load if on mobile
 	setNavHeight();
-
-	var pathname = getPathname();
-	if(pathname == 'govern' || pathname == 'trade' || pathname == 'build'){
-		// Only run parallax on certain pages
-		new universalParallax().init({
-		  speed: 3.0
-		});
-	}
+	
 	// Set navbar colour on load if page has been scrolled
 	navBGScroll();
-
-	
 });
