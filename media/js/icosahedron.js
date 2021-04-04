@@ -56,7 +56,7 @@ camera.position.z = 220;
 var greyMat = new THREE.MeshPhongMaterial({
   // color: new THREE.Color("rgb(125,127,129)"),
   // opacity: 0.1,
-  opacity: 0,
+  opacity: 1,
   shading: THREE.FlatShading,
   transparent: true,
   vertexColors: true
@@ -73,13 +73,6 @@ loader.load( image, function ( texture ) {
     var mesh = new THREE.Mesh( geometry, material );
     group.add( mesh );
 });
-
-var L2 = new THREE.PointLight();
-L2.position.z = 1900;
-L2.position.y = 1850;
-L2.position.x = 1000;
-scene.add(L2);
-camera.add(L2);
 
 var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(125, 1), greyMat);
 Ico.rotation.z = 0.5;

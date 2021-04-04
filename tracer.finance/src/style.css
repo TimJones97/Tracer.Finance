@@ -1,24 +1,24 @@
 /*-----------------GENERAL STYLES-----------------*/
 @font-face {
     font-family: 'Akkurat Light';
-    src: url('../fonts/Akkurat-Light.woff2') format('woff2'),
-        url('../fonts/Akkurat-Light.woff') format('woff');
+    src: url('./fonts/Akkurat-Light.woff2') format('woff2'),
+        url('./fonts/Akkurat-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Akkurat';
-    src: url('../fonts/Akkurat.woff2') format('woff2'),
-        url('../fonts/Akkurat.woff') format('woff');
+    src: url('./fonts/Akkurat.woff2') format('woff2'),
+        url('./fonts/Akkurat.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Akkurat Bold';
-    src: url('../fonts/Akkurat-Bold.woff2') format('woff2'),
-        url('../fonts/Akkurat-Bold.woff') format('woff');
+    src: url('./fonts/Akkurat-Bold.woff2') format('woff2'),
+        url('./fonts/Akkurat-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -395,7 +395,7 @@ html, body{
     text-align: center;
 }
 .tracer-btn:after {
-    content: url("../images/general/arrow_right_sml.svg");
+    content: url("./images/general/arrow_right_sml.svg");
     position: absolute;
     right: 20px;
     margin-top: 4px;
@@ -807,7 +807,7 @@ footer .social-icons .social-link:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url('../images/general/static_bg.svg');
+  background: url('./images/general/static_bg.svg');
   background-size: cover;
 }
 /*Main header*/
@@ -851,7 +851,7 @@ footer .social-icons .social-link:hover {
 /*Proposals section*/
 .proposals {
     position: relative;
-    background: url('../images/govern/proposals_bg.svg');
+    background: url('./images/govern/proposals_bg.svg');
     /* overflow: hidden; */
     background-size: cover;
     height: auto;
@@ -1061,7 +1061,7 @@ footer .social-icons .social-link:hover {
 
 .perpetuals {
     position: relative;
-    background: url('../images/govern/proposals_bg.svg');
+    background: url('./images/govern/proposals_bg.svg');
     /* overflow: hidden; */
     background-size: cover;
     height: auto;
@@ -1345,6 +1345,7 @@ footer .social-icons .social-link:hover {
     right: 80px;
     top: -100px;
     width: 60%;
+    max-width: 1000px;
 }
 .whitepapers .text-container .right-container .flex-container {
     width: 100%;
