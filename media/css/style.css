@@ -716,6 +716,8 @@ footer .text-container .sitemap .sitemap-links a {
     padding-right: 5px;
     display: inline-block;
     width: max-content;
+}
+footer .text-container .sitemap .sitemap-links a p {
     transition: color 0.5s ease;
 }
 footer .text-container .sitemap .sitemap-links a:hover p {
@@ -2567,6 +2569,9 @@ a.post-link-container {
     }
     .build-info .text-container .right-container {
         margin-top: 0px;
+    }
+    .build-info .text-container .right-container .build-anim {
+        width: 100%;
     }
 
     /*---------------BLOG PAGE----------------*/

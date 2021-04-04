@@ -16,8 +16,10 @@ renderer.setSize(600, 600);
 function onWindowResize() {
 
   var screenWidth = $(window).width();
-  if (screenWidth <= 479) {
-    renderer.setSize(350, 350);
+  if (screenWidth <= 400) {
+    renderer.setSize(310, 310);
+  } else if (screenWidth <= 479) {
+    renderer.setSize(400, 400);
   } else if (screenWidth <= 767) {
     renderer.setSize(450, 450);
   } else if (screenWidth <= 991) {
