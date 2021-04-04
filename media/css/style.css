@@ -1216,6 +1216,7 @@ footer .social-icons .social-link:hover {
 
 .perpetuals-info {
     background: #fff;
+    margin-top: -10px;
 }
 .perpetuals-info .text-container h2 {
     color: #050CBD;
@@ -2335,7 +2336,7 @@ a.post-link-container {
         display: block;
     }
 
-    /*-----MAIN HERO SECTION-----*/
+    /*-----MAIN SECTION-----*/
 
     .main header {
         top: 300px;
@@ -2435,9 +2436,13 @@ a.post-link-container {
 
     /*-----PERPETUALS-----*/
 
+    .perpetuals .text-container h2, .perpetuals .text-container p {
+        padding-left: 20px;
+    }
+
     /*TABLE*/
     .perpetuals .text-container table.live-perpetual-markets {
-        width: auto;
+        width: 100%;
     }
     .perpetuals .text-container .live-perpetual-markets thead tr th {
         display: none;
@@ -2475,7 +2480,7 @@ a.post-link-container {
         font-size: 20px;
     }
     .perpetuals .text-container {
-        padding: 0px 20px 40px 20px;
+        padding: 0px 15px 40px 15px;
     }
     .perpetuals .text-container .live-perpetual-markets .coin-info-row td span:not(.pair-text) {
         position: absolute;
@@ -2659,13 +2664,19 @@ a.post-link-container {
         padding-top: 220px;
     }
 
-    /*-------------PERPETUALS PAGE-------------*/
+    /*-------------TRADE PAGE-------------*/
 
     /*-----MAIN SECTION-----*/
 
     .perpetuals .tracer-tablet {
         top: -180px;
         width: 45%;
+    }
+
+    /*-----PERPETUALS SECTION-----*/
+
+    .perpetuals .text-container h2, .perpetuals .text-container p {
+        padding-left: 20px;
     }
 
     /*-------------FOOTER-------------*/
