@@ -8,50 +8,50 @@ class App extends React.Component {
             <div class="nav-container">
               <nav class="navbar navbar-expand-xl">
                 <a class="navbar-brand" href="/Tracer.Finance/pages/home/">
-                  <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo">
+                  <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"/>
                 </a>
                 <div class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="../../media/images/nav/triangle_down.svg" alt="Dropdown icon">
+                    <img src="../../media/images/nav/triangle_down.svg" alt="Dropdown icon"/>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <div class="nav-item">
                       <a class="nav-link" href="/Tracer.Finance/pages/home/">
-                        <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo">
+                        <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"/>
                       </a>
                     </div>
                     <div class="nav-item">
                       <a class="nav-link" href="/Tracer.Finance/pages/govern/">
-                        <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Governance">
+                        <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Governance"/>
                         &nbsp;Governance
                       </a>
                     </div>
                     <div class="nav-item">
                       <a class="nav-link" href="/Tracer.Finance/pages/blog/">
-                        <img src="../../media/images/general/tracer_logo.svg"  alt="Tracer Logo - Blog">
+                        <img src="../../media/images/general/tracer_logo.svg"  alt="Tracer Logo - Blog"/>
                         &nbsp;Blog
                       </a>
                     </div>
                     <div class="nav-item social-links">
                       <div class="flex-container">
                         <a class="nav-link social" href="https://discourse.tracer.finance/">
-                              <img src="../../media/images/nav/discourse.svg" alt="Discourse icon">
+                              <img src="../../media/images/nav/discourse.svg" alt="Discourse icon"/>
                             </a>
                             <a class="nav-link social" href="https://github.com/tracer-protocol">
-                              <img src="../../media/images/nav/github.svg" alt="Github icon">
+                              <img src="../../media/images/nav/github.svg" alt="Github icon"/>
                             </a>
                             <a class="nav-link social" href="https://discord.gg/kvJEwfvyrW">
-                              <img src="../../media/images/nav/discord.svg" alt="Discord icon">
+                              <img src="../../media/images/nav/discord.svg" alt="Discord icon"/>
                             </a>
                             <a class="nav-link social" href="https://twitter.com/tracer_finance">
-                              <img src="../../media/images/nav/twitter.svg" alt="Twitter icon">
+                              <img src="../../media/images/nav/twitter.svg" alt="Twitter icon"/>
                             </a>
                       </div>
                     </div>
                   </div>
                 </div>
                   <button class="navbar-toggler x" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
@@ -82,7 +82,7 @@ class App extends React.Component {
                         <ul>
                           <li class="nav-item">
                               <a class="nav-link" href="/Tracer.Finance/pages/govern/">
-                                <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Governance">
+                                <img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Governance"/>
                                 &nbsp;Governance
                               </a>
                           </li>
@@ -95,16 +95,16 @@ class App extends React.Component {
                             <li class="nav-item social-links">
                               <div class="flex-container">
                                 <a class="nav-link social" href="https://discourse.tracer.finance/">
-                                  <img src="../../media/images/nav/discourse.svg" alt="Discourse icon">
+                                  <img src="../../media/images/nav/discourse.svg" alt="Discourse icon"/>
                                 </a>
                                 <a class="nav-link social" href="https://github.com/tracer-protocol">
-                                  <img src="../../media/images/nav/github.svg" alt="Github icon">
+                                  <img src="../../media/images/nav/github.svg" alt="Github icon"/>
                                 </a>
                                 <a class="nav-link social" href="https://discord.gg/kvJEwfvyrW">
-                                  <img src="../../media/images/nav/discord.svg" alt="Discord icon">
+                                  <img src="../../media/images/nav/discord.svg" alt="Discord icon"/>
                                 </a>
                                 <a class="nav-link social" href="https://twitter.com/tracer_finance">
-                                  <img src="../../media/images/nav/twitter.svg" alt="Twitter icon">
+                                  <img src="../../media/images/nav/twitter.svg" alt="Twitter icon"/>
                                 </a>
                               </div>
                             </li>
@@ -150,10 +150,10 @@ class App extends React.Component {
                         <h3>Governs (Optional)</h3>
                       </div>
                       <figure>
-                        <div class="icon">
-                          <img class="tracer-image" src="../../media/images/general/tracer_DAO.svg" alt="Tracer DAO Logo">
+                        <div class="icon"/>
+                          <img class="tracer-image" src="../../media/images/general/tracer_DAO.svg" alt="Tracer DAO Logo"/>
                         </div>
-                        <figcaption><img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"> DAO</figcaption>
+                        <figcaption><img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"/> DAO</figcaption>
                       </figure>
                       <div class="arrow-flow">
                         <div class="arrow-container">
@@ -163,10 +163,10 @@ class App extends React.Component {
                         </div>
                       </div>
                       <figure>
-                        <div class="icon">
-                          <img class="tracer-image" src="../../media/images/general/tracer_factory.svg" alt="Tracer Factory Logo">
+                        <div class="icon"/>
+                          <img class="tracer-image" src="../../media/images/general/tracer_factory.svg" alt="Tracer Factory Logo"/>
                         </div>
-                        <figcaption><img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"> Factory</figcaption>
+                        <figcaption><img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"/> Factory</figcaption>
                       </figure>
                       <div class="arrow-flow">
                         <div class="arrow-container">
@@ -176,10 +176,10 @@ class App extends React.Component {
                         </div>
                       </div>
                       <figure>
-                        <div class="icon">
-                          <img class="tracer-image" src="../../media/images/general/tracer_perpetuals.svg" alt="Tracer Perpetuals Logo">
+                        <div class="icon"/>
+                          <img class="tracer-image" src="../../media/images/general/tracer_perpetuals.svg" alt="Tracer Perpetuals Logo"/>
                         </div>
-                        <figcaption><img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"> Perpetuals</figcaption>
+                        <figcaption><img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo"/> Perpetuals</figcaption>
                       </figure>
                     </div>
                   </div>
@@ -190,13 +190,13 @@ class App extends React.Component {
                   <h2>Partners</h2>
                   <div class="flex-container">
                     <figure>
-                      <img src="../../media/images/partners/lions_mane_logo.svg" alt="Lion's Mane Logo">
+                      <img src="../../media/images/partners/lions_mane_logo.svg" alt="Lion's Mane Logo"/>
                     </figure>
                     <figure class="rmit">
-                      <img src="../../media/images/partners/RMIT_BIH_logo.svg" alt="RMIT BIH Logo">
+                      <img src="../../media/images/partners/RMIT_BIH_logo.svg" alt="RMIT BIH Logo"/>
                     </figure>
                     <figure class="sigma">
-                      <img src="../../media/images/partners/sigma_prime_logo.svg" alt="Sigma Prime Logo">
+                      <img src="../../media/images/partners/sigma_prime_logo.svg" alt="Sigma Prime Logo"/>
                     </figure>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ class App extends React.Component {
                 <hr>
                 <div class="left-container">
                   <div class="logo-container">
-                    <img src="../../media/images/footer/tracer_logo_blue.svg" alt="Tracer Logo">
+                    <img src="../../media/images/footer/tracer_logo_blue.svg" alt="Tracer Logo"/>
                     <p>&copy;&nbsp;<span class="year"></span> Tracer Ltd</p>
                   </div>
                 </div>
@@ -252,24 +252,24 @@ class App extends React.Component {
                     <a href="#" class="tracer-btn blue inline">Subscribe to Mailing list</a>
                     <input class="tracer-btn search" placeholder="Search">
                     <div class="ellipse-container">
-                      <img src="../../media/images/footer/ellipse.svg" alt="Ellipse icon">
-                      <img src="../../media/images/footer/ellipse.svg" alt="Ellipse icon">
-                      <img src="../../media/images/footer/ellipse.svg" alt="Ellipse icon">
+                      <img src="../../media/images/footer/ellipse.svg" alt="Ellipse icon"/>
+                      <img src="../../media/images/footer/ellipse.svg" alt="Ellipse icon"/>
+                      <img src="../../media/images/footer/ellipse.svg" alt="Ellipse icon"/>
                     </div>
                   </div>
                 </div>
                 <div class="social-icons">
                   <a class="social-link" href="https://discourse.tracer.finance/">
-                    <img src="../../media/images/footer/discourse_blue.svg" alt="Discourse icon">
+                    <img src="../../media/images/footer/discourse_blue.svg" alt="Discourse icon"/>
                   </a>
                   <a class="social-link" href="https://github.com/tracer-protocol">
-                    <img src="../../media/images/footer/github_blue.svg" alt="Github icon">
+                    <img src="../../media/images/footer/github_blue.svg" alt="Github icon"/>
                   </a>
                   <a class="social-link" href="https://discord.gg/kvJEwfvyrW">
-                    <img src="../../media/images/footer/discord_blue.svg" alt="Discord icon">
+                    <img src="../../media/images/footer/discord_blue.svg" alt="Discord icon"/>
                   </a>
                   <a class="social-link" href="https://twitter.com/tracer_finance">
-                    <img src="../../media/images/footer/twitter_blue.svg" alt="Twitter icon">
+                    <img src="../../media/images/footer/twitter_blue.svg" alt="Twitter icon"/>
                   </a>
                 </div>
               </div>
