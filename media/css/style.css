@@ -92,7 +92,7 @@ body {
     width: 150px;
     position: fixed;
     left: 80px;
-    top: 20px;
+    top: 25px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
@@ -518,7 +518,7 @@ section.eco-system .right-container h2 {
     box-sizing: border-box;
     border-radius: 10px;
     margin-bottom: unset;
-    /*transition: all 0.5s ease;*/
+    transition: background 0.5s ease;
 }
 .tracer-icons figure:hover {
     background: #3DA8F5;
@@ -650,9 +650,6 @@ footer.darkblue .text-container .tracer-btn.search::placeholder {
 }
 /*---End Darkblue styles---*/
 
-footer .text-container {
-    padding-left: 80px;
-}
 footer .text-container p,
 footer .text-container a, {
     /*color: #050CBD !important;*/
@@ -2190,10 +2187,6 @@ a.post-link-container {
     .arrow-flow .arrow-container .down-arrow {
         margin: 0 auto;
     }
-    .ellipse-container {
-        display: none;
-    }
-    /*Eco-sytem*/
     section.eco-system .text-container {
         display: flex;
         flex-direction: column-reverse;
@@ -2207,6 +2200,12 @@ a.post-link-container {
     }
     section.eco-system .left-container h2 {
         display: none;
+    }
+    section.eco-system .text-container .left-container {
+        margin-bottom: 10px;
+    }
+    section.eco-system .text-container .right-container {
+        margin-top: 0px;
     }
     .tracer-icons .connector-lines_right {
         position: absolute;
@@ -2313,6 +2312,9 @@ a.post-link-container {
     footer .text-container .right-container .pull-right .tracer-btn.search {
         text-align: center;
         padding-left: 0px;
+    }
+    footer .ellipse-container {
+        display: none;
     }
 }
 @media only screen and (max-width: 767px){
@@ -2635,6 +2637,12 @@ a.post-link-container {
     .related-content .right-container {
         width: 100%;
         padding-left: 0px;
+    }
+
+    /*---------------FOOTER----------------*/
+
+    .text-container hr {
+        width: calc(100% - 66px);
     }
 }
 @media only screen and (max-width: 479px){
