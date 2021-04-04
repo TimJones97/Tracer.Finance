@@ -43,9 +43,9 @@ function getPathname(){
 }
 function setNavHeight(){
 	if(isCollapsed()){
-		$('.navbar-nav').css('height', $(window).innerHeight() + 'px');
+		$('.navbar-nav').css('height', window.screen.height + 'px');
 	}
-	console.log($(window).height());
+	console.log(window.screen.height);
 }
 $(window).scroll(function(){
 	//Check on the navbar on start
