@@ -2334,7 +2334,10 @@ a.post-link-container {
         width: 120px;
     }
     .bottom-nav ul .nav-item .nav-link {
-        padding: 18px 35px 18px 18px;
+        padding: 18px 35px 18px 35px;
+    }
+    .bottom-nav ul .nav-item .nav-link.social {
+        padding: 18px 18px 18px 35px;
     }
 
 
