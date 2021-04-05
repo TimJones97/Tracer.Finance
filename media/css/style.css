@@ -93,8 +93,10 @@ html, body{
     max-width: 1080px;
 }
 .nav-container.solid {
-    /*background: #160bc3;*/
-    background: #03065e;
+    background: #160bc3;
+}
+.nav-container.solid.darkblue {
+    background: #03065e !important;
 }
 .navbar-brand {
     width: 150px;
