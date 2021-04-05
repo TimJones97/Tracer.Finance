@@ -1598,7 +1598,8 @@ footer .social-icons .social-link:hover {
     content: "";
 }
 .blog-posts .text-container {
-    height: 100%;
+    float: left;
+    background: #fff;
     overflow: visible;
 }
 
@@ -1664,6 +1665,7 @@ a.post-link-container {
     position: relative;
     width: 100%;
     height: 56.25%;
+    min-height: 225px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     overflow: hidden;
