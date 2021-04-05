@@ -2374,7 +2374,7 @@ a.post-link-container {
     .tracer-btn:after {
         content: "";
     }
-    
+
     /*-----PARTNERS-----*/
 
     section.partners figure {
@@ -2445,6 +2445,12 @@ a.post-link-container {
         right: 0px;
         bottom: 15px;
     }
+    .proposals .text-container .live-proposals .proposal-row:hover td.time-left span,
+    .proposals .text-container .live-proposals .proposal-row:hover td.status span,
+    .proposals .text-container .live-proposals .proposal-row:hover td.vote-yes span {
+        color: #A3A3A3;
+    }
+    
 
     /*-----GOVERNANCE-----*/
 
@@ -2459,6 +2465,7 @@ a.post-link-container {
     .governance .text-container .flex-container .governance-info p {
         max-width: 500px;
     }
+
     /*-------------TRADE PAGE-------------*/
 
     /*-----PERPETUALS-----*/
@@ -2518,6 +2525,10 @@ a.post-link-container {
         display: inline;
         position: relative;
         padding-right: 10px;
+    }
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td.price span,
+    .perpetuals .text-container .live-perpetual-markets .coin-info-row:hover td.fluctuation span {
+        color: #A3A3A3;
     }
 
     /*-----PERPETUALS INFO BLOCKS-----*/
