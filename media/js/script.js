@@ -43,13 +43,13 @@ function truncate(input) {
 // }
 function setNavHeight(){
 	if(isCollapsed()){
-		$('.navbar-nav').css('height', window.screen.availHeight + 'px');
+		$('.navbar-nav').css('height', $(window).innerHeight() + 'px');
 	}
 	else {
 		$('.navbar-nav').css('height', 'auto');
 	}
-	console.log('Available height: ' + window.screen.availHeight);
-	$('.nav-item.menu').text(window.screen.availHeight);
+	console.log('Available height: ' + $(window).innerHeight());
+	$('.nav-item.menu').text($(window).innerHeight());
 }
 $(window).scroll(function(){
 	//Check on the navbar on start
