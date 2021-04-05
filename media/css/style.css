@@ -217,13 +217,14 @@ html, body{
 }
 /*Bottom Nav styles - social icons*/
 .bottom-nav {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
     height: auto;
     background: #1026C9;
     display: none;
+    margin-top: 40px;
 }
 .bottom-nav ul {
     padding-inline-start: 0px;

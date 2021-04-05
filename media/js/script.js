@@ -41,27 +41,27 @@ function truncate(input) {
 // 	var pathname = pathname_arr[pathname_arr.length - 2];
 // 	return pathname;
 // }
-function setNavHeight(){
-	if(isCollapsed()){
-		$('.navbar-nav').css('height', window.screen.availHeight + 'px');
-	}
-	else {
-		$('.navbar-nav').css('height', 'auto');
-	}
-	console.log('Available height: ' + window.screen.availHeight);
-}
+// function setNavHeight(){
+// 	if(isCollapsed()){
+// 		$('.navbar-nav').css('height', window.screen.availHeight + 'px');
+// 	}
+// 	else {
+// 		$('.navbar-nav').css('height', 'auto');
+// 	}
+// 	console.log('Available height: ' + window.screen.availHeight);
+// }
 $(window).scroll(function(){
 	//Check on the navbar on start
 	navBGScroll();
 });
 $(window).resize(function(){
-	setNavHeight();
+	// setNavHeight();
 });
 $(document).ready(function(){
 	setCopyrightYear();
 
 	// Set nav menu height on load if on mobile
-	setNavHeight();
+	// setNavHeight();
 	
 	// Set navbar colour on load if page has been scrolled
 	navBGScroll();
