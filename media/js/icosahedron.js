@@ -8,6 +8,9 @@ var renderer = new THREE.WebGLRenderer({
 var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
 var scene = new THREE.Scene();
 var Ico;
+var selectedObject = null;
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
 
 scene.add(camera);
 renderer.setSize(600, 600);
@@ -34,7 +37,6 @@ onWindowResize();
 $(window).resize(function(){
   onWindowResize();
 });
-
 
 $container.append(renderer.domElement);
 
@@ -70,7 +72,7 @@ const wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x3DA8F5, wirefr
 
 let wireframe = new THREE.Mesh( new THREE.IcosahedronGeometry(125, 1), wireframeMaterial );
 
-Ico.add( wireframe );
+Ico.add(wireframe);
 
 scene.add(Ico);
 
@@ -84,15 +86,29 @@ orbit.maxAzimuthAngle = (Math.PI / 2) * 0.6; // radians
 // sprites
 var txtLoader = new THREE.TextureLoader();
 txtLoader.setCrossOrigin("");
-var textures = [
-  "../../media/images/build/person.png",
-  "../../media/images/build/person.png"
+var texturesPartners = [
+  "../../media/images/build/RMIT_BIH_logo_dark.svg",
+  "../../media/images/build/lions_mane_logo_white_square.svg"
 ];
 var direction = new THREE.Vector3();
 Ico.geometry.vertices.forEach(function(vertex, index){
-	var texture = txtLoader.load(textures[index % 3]);
+	var texture = txtLoader.load(texturesPartners[index]);
 	var spriteMaterial = new THREE.SpriteMaterial({map: texture});
 	var sprite = new THREE.Sprite(spriteMaterial);
+  sprite.scale.setScalar(18);
+  direction.copy(vertex).normalize();
+  sprite.position.copy(vertex).addScaledVector(direction, 10);
+  Ico.add(sprite);
+});
+var texturesPlaceholder = [
+  "../../media/images/build/person.svg",
+  "../../media/images/build/person.svg",
+  "../../media/images/build/person.svg"
+];
+Ico.geometry.vertices.forEach(function(vertex, index){
+  var texture = txtLoader.load(texturesPlaceholder[index % 3]);
+  var spriteMaterial = new THREE.SpriteMaterial({map: texture});
+  var sprite = new THREE.Sprite(spriteMaterial);
   sprite.scale.setScalar(15);
   direction.copy(vertex).normalize();
   sprite.position.copy(vertex).addScaledVector(direction, 10);
@@ -102,6 +118,33 @@ Ico.geometry.vertices.forEach(function(vertex, index){
 function update() {
   Ico.rotation.x += 2 / 2000;
   Ico.rotation.y += 2 / 2000;
+}
+
+// FOR CLICK EVENTS 
+var canvas = document.querySelector('canvas');
+canvas.addEventListener( 'pointermove', onPointerMove );
+
+function onPointerMove( event ) {
+  if (selectedObject) {
+    selectedObject.material.color.set( '#69f' );
+    selectedObject = null;
+  }
+
+  pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+  pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+  raycaster.setFromCamera( pointer, camera );
+  const intersects = raycaster.intersectObject( Ico, true );
+  if (intersects.length > 0) {
+    const res = intersects.filter( function ( res ) {
+      return res && res.object;
+    } )[ 0 ];
+    if (res && res.object && res.object.type == 'Sprite') {
+      selectedObject = res.object;
+      console.log(selectedObject.material);
+      // selectedObject.material.color.set( '#f00' );
+      // selectedObject.scale.set(100, 100, 100);
+    }
+  }
 }
 
 // Render
