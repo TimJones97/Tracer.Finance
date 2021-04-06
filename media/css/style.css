@@ -3023,8 +3023,11 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .perpetuals .tracer-tablet {
-        top: -180px;
+        top: -160px;
         width: 40%;
+    }
+    .perpetuals .tracer-tablet img {
+        width: 500px;
     }
 
     /*-----PERPETUALS SECTION-----*/
