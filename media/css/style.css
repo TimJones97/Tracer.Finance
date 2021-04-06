@@ -1983,7 +1983,7 @@ a.post-link-container {
     /*-----BLOG POSTS-----*/
     
     a.post-link-container {
-        width: auto;
+        width: 49%;
     }
     .blog-posts .right-container .flex-container {
         justify-content: flex-end;
