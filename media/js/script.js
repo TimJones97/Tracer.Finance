@@ -5,7 +5,6 @@ function isCollapsed(){
 	else {
 		return false;
 	}
-
 }
 function setCopyrightYear(){
 	var theDate = new Date(); 
@@ -13,12 +12,19 @@ function setCopyrightYear(){
 }
 function navBGScroll(){
 	var scrollTop = $(document).scrollTop(),
-		navElement = $('.nav-container');
-	if(scrollTop > 5){
-		navElement.addClass('solid');
+		navElement = $('.nav-container')
+		currentWidth = $(window).width();
+	if(scrollTop > 5 || currentWidth < 1200){
+		if(navElement.hasClass('darkblue')){
+			navElement.addClass('solid-darkblue');
+		}
+		else {
+			navElement.addClass('solid');
+		}
 	}
 	else {
 		navElement.removeClass('solid');
+		navElement.removeClass('solid-darkblue');
 	}
 }
 function createScrollReveal(){
@@ -49,6 +55,13 @@ function setNavHeight(){
 		$('.navbar-nav').css('height', 'auto');
 	}
 }
+function toggleSubscriptionBox(){
+	$('footer .tracer-btn.blue').click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$('.subscribe-box_hidden').toggleClass('show');
+	});
+}
 $(window).scroll(function(){
 	//Check on the navbar on start
 	navBGScroll();
@@ -58,6 +71,8 @@ $(window).resize(function(){
 });
 $(document).ready(function(){
 	setCopyrightYear();
+
+	toggleSubscriptionBox();
 
 	// Set nav menu height on load if on mobile
 	setNavHeight();
