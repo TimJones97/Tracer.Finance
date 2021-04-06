@@ -2426,6 +2426,10 @@ a.post-link-container {
     .main.trade header .button-container {
         width: 100%;
     }
+    .main.trade header {
+        top: 100px;
+        transform: unset;
+    }
 
     /*-----PERPETUALS-----*/
 
@@ -2702,7 +2706,7 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .main.govern header {
-        bottom: -100px;
+        bottom: -140px;
     }
 
     /*-----PROPOSALS-----*/
