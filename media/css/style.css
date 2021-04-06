@@ -1637,6 +1637,7 @@ footer .social-icons .social-link:hover {
 .build-info .wrap-container .right-container {
     padding-top: 30px;
     width: 60%;
+    float: right;
 }
 .build-anim {
     position: relative;
@@ -2260,6 +2261,18 @@ a.post-link-container {
     .build-anim {
         margin: 0 auto;
     }
+    .build-info .wrap-container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 0;
+    }
+    .build-info .wrap-container .right-container {
+        margin-top: 0px;
+        padding-top: 10px;
+    }
+    .build-info .wrap-container .right-container .build-anim {
+        width: 100%;
+    }
 
     /*---------------BLOG POSTS PAGE--------------*/
 
@@ -2444,18 +2457,7 @@ a.post-link-container {
 
     /*---------------BUILD PAGE----------------*/
 
-    .build-info .wrap-container {
-        display: flex;
-        flex-direction: column-reverse;
-        padding-top: 0;
-    }
-    .build-info .wrap-container .right-container {
-        margin-top: 0px;
-        padding-top: 10px;
-    }
-    .build-info .wrap-container .right-container .build-anim {
-        width: 100%;
-    }
+    
 
     /*---------------LEARN PAGE----------------*/
     .main.learn {
