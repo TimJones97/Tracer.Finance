@@ -544,8 +544,8 @@ section.eco-system .right-container h2 {
     width: 100%;
     left: unset;
     font-size: 15px;
-    transform: translate(-65px, -50%) rotate(90deg);
-    width: 160px;
+    transform: translate(-68px, -50%) rotate(90deg);
+    width: 165px;
     color: #fff;
 }
 .tracer-icons figure {
@@ -3024,7 +3024,7 @@ a.post-link-container {
 
     .perpetuals .tracer-tablet {
         top: -180px;
-        width: 45%;
+        width: 40%;
     }
 
     /*-----PERPETUALS SECTION-----*/
