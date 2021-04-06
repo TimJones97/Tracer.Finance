@@ -435,6 +435,9 @@ html, body {
 .tracer-btn:hover:after {
     opacity: 1;
 }
+.nav-item.exchange {
+    transition: all 0.2s ease-in-out;
+}
 .nav-item.exchange:hover {
     background: #3DA8F5;
     border: 2px solid #3DA8F5;
