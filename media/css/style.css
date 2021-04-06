@@ -2486,8 +2486,13 @@ a.post-link-container {
     }
     .blog-posts .left-container {
         width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        float: none;
+        opacity: 0;
+        height: 0px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .blog-posts .right-container {
         width: 100%;
@@ -2909,16 +2914,6 @@ a.post-link-container {
 
     /*--CATEGORY LISTINGS--*/
 
-    .blog-posts .left-container {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        float: none;
-        opacity: 0;
-        height: 0px;
-        display: flex;
-        justify-content: space-between;
-    }
     .blog-posts .left-container .category {
         width: 50%;
         padding-right: 10px;
