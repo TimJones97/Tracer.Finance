@@ -33,7 +33,7 @@ b {
 *:active {
     outline: none !important;
 }
-p, h1, h2, h3 {
+p, h1, h2 {
     font-family: 'Akkurat';
     color: #fff;
     transition: all 0.5s ease;
@@ -159,7 +159,6 @@ html, body {
 .navbar-collapse .video-bg {
     opacity: 0;
     display: none;
-    transition: opacity 0.5s ease;
     pointer-events: none;
 }
 
@@ -170,9 +169,6 @@ html, body {
 }
 .navbar-toggler {
     border: none;
-    position: fixed;
-    right: 33px;
-    top: 20px;
     height: 30px;
     transition: all 0.5s ease;
     z-index: 999;
@@ -294,7 +290,6 @@ html, body {
 }
 .dropdown-menu {
     display: block;
-    pointer-events: none;
     background: #3372e8;
     position: absolute;
     top: 0;
@@ -307,10 +302,12 @@ html, body {
     transform: translateZ(0);
     backface-visibility: hidden;
     opacity: 0;
+    height: 100px;
+    overflow: hidden;
 }
 .dropdown-menu.show {
-    pointer-events: all;
     opacity: 1;
+    height: 427px;
 }
 .dropdown-toggle[aria-expanded="true"] {
     border-bottom: 1px solid transparent !important;
@@ -540,6 +537,7 @@ section.eco-system .right-container h2 {
     font-size: 22px;
     background: #1026c9;
     padding: 0px 15px;
+    color: #fff;
 }
 .tracer-icons .connector-lines.right h3 {
     top: 50%;
@@ -548,6 +546,7 @@ section.eco-system .right-container h2 {
     font-size: 15px;
     transform: translate(-65px, -50%) rotate(90deg);
     width: 160px;
+    color: #fff;
 }
 .tracer-icons figure {
     height: 200px;
@@ -1660,6 +1659,7 @@ footer .social-icons .social-link:hover {
 .build-anim #container canvas {
     margin: 0 auto;
     display: block;
+    cursor: pointer;
 }
 .build-anim p {
     font-family: 'Akkurat Light';
@@ -1952,14 +1952,6 @@ a.post-link-container {
 
 @media only screen and (max-width: 1600px){
 
-    /*-------------NAVBAR-------------*/
-
-    .nav-item.dropdown {
-        opacity: 0;
-        pointer-events: none;
-        /*display: none;*/
-    }
-
     /*---------------HOME PAGE--------------*/
 
     /*-----ECO-SYSTEM SECTION-----*/
@@ -2034,6 +2026,16 @@ a.post-link-container {
         margin-top: 85px;
     }
 }
+/*Only for the Tracer dropdown menu*/
+@media only screen and (max-width: 1350px){
+
+    /*-------------DROPDOWN MENU-------------*/
+
+    .nav-item.dropdown {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
 /*Media queries break at 1200px instead of standard tablet width of 991px for large graphics*/
 @media only screen and (max-width: 1200px){
 
@@ -2072,14 +2074,14 @@ a.post-link-container {
         top: 20px;
         width: 120px;
     }
-    .navbar-collapse .video-bg {
+    .collapse.show .video-bg {
         opacity: 1;
     }
     .nav-item.menu,
     .nav-item .nav-link {
         font-size: 36px;
         margin: unset;
-        padding: 15px 35px;
+        padding: 15px 80px;
     }
     .nav-item {
         border-top: 1px solid #3DA8F5;
@@ -2336,9 +2338,17 @@ a.post-link-container {
         display: inline-flex;
         padding-left: 0px;
     }
+
+    /*-----HIDDEN EMAIL SUBSCRIPTION-----*/
+
+    footer .wrap-container .subscribe .subscribe-box_hidden.show {
+        height: 130px;
+        padding: 30px 0px 15px 0px;
+    }
     footer .wrap-container .subscribe .subscribe-box_hidden input,
     footer .wrap-container .subscribe .subscribe-box_hidden button {
         width: 150px;
+        margin-top: 5px;
     }
 }
 /*---TABLET SCREEN WIDTH---*/
@@ -2609,19 +2619,22 @@ a.post-link-container {
     footer .wrap-container .right-container .pull-right .tracer-btn.search {
         width: 100%;
         margin-top: 10px;
-        height: 60px;
     }
     footer .wrap-container .inline {
         display: inline-flex;
         flex: 0 0 100%; 
         margin-right: 0px; 
     }
+
+    /*-----HIDDEN EMAIL SUBSCRIPTION-----*/
+
     footer .wrap-container .subscribe .subscribe-box_hidden {
-        top: 35px;
+        top: 30px;
     }
     footer .wrap-container .subscribe .subscribe-box_hidden input,
     footer .wrap-container .subscribe .subscribe-box_hidden button {
         width: 220px;
+        margin-top: 10px;
     }
     footer .wrap-container .subscribe .subscribe-box_hidden.show {
         height: 155px;
@@ -2656,6 +2669,9 @@ a.post-link-container {
         left: 33px;
         top: 20px;
         width: 120px;
+    }
+    .nav-item.menu, .nav-item .nav-link {
+        padding: 15px 33px;
     }
     .bottom-nav ul .nav-item .nav-link {
         padding: 18px 35px 18px 35px;

@@ -41,12 +41,38 @@ function truncate(input) {
    }
    return input;
 };
-// Get the current URL page
-// function getPathname(){
-// 	var pathname_arr = window.location.pathname.split('/');
-// 	var pathname = pathname_arr[pathname_arr.length - 2];
-// 	return pathname;
-// }
+function showDropdownOnHover(){
+	// Show when hovering over the general area
+	$('.dropdown-menu').hover(
+	  	function() {
+		    $(this).addClass('show');
+		    $('.dropdown-toggle').attr('aria-expanded', 'true');
+	  	}, function() {
+		    $(this).removeClass('show');
+		    $('.dropdown-toggle').attr('aria-expanded', 'false');
+	  	}
+	);
+	// Show when hovering over the toggle switch
+	$('.dropdown-toggle').hover(
+	  	function() {
+		    $('.dropdown-menu').addClass('show');
+		    $(this).attr('aria-expanded', 'true');
+	  	}, function() {
+		    $('.dropdown-menu').removeClass('show');
+		    $(this).attr('aria-expanded', 'false');
+	  	}
+	);
+	// Show when hovering over the logo
+	$('.navbar-brand').hover(
+	  	function() {
+		    $('.dropdown-menu').addClass('show');
+		    $('.dropdown-toggle').attr('aria-expanded', 'true');
+	  	}, function() {
+		    $('.dropdown-menu').removeClass('show');
+		    $('.dropdown-toggle').attr('aria-expanded', 'false');
+	  	}
+	);
+}
 function setNavHeight(){
 	if(isCollapsed()){
 		$('.navbar-nav').css('height', $(window).innerHeight() + 'px');
@@ -73,6 +99,8 @@ $(document).ready(function(){
 	setCopyrightYear();
 
 	toggleSubscriptionBox();
+
+	showDropdownOnHover();
 
 	// Set nav menu height on load if on mobile
 	setNavHeight();
