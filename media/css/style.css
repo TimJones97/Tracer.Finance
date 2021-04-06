@@ -730,6 +730,10 @@ footer .wrap-container .logo-container {
     display: flex;
     align-items: center;
 }
+footer .wrap-container .logo-container .split-left,
+footer .wrap-container .logo-container .split-right {
+    width: 50%;
+}
 footer .wrap-container .logo-container img {
     margin-top: -20px;
 }
@@ -2015,6 +2019,11 @@ a.post-link-container {
 
     /*---------------FOOTER--------------*/
 
+    footer .wrap-container .logo-container .split-right p {
+        text-align: right;
+        margin-left: unset;
+        width: 100%;
+    }
     footer .wrap-container .right-container {
         width: 100%;
         float: none;
@@ -2557,13 +2566,8 @@ a.post-link-container {
         justify-content: space-between;
         align-items: unset;
     }
-    footer .wrap-container .logo-container .split-left,
-    footer .wrap-container .logo-container .split-right {
-        width: 50%;
-    }
     footer .wrap-container .logo-container .split-right p {
         text-align: left;
-        margin-left: unset;
     }
     footer .wrap-container .logo-container img {
         width: 100px;
@@ -2941,7 +2945,7 @@ a.post-link-container {
         margin-bottom: 20px;
     }
     .blog-post {
-        height: 485px;
+        height: 400px;
         margin: 0 auto;
     }
 
@@ -3032,6 +3036,9 @@ a.post-link-container {
 
     /*--BLOG POST--*/
 
+    .blog-post {
+        height: 420px;
+    }
     .blog-post .caption-img,
     .blog-post .blog-text{
         height: 50%;
