@@ -1755,6 +1755,7 @@ a.post-link-container {
     display: block;
     margin-bottom: 20px;
     margin-left: 1%;
+    max-width: 400px;
 }
 .blog-post {
     width: 100%;
@@ -2942,7 +2943,6 @@ a.post-link-container {
     .blog-post {
         height: 485px;
         margin: 0 auto;
-        max-width: 400px;
     }
 
     /*-----RELATED CONTENT-----*/
