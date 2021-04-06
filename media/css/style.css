@@ -2937,7 +2937,7 @@ a.post-link-container {
     }
     .blog-posts .right-container a.post-link-container {
         width: 100%;
-        margin-right: 0;
+        margin: 0 auto;
         margin-bottom: 20px;
     }
     .blog-post {
