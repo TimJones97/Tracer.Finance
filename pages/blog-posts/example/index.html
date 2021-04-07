@@ -22,7 +22,7 @@
 		<!-- Change later -->
 		<meta property="og:image" content="/Tracer.Finance/media/images/general/open_graph_logo.png">
 
-	    <title>Tracer Perpetual Swaps | Tracer Blog</title>
+	    <title> | Tracer Blog</title>
 	    <link rel="shortcut icon" type="image/jpg" href="../../../media/images/general/favicon.ico"/>
 
 	    <!-- Bootstrap CSS -->
@@ -362,7 +362,10 @@
 		  	// Only create ScrollReveal on this page
 			createScrollReveal();
 
-			var body_location = 'example.md',
+			// var body_location = '../../../example.md',
+
+			// Replace with actual API link later
+			var body_location = 'https://raw.githubusercontent.com/TimJones97/Tracer.Finance/main/example.md',
 				md_text = getText(body_location),
 				converter = new showdown.Converter({'noHeaderId': true}),
 			    html      = converter.makeHtml(md_text),

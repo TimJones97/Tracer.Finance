@@ -118,9 +118,13 @@ function formatText(post){
 	var title = post.find('h1').first(),
 		stripped_title = title.text().replace(/"/g, ""),
 		subtitle = post.find('h2').first(),
-		stripped_subtitle = subtitle.text().replace(/"/g, "");
+		stripped_subtitle = subtitle.text().replace(/"/g, ""),
+		new_title = stripped_title + " | Tracer Blog";
 
-	document.title = title.text() + ' | Tracer Blog';
+	// Set page title to blog post title
+	var title_element = document.getElementsByTagName("title")[0];
+	title_element.innerText = new_title;
+
 	title.text(stripped_title);
 	subtitle.text(stripped_subtitle);
 
@@ -131,8 +135,6 @@ function formatText(post){
 
 	// Remove the horizontal rule line
 	post.find("hr").remove();
-
-	document.title = title;
 }
 $(window).scroll(function(){
 	//Check on the navbar on start
