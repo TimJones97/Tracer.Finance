@@ -2254,9 +2254,11 @@ a.post-link-container {
     }
     
     /*-----PERPETUALS-----*/
-
+    .perpetuals {
+        padding-top: 150px;
+    }
     .perpetuals .tracer-tablet {
-        top: -420px;
+        top: -280px;
         width: 50%;
         right: 0px;
     }
@@ -2528,14 +2530,18 @@ a.post-link-container {
 
     /*-----PERPETUALS-----*/
 
+    .perpetuals {
+        padding-top: 170px;
+    }
     .perpetuals .tracer-tablet {
         top: -205px;
         width: 45%;
         right: 0px;
     }
-    .perpetuals {
-        padding-top: 150px;
+    .perpetuals .tracer-tablet img {
+        width: 600px;
     }
+    
 
     /*---------------BUILD PAGE----------------*/
 
