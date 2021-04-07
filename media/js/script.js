@@ -130,7 +130,7 @@ function formatText(post){
 
 	// Add "mins" to end of read time
 	var read_time = post.find('h4').first();
-	read_time.text(read_time.text() + ' mins');
+	read_time.text(read_time.text() + ' minutes');
 
 	// Remove the slug, published, and blogImg lines from the blog post text
 	post.find("p:contains('slug:')").remove();
