@@ -1887,8 +1887,8 @@ a.post-link-container {
     content: "";
     position: absolute;
     background: url(../../media/images/blog-posts/clock.svg);
-    height: 15px;
-    width: 15px;
+    height: 16px;
+    width: 16px;
     background-size: cover;
     top: 50%;
     left: -20px;
