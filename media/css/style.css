@@ -60,6 +60,7 @@ body.no-anim * {
   background: #03065e;
   color: white;
 }
+
 /*----CUSTOM SCROLLBAR----*/
 
 ::-webkit-scrollbar {
@@ -1897,7 +1898,6 @@ a.post-link-container {
 .blog-post_full .blog-text h1 {
     font-size: 36px;
     color: #050CBD;
-    margin-top: 5px;
     margin-bottom: 20px;
 }
 /*Subtitle*/
