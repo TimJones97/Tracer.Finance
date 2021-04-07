@@ -36,7 +36,7 @@ b {
 p, h1, h2 {
     font-family: 'Akkurat';
     color: #fff;
-    transition: all 0.5s ease;
+    transition: font-size 0.5s ease;
 }
 h1 {
     font-size: 80px;
@@ -1682,7 +1682,7 @@ footer .social-icons .social-link:hover {
     justify-content: center;
 }
 .main.blog .wrap-container h2 {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /*-----BLOG POSTS SECTION-----*/
