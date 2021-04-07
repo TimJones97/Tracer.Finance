@@ -56,7 +56,7 @@ var greyMat = new THREE.MeshPhongMaterial({
 // instantiate a loader
 var group = new THREE.Object3D();
 scene.add(group);
-var image = '../../media/images/build/tracer_factory.png';
+var image = '../../media/images/build/tracer_factory.svg';
 var loader = new THREE.TextureLoader();
 loader.load( image, function ( texture ) {
     var geometry = new THREE.PlaneGeometry(100, 100);
@@ -132,19 +132,19 @@ function onPointerMove( event ) {
 
   pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-  raycaster.setFromCamera( pointer, camera );
-  const intersects = raycaster.intersectObject( Ico, true );
-  if (intersects.length > 0) {
-    const res = intersects.filter( function ( res ) {
-      return res && res.object;
-    } )[ 0 ];
-    if (res && res.object && res.object.type == 'Sprite') {
-      selectedObject = res.object;
-      console.log(selectedObject.material);
-      // selectedObject.material.color.set( '#f00' );
-      // selectedObject.scale.set(100, 100, 100);
-    }
-  }
+  // raycaster.setFromCamera( pointer, camera );
+  // const intersects = raycaster.intersectObject( Ico, true );
+  // if (intersects.length > 0) {
+  //   const res = intersects.filter( function ( res ) {
+  //     return res && res.object;
+  //   } )[0];
+  //   if (res && res.object && res.object.type == 'Sprite') {
+  //     selectedObject = res.object;
+  //     console.log(selectedObject.material);
+  //     // selectedObject.material.color.set( '#f00' );
+  //     // selectedObject.scale.set(100, 100, 100);
+  //   }
+  // }
 }
 
 // Render
