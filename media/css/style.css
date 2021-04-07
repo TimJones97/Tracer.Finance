@@ -849,7 +849,7 @@ footer .wrap-container .subscribe .subscribe-box_hidden {
 }
 footer .wrap-container .subscribe .subscribe-box_hidden.show {
     height: 130px;
-    padding: 20px 0px 15px 0px;
+    padding: 15px 0px 15px 0px;
 }
 footer .wrap-container .subscribe .subscribe-box_hidden input,
 footer .wrap-container .subscribe .subscribe-box_hidden button {
