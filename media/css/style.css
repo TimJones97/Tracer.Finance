@@ -2249,6 +2249,9 @@ a.post-link-container {
         height: 60vh;
         min-height: 515px;
     }
+    .main.trade header {
+        top: 50%;
+    }
     
     /*-----PERPETUALS-----*/
 
@@ -2526,8 +2529,8 @@ a.post-link-container {
     /*-----PERPETUALS-----*/
 
     .perpetuals .tracer-tablet {
-        top: -260px;
-        width: 50%;
+        top: -205px;
+        width: 45%;
         right: 0px;
     }
     .perpetuals {
