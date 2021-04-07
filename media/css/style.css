@@ -2970,6 +2970,16 @@ a.post-link-container {
 
     /*-----RIGHT CONTAINER - WHITEPAPERS-----*/
 
+    .whitepapers .wrap-container {
+        padding: 40px 0px;
+    }
+    .whitepapers .wrap-container .left-container {
+        padding-left: 33px;
+    }
+    .whitepapers .wrap-container .right-container {
+        padding-left: 33px;
+        height: 445px;
+    }
     .whitepapers .wrap-container .right-container {
         width: 100%;
         height: 480px;
@@ -2978,9 +2988,7 @@ a.post-link-container {
     /*Enable scroll for whitepapers*/
     .whitepapers .wrap-container .right-container .flex-container {
         overflow-x: scroll;
-    }
-    .scroll-prompt {
-        display: flex;
+        overflow-y: hidden;
     }
     .whitepapers .wrap-container .right-container article.whitepaper-download {
         width: 100%;
@@ -3105,15 +3113,8 @@ a.post-link-container {
 
     /*---------------LEARN PAGE----------------*/
 
-    .whitepapers .wrap-container {
-        padding: 40px 0px;
-    }
-    .whitepapers .wrap-container .left-container {
-        padding-left: 33px;
-    }
-    .whitepapers .wrap-container .right-container {
-        padding-left: 33px;
-        height: 445px;
+    .scroll-prompt {
+        display: flex;
     }
 
     /*---------------BLOG PAGE----------------*/
