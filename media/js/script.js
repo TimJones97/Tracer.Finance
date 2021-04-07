@@ -120,6 +120,7 @@ function formatText(post){
 		subtitle = post.find('h2').first(),
 		stripped_subtitle = subtitle.text().replace(/"/g, "");
 
+	document.title = title.text() + ' | Tracer Blog';
 	title.text(stripped_title);
 	subtitle.text(stripped_subtitle);
 
@@ -130,6 +131,8 @@ function formatText(post){
 
 	// Remove the horizontal rule line
 	post.find("hr").remove();
+
+	document.title = title;
 }
 $(window).scroll(function(){
 	//Check on the navbar on start
