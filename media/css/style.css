@@ -1790,7 +1790,7 @@ a.post-link-container {
     position: relative;
     width: 100%;
     height: 56.25%;
-    min-height: 225px;
+    min-height: 175px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     overflow: hidden;
@@ -3016,6 +3016,8 @@ a.post-link-container {
     }
     .related-content .right-container a.post-link-container {
         width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
 @media only screen and (max-width: 479px){

@@ -121,12 +121,16 @@ function formatText(post){
 		stripped_subtitle = subtitle.text().replace(/"/g, ""),
 		new_title = stripped_title + " | Tracer Blog";
 
+	title.text(stripped_title);
+	subtitle.text(stripped_subtitle);
+
 	// Set page title to blog post title
 	var title_element = document.getElementsByTagName("title")[0];
 	title_element.innerText = new_title;
 
-	title.text(stripped_title);
-	subtitle.text(stripped_subtitle);
+	// Add "mins" to end of read time
+	var read_time = post.find('h4').first();
+	read_time.text(read_time.text() + ' mins');
 
 	// Remove the slug, published, and blogImg lines from the blog post text
 	post.find("p:contains('slug:')").remove();
