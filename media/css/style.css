@@ -53,6 +53,9 @@ html, body {
    height: 100%;
    width: 100%;
 }
+body.no-anim * {
+  transition: none !important;
+}
 *::selection { 
   background: #03065e;
   color: white;

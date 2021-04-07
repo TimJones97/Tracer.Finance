@@ -148,6 +148,10 @@ $(window).resize(function(){
 	setNavHeight();
 });
 $(document).ready(function(){
+	
+	// Wait for page to load before enabling transitions to stop elements from showing too early
+  	$("body").removeClass("no-anim");
+
 	setCopyrightYear();
 
 	toggleSubscriptionBox();
