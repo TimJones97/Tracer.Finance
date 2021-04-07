@@ -252,6 +252,9 @@ html, body {
     display: flex;
     align-items: center;
 }
+.bottom-nav ul .social-links {
+    border-bottom: 1px solid #3DA8F5;
+}
 .nav-link.social {
     padding: 15px 25px 15px 35px;
 }
