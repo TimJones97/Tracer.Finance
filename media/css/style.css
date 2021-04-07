@@ -57,8 +57,8 @@ body.no-anim * {
   transition: none !important;
 }
 *::selection { 
-  background: #03065e;
-  color: white;
+  background: #090ea5;
+  color: #fff;
 }
 
 /*----CUSTOM SCROLLBAR----*/
