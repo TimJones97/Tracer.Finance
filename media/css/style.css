@@ -1728,6 +1728,7 @@ footer .social-icons .social-link:hover {
     opacity: 1;
     /*Fixed height for animation*/
     height: 160px;
+    pointer-events: all;
 }
 .category {
     margin-bottom: 20px;
@@ -1813,11 +1814,11 @@ a.post-link-container {
     font-size: 16px;
     margin: 0;
 }
-.blog-post .blog-text p.post-time {
+.blog-post .blog-text h6 {
     color: #A3A3A3;
     margin-bottom: 5px;
 }
-.blog-post .blog-text p.post-title {
+.blog-post .blog-text h1 {
     font-size: 24px;
     color: #050CBD;
     margin-bottom: 5px;
@@ -1852,7 +1853,6 @@ a.post-link-container {
 
 .blog-post_full {
     /*max-width: 950px;*/
-    padding-bottom: 20px;
 }
 .blog-post_full .blog-text p {
     font-size: 16px;
@@ -1861,25 +1861,46 @@ a.post-link-container {
     color: #333333;
     max-width: 950px;
 }
-.blog-post_full .blog-text p.post-time {
-    color: #A3A3A3;
-    margin-bottom: 5px;
-}
-.blog-post_full .blog-text h2.post-title {
+
+/*Title*/
+.blog-post_full .blog-text h1 {
     font-size: 36px;
     color: #050CBD;
     margin-top: 5px;
     margin-bottom: 20px;
 }
-.blog-post_full .blog-text h3.post-tagline,
-.blog-post_full .blog-text h3.post-subheading {
+/*Subtitle*/
+.blog-post_full .blog-text h2 {
     font-size: 24px;
     color: #333333;
-    margin-bottom: 25px;
 }
-.blog-post_full .blog-text h3.post-subheading {
-    margin-bottom: 10px;
+/*Read time*/
+.blog-post_full .blog-text h4 {
+    position: relative;
+    display: inline-block;
+    color: #A3A3A3;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
+.blog-post_full .blog-text h4:before {
+    content: "";
+    position: absolute;
+    background: url(../../media/images/blog-posts/clock.svg);
+    height: 15px;
+    width: 15px;
+    background-size: cover;
+    top: 50%;
+    left: -20px;
+    transform: translate(0%, -50%);
+}
+/*Date*/
+.blog-post_full .blog-text h6 {
+    display: inline-block;
+    color: #A3A3A3;
+    margin-bottom: 20px;
+}
+
 .blog-post_full picture.blog-post_image,
 .blog-post_full picture.blog-post_image img {
     width: 100%;
@@ -1889,7 +1910,10 @@ a.post-link-container {
     max-width: 950px;
     display: block;
 }
-
+/*Do not provide margin to paragraph list items*/
+.blog-post_full .blog-text ul li p {
+    margin-bottom: 0px;
+}
 /*-----POST GRAPHICS-----*/
 
 .blog-post_full .post-graphics {
@@ -2522,6 +2546,7 @@ a.post-link-container {
         height: 0px;
         display: flex;
         justify-content: space-between;
+        pointer-events: none;
     }
     .blog-posts .right-container {
         width: 100%;

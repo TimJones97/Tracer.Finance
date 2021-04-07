@@ -88,6 +88,49 @@ function toggleSubscriptionBox(){
 		$('.subscribe-box_hidden').toggleClass('show');
 	});
 }
+// Get markdown content  
+function getText(myUrl){
+    var result = null;
+    $.ajax( { url: myUrl, 
+              type: 'get', 
+              dataType: 'html',
+              async: false,
+              success: function(data) { 
+              	result = data;
+              	result = result.replace('title:', '#')
+              	.replace('subtitle:', '##')
+				.replace('date:', '###### Date:')
+				.replace('readTime:', '#### Read time:');
+              } 
+            }
+    );
+    return result;
+}
+function formatText(post){
+	// h6 is always date element
+	// This formats the date into a nice readable format
+	var date = post.find('h6'),
+		formatted_date = moment(date.text(), "DD-MM-YYYY"),
+		readable_date  = moment(formatted_date).format('d MMMM YYYY');
+	date.text(readable_date);
+
+	// Remove the quotation marks from the h1 and h2 elements
+	var title = post.find('h1').first(),
+		stripped_title = title.text().replace(/"/g, ""),
+		subtitle = post.find('h2').first(),
+		stripped_subtitle = subtitle.text().replace(/"/g, "");
+
+	title.text(stripped_title);
+	subtitle.text(stripped_subtitle);
+
+	// Remove the slug, published, and blogImg lines from the blog post text
+	post.find("p:contains('slug:')").remove();
+	post.find("p:contains('blogImg:')").remove();
+	post.find("h2:contains('published:')").remove();
+
+	// Remove the horizontal rule line
+	post.find("hr").remove();
+}
 $(window).scroll(function(){
 	//Check on the navbar on start
 	navBGScroll();

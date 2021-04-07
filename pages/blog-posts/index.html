@@ -431,6 +431,9 @@
 		<!-- ScrollReveal.js -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ==" crossorigin="anonymous"></script>
 
+		<!-- Showdown for Blog Post -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous"></script>
+
 		<!-- Local scripts -->
 		<script>
 		  	document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')
@@ -438,6 +441,11 @@
 		<script>
 		  	// Only create ScrollReveal on this page
 			createScrollReveal();
+
+			var md_text = getText(body_location),
+				converter = new showdown.Converter(),
+			    html      = converter.makeHtml(md_text);
+			console.log(html);
 		</script>
 	</body>
 </html>
