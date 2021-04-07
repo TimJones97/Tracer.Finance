@@ -357,7 +357,8 @@ html, body {
 }
 .dropdown-menu .nav-item .nav-link.social {
     padding: 20px 10px 20px 33px;
-    opacity: 1;
+    opacity: 0;
+    transform: translateX(-20px);
 }
 /*Extra dropdown styles that apply 
   when dropdown is open*/
@@ -384,7 +385,23 @@ html, body {
 .dropdown-menu.show .nav-item .nav-link.social:hover img {
     transform: scale(1.1);
 }
-
+/*Fade in the social icons one by one*/
+.dropdown-menu.show .social-links .nav-link {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.dropdown-menu.show .social-links .nav-link:nth-child(4){
+    transition: all 0.3s ease-in-out 0.2s;
+}
+.dropdown-menu.show .social-links .nav-link:nth-child(3) {
+    transition: all 0.3s ease-in-out 0.3s;
+}
+.dropdown-menu.show .social-links .nav-link:nth-child(2) {
+    transition: all 0.3s ease-in-out 0.4s;
+}
+.dropdown-menu.show .social-links .nav-link:nth-child(1) {
+    transition: all 0.3s ease-in-out 0.5s;
+}
 /*-----MAIN SECTION-----*/
 
 .video-bg {
