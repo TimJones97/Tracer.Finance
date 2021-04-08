@@ -128,8 +128,24 @@ body.no-anim * {
     transition: all 0.5s ease;
     z-index: 1;
 }
+.navbar-brand.blog-brand {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+.navbar-brand.blog-brand img {
+    width: 150px;
+    padding-right: 10px;
+}
 .navbar-brand img {
     width: 100%;
+}
+.navbar-brand.blog-brand p {
+    font-family: 'Akkurat Light', serif;
+    margin: 0;
+    margin-left: 5px;
+    text-align: right;
+    font-size: 30px;
 }
 .navbar-brand.fade-out {
     opacity: 0;
@@ -150,7 +166,6 @@ body.no-anim * {
 .nav-item .nav-link:hover {
     color: #3DA8F5;
 }
-
 /*Hide the home element on desktop*/
 .nav-item.home {
     display: none;
@@ -158,10 +173,14 @@ body.no-anim * {
 .nav-item.home:hover {
     background: unset !important;
 }
-.nav-item.exchange {
+.nav-item.main-site,
+.nav-item.tracer-perpetuals {
     border: 2px solid #fff;
     padding: 0px 5px;
     border-radius: 50px;
+}
+.nav-item.main-site {
+
 }
 .navbar-collapse .video-bg {
     opacity: 0;
@@ -465,14 +484,14 @@ body.no-anim * {
 .tracer-btn:hover:after {
     opacity: 1;
 }
-.nav-item.exchange {
+.nav-item.tracer-perpetuals {
     transition: all 0.2s ease-in-out;
 }
-.nav-item.exchange:hover {
+.nav-item.tracer-perpetuals:hover {
     background: #3DA8F5;
     border: 2px solid #3DA8F5;
 }
-.nav-item.exchange:hover a {
+.nav-item.tracer-perpetuals:hover a {
     color: #fff;
 }
 .button-container {
@@ -2003,6 +2022,12 @@ a.post-link-container {
     display: inline-flex;
     margin-top: 20px;
 }
+
+/*-------------------EXCHANGE PAGE - COMING SOON-------------------*/
+
+.main.exchange {
+
+}
 /*-------------------MEDIA QUERIES-------------------*/
 
 @media only screen and (max-width: 1600px){
@@ -2146,8 +2171,8 @@ a.post-link-container {
         border-top: unset;
         display: block;
     }
-    .nav-item.blog,
-    .nav-item.exchange {
+    .nav-item.home,
+    .nav-item.tracer-perpetuals {
         display: none;
     }
     .navbar-nav {
