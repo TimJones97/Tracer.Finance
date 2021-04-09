@@ -81,7 +81,7 @@ var txtLoader = new THREE.TextureLoader();
 txtLoader.setCrossOrigin("");
 var texturesPartners = [
   "../../media/images/build/RMIT_BIH_logo_dark.svg",
-  "../../media/images/build/lions_mane_logo_white_square.svg"
+  "../../media/images/build/lions_mane_logo_square.svg"
 ];
 var direction = new THREE.Vector3();
 Ico.geometry.vertices.forEach(function(vertex, index){

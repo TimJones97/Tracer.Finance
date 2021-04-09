@@ -168,11 +168,23 @@ function toggleReadMore(){
 	$('.read-more-btn').click(function(){
 		var current_text = $(this).text();
 		if(current_text == "Read More"){
-			$(this).text('Read Less');
+			$(this).stop().animate({
+		        'opacity': 0
+		    }, 200, function() {
+	        	$(this).text('Read Less').animate({
+	            'opacity': 1
+	       		}, 200);
+			});
 			$('.build-text .show-more').addClass('full');
 		}
 		else {
-			$(this).text('Read More');
+			$(this).stop().animate({
+		        'opacity': 0
+		    }, 200, function() {
+	        	$(this).text('Read More').animate({
+	            'opacity': 1
+	       		}, 200);
+			});
 			$('.build-text .show-more').removeClass('full');
 		}
 	});
