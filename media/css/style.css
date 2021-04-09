@@ -533,6 +533,7 @@ section.eco-system p {
 }
 .left-container {
     width: 30%;
+    float: left;
 }
 .right-container {
     width: 70%;
@@ -1196,6 +1197,12 @@ footer .social-icons .social-link:hover {
     width: 180px;
 }
 .governance .wrap-container .flex-container .governance-info .tracer-btn.apply-govern:hover {
+    width: 230px;
+}
+.governance .wrap-container .flex-container .governance-info .tracer-btn.discourse-launch {
+    width: 180px;
+}
+.governance .wrap-container .flex-container .governance-info .tracer-btn.discourse-launch:hover {
     width: 230px;
 }
 .governance .wrap-container .flex-container .governance-info .tracer-btn:hover {
