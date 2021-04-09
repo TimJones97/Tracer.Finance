@@ -223,6 +223,7 @@ $(window).resize(function(){
 	// or vice versa, capture the change and resize 
 	// accordingly
 	setNavHeight();
+	navBGScroll();
 });
 $(document).ready(function(){
 	
