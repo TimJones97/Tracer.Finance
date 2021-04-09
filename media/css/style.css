@@ -127,20 +127,21 @@ body.no-anim * {
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    padding: 0;
 }
-.navbar-brand.blog-brand {
+.navbar-brand.brand-text {
     display: flex;
     width: auto;
     justify-content: space-between;
 }
-.navbar-brand.blog-brand img {
+.navbar-brand.brand-text img {
     width: 150px;
     padding-right: 10px;
 }
 .navbar-brand img {
     width: 100%;
 }
-.navbar-brand.blog-brand p {
+.navbar-brand.brand-text p {
     font-family: 'Akkurat Light', serif;
     margin: 0;
     margin-left: 5px;
@@ -330,7 +331,7 @@ body.no-anim * {
     left: 45px;
     width: 450px;
     z-index: 0; 
-    padding-top: 80px;
+    padding-top: 85px;
     padding-bottom: 0px;
     transition: all 0.5s ease;
     transform: translateZ(0);
@@ -2027,6 +2028,13 @@ a.post-link-container {
 
 .main.exchange {
 
+}
+
+.main.exchange header .tracer-btn.alpha {
+    width: 180px;
+}
+.main.exchange header .tracer-btn.alpha:hover {
+    width: 220px;
 }
 /*-------------------MEDIA QUERIES-------------------*/
 
