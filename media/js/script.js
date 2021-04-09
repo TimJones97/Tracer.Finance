@@ -85,8 +85,23 @@ function toggleSubscriptionBox(){
 	$('footer .tracer-btn.blue').click(function(e){
 		e.preventDefault();
 		e.stopPropagation();
-		$('.subscribe-box_hidden').toggleClass('show');
+		$('.subscribe').addClass('show');
+		$('.tracer-btn.blue').attr('onclick', 'checkIfValid()');
 	});
+	$(document).click(function(event){
+	    if(event.target != $('.subscribe')[0] &&
+	       event.target != $('.subscribe form')[0] &&
+	       event.target != $('.subscribe form input')[0] &&
+	       event.target != $('.subscribe .tracer-btn.blue')[0]) {
+			$('.subscribe').removeClass('show');
+			$('.tracer-btn.blue').removeAttr('onclick');
+	    }
+	})
+}
+function checkIfValid(){
+	if($("#email").valid()) {
+	    document.getElementById("subscription-form").submit()
+	}
 }
 // Get markdown content  
 function getText(myUrl){
@@ -140,6 +155,15 @@ function formatText(post){
 	// Remove the horizontal rule line
 	post.find("hr").remove();
 }
+function showInfoTextOnAlphaButtonHover(){
+	$('.alpha-btn').hover(
+	  	function() {
+		    $(this).siblings('span').attr('data-show', 'true');
+	  	}, function() {
+		    $(this).siblings('span').attr('data-show', 'false');
+	  	}
+	);
+}
 $(window).scroll(function(){
 	//Check on the navbar on start
 	navBGScroll();
@@ -150,7 +174,9 @@ $(window).resize(function(){
 $(document).ready(function(){
 	
 	// Wait for page to load before enabling transitions to stop elements from showing too early
-  	$("body").removeClass("no-anim");
+	setTimeout(function(){
+  		$("body").removeClass("no-anim");
+	}, 200);
 
 	setCopyrightYear();
 

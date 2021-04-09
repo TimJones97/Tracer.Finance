@@ -45,7 +45,7 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<div class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="/Tracer.Finance/pages/exchange/">
 									<img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Perpetuals">
 									&nbsp;Perpetuals
 								</a>
@@ -103,7 +103,7 @@
 						        <a class="nav-link" href="/Tracer.Finance/pages/build/">Build</a>
 						    </li>
 						    <li class="nav-item">
-					        	<a class="nav-link" href="/Tracer.Finance/pages/integrate/">Integrate</a>
+					        	<a class="nav-link" href="/Tracer.Finance/pages/integrations/">Integrations</a>
 						    </li>
 						    <li class="nav-item tracer-perpetuals">
 						        <a class="nav-link" href="/Tracer.Finance/pages/exchange/">Tracer Perpetuals</a>
@@ -286,11 +286,10 @@
 					</div>
 					<div class="pull-right">
 						<div class="subscribe inline">
-							<a href="#" class="tracer-btn blue inline">Subscribe to Mailing list</a>
 							<div class="subscribe-box_hidden">
-								<form>
-									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" placeholder="Email" required>
-									<button type="submit">Subscribe</button>
+								<form id="subscription-form" method="post">
+									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" placeholder="Enter Email" required>
+									<a class="tracer-btn blue" id="email-submit">Subscribe to Mailing list</a>
 								</form>
 							</div>
 						</div>
@@ -318,6 +317,9 @@
 
 		<!-- jQuery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+		<!-- jQuery Validate -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
 
 		<!-- Bootstrap JS -->
 		<script src="../../media/js/bootstrap.modified.js"></script>

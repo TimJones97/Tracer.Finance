@@ -3,7 +3,7 @@
 	<head>
 		<!-- Meta tags -->
 		<meta name="viewport" content="width=device-width, user-scalable=no"/>
-	    <meta name="title" content="Tracer | Trade">
+	    <meta name="title" content="Tracer | Integrations">
 	    <meta name="description" content="Financial infrastructure that stands to be the backbone of a decentralised globally secure financial network.">
 	    <meta name="keywords" content="Tracer, DeFi, Bitcoin, Crypto, Exchange, Governance, DAO, Protocol">
 	    <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
 	    <meta name="theme-color" content="#03065E">
 
 	    <!-- OpenGraph meta tags -->
-	    <meta property="og:title" content="Tracer | Trade">
+	    <meta property="og:title" content="Tracer | Integrations">
 		<meta property="og:site_name" content="Tracer Finance">
 		<meta property="og:url" content="https://tracer.finance/">
 		<meta property="og:description" content="Financial infrastructure that stands to be the backbone of a decentralised globally secure financial network.">
@@ -22,7 +22,7 @@
 		<!-- Change later -->
 		<meta property="og:image" content="/Tracer.Finance/media/images/general/open_graph_logo.png">
 
-		<title>Tracer | Trade</title>
+	    <title>Tracer | Integrations</title>
 	    <link rel="shortcut icon" type="image/jpg" href="../../media/images/general/favicon.ico"/>
 
 	    <!-- Bootstrap CSS -->
@@ -32,7 +32,7 @@
     	<script>document.write('<link rel="stylesheet" type="text/css" href="../../media/css/style.css?v=' + Date.now() + '"\/>');</script>
 	</head>
 	<body class="no-anim">
-		<div class="nav-container darkblue">
+		<div class="nav-container">
 			<div class="nav-bg"></div>
 			<div class="wrap-container">
 				<a class="navbar-brand" href="/Tracer.Finance/pages/home/">
@@ -93,7 +93,7 @@
 						    <li class="nav-item">
 						        <a class="nav-link" href="/Tracer.Finance/pages/govern/">Govern</a>
 					      	</li>
-						    <li class="nav-item active">
+						    <li class="nav-item">
 						        <a class="nav-link" href="/Tracer.Finance/pages/trade/">Trade</a>
 						    </li>
 						    <li class="nav-item">
@@ -102,7 +102,7 @@
 						    <li class="nav-item">
 						        <a class="nav-link" href="/Tracer.Finance/pages/build/">Build</a>
 						    </li>
-						    <li class="nav-item">
+						    <li class="nav-item active">
 					        	<a class="nav-link" href="/Tracer.Finance/pages/integrations/">Integrations</a>
 						    </li>
 						    <li class="nav-item tracer-perpetuals">
@@ -148,130 +148,44 @@
 				</nav>
 		 	</div>
 	  	</div>
-	  	<section class="main trade">
-	  		<div class="fixed-bg">
-	  		</div>
+	  	<section class="main integrations">
 	  		<div class="wrap-container">
-	  			<header>
-	  				<p class="sml-blue">
-	  					Go Long or Short
-	  				</p>
-	  				<div class="tracer-perpetuals-container">
-		  				<picture>
-							<img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo">
-		  				</picture>
-		  				<p>Perpetuals</p>
-		  			</div>
-	  				<p class="sml-blue">
-		  				Tracer’s perpetual swap financial contract allows you to go LONG or SHORT on any asset with a price feed.
-	  				</p>
-	  				<div class="button-container">
-	  					<a class="tracer-btn" href="#">Launch</a>
-		  			</div>
-	  				<div class="button-container">
-		  				<a class="tracer-btn" target="_blank" href="https://tracer.finance/whitepapers/perp-swaps/Tracer_Perpetual_Swaps.pdf">Whitepaper</a>
-		  			</div>
-		  			<div class="button-container block-display">
-	  					<a class="tracer-btn alpha-btn" href="#">Apply for Alpha</a>
-		  			</div>
-		  		</header>
-  			</div>
-	  	</section>
-	  	<section class="perpetuals">
-	  		<picture class="tracer-tablet">
-	  			<img src="../../media/images/perpetuals/tracer_tablet.png" alt="Tracer Markets Tablet">
-	  		</picture>	
-	  		<div class="wrap-container">
-	  			<p>Tracer Exchange</p>
-	  			<h2>Perpetual Markets</h2>
-	  			<table class="live-perpetual-markets">
-	  			  <thead>
-	  			    <tr>
-	  			      	<th class="market-header">Market</th>
-	  			      	<th class="cumulative-header">Cumulative</th>
-	  			      	<th class="quantity-header">Quantity</th>
-	  			      	<th class="price-header">Price</th>
-	  			      	<th class="fluctuation-header">Fluctuation</th>
-	  			    </tr>
-	  			  </thead>
-	  			  <tbody>
-	  			    <tr data-ticker="ETH:USDC" class="coin-info-row">
-	  			      	<td class="ticker-pair">
-	  			      		<img src="../../media/images/perpetuals/ticker_icons/eth_icon.png" alt="Ethereum icon">
-	  			      		<span class="pair-text">ETH &#62; USDC</span>
-	  			      	</td>
-	  			      	<td class="cumulative"><span>Cumulative</span>213</td>
-	  			      	<td class="quantity"><span>Quantity</span>4554</td>
-	  			      	<td class="price"><span>Price</span>$7,450.60</td>
-	  			      	<td class="fluctuation down"><span>Fluctuation</span>1.04%</td>
-	  			    </tr>
-	  			    <tr data-ticker="BTC:USDC" class="coin-info-row">
-  			      		<td class="ticker-pair">
-	  			      		<img src="../../media/images/perpetuals/ticker_icons/btc_icon.png" alt="Bitcoin icon">
-	  			      		<span class="pair-text">BTC &#62; USDC</span>
-  			      		</td>
-  			      		<td class="cumulative"><span>Cumulative</span>54372</td>
-	  			      	<td class="quantity"><span>Quantity</span>55519</td>
-	  			      	<td class="price"><span>Price</span>$57,490.63</td>
-	  			      	<td class="fluctuation up"><span>Fluctuation</span>0.04%</td>
-	  			    </tr>
-	  			    <tr data-ticker="LINK:USDC" class="coin-info-row">
-	  			      	<td class="ticker-pair">
-	  			      		<img src="../../media/images/perpetuals/ticker_icons/link_icon.png" alt="Link icon">
-	  			      		<span class="pair-text">LINK &#62; USDC</span>
-  			      		</td>
-	  			      	<td class="cumulative"><span>Cumulative</span>79456</td>
-	  			      	<td class="quantity"><span>Quantity</span>1233</td>
-	  			      	<td class="price"><span>Price</span>$350.60</td>
-	  			      	<td class="fluctuation up"><span>Fluctuation</span>0.24%</td>
-	  			    </tr>
-	  			  </tbody>
-	  			</table>
+	  			<h2>Integrations</h2>
 	  		</div>
 	  	</section>
-	  	<section class="perpetuals-info">
+  	  	<section class="integrations-info">
+  	  		<div class="wrap-container">
+  	  			<div class="left-container">
+  	  				<h2>Arm your users with leveraged exposure to any market</h2>
+  	  				<p>
+	  	  				Provide your users and applications with lightning fast, ultra secure low cost perpetual swap contracts. Plug Tracer’s liquid infrastructure into your application and the Tracer ecosystem will manage the rest.
+	  	  			</p>
+	  				<div class="button-container">
+  						<a class="tracer-btn" href="#">Get in touch</a>
+  	  				</div>
+	  				<div class="button-container">
+  						<a class="tracer-btn" href="#">Read the Docs</a>
+  	  				</div>
+  	  			</div>
+  	  			<div class="right-container">
+  	  				
+  				</div>
+  	  		</div>
+  	  	</section>
+	  	<section class="documentation">
 	  		<div class="wrap-container">
+	  			<h2>Documentation</h2>
 		  		<div class="flex-container">
 		  			<div class="info-block">
-		  				<p class="sub-heading">
-		  					In-depth research
-		  				</p>
-		  				<h3 class="title">
-		  					Read the Perps Whitepaper
-		  				</h3>
-		  				<p class="perp-text">
-		  					Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
-		  				</p>
-	  					<a class="tracer-btn" href="https://tracer.finance/whitepapers/perp-swaps/Tracer_Perpetual_Swaps.pdf">Learn More</a>
-		  			</div>
-		  			<div class="info-block">
-		  				<p class="sub-heading">
-		  					Open Forum
-		  				</p>
-		  				<h3 class="title">
-		  					Benefit of Tracer Perps #3
-		  				</h3>
-		  				<p class="perp-text">
-		  					Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
-		  				</p>
-	  					<a class="tracer-btn" href="#">Learn More</a>
-		  			</div>
-		  			<div class="info-block">
-		  				<p class="sub-heading">
-		  					Blazing fast transactions
-		  				</p>
-		  				<h3 class="title">
-		  					Benefit of Tracer Perps #3
-		  				</h3>
-		  				<p class="perp-text">
-		  					Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
+		  				<p class="documentation-text">
+		  					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takim
 		  				</p>
 	  					<a class="tracer-btn" href="#">Learn More</a>
 		  			</div>
 		  		</div>
 	  		</div>
 	  	</section>
-		<footer>
+	  	<footer>
 			<div class="wrap-container">
 				<hr>
 				<div class="left-container">
@@ -349,23 +263,25 @@
 				</div>
 			</div>
 	  	</footer>
-
-	  	<!-- FOR DARK VIDEO LATER -->
-	  	<!-- Uncomment element and insert path to your mp4 darker video file -->
-
-	  	<!-- <video class="video-bg" muted loop="loop" autoplay playsinline>
-	  	    <source src="../../media/images/general/tracer_home.mp4" type="video/mp4">
-	  	</video> -->
-
+	  	<video class="video-bg" muted loop="loop" autoplay playsinline>
+	        <source src="../../media/images/general/tracer_home.mp4" type="video/mp4">
+	  	</video>
 		<!-- jQuery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
-		<!-- Bootstrap JS -->
+		<!-- Bootstrap JS (modified) -->
 		<script src="../../media/js/bootstrap.modified.js"></script>
+
+		<!-- ScrollReveal.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ==" crossorigin="anonymous"></script>
 
 		<!-- Local scripts -->
 		<script>
-		  document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')
+		  	document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')
+		</script>
+		<script>
+		  	// Only create ScrollReveal on this page
+			createScrollReveal();
 		</script>
 	</body>
 </html>

@@ -45,7 +45,7 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<div class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="/Tracer.Finance/pages/exchange/">
 									<img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Perpetuals">
 									&nbsp;Perpetuals
 								</a>
@@ -103,7 +103,7 @@
 						        <a class="nav-link" href="/Tracer.Finance/pages/build/">Build</a>
 						    </li>
 						    <li class="nav-item">
-					        	<a class="nav-link" href="/Tracer.Finance/pages/integrate/">Integrate</a>
+					        	<a class="nav-link" href="/Tracer.Finance/pages/integrations/">Integrations</a>
 						    </li>
 						    <li class="nav-item tracer-perpetuals">
 						        <a class="nav-link" href="/Tracer.Finance/pages/exchange/">Tracer Perpetuals</a>
@@ -248,11 +248,10 @@
 					</div>
 					<div class="pull-right">
 						<div class="subscribe inline">
-							<a href="#" class="tracer-btn blue inline">Subscribe to Mailing list</a>
 							<div class="subscribe-box_hidden">
-								<form>
-									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" placeholder="Email" required>
-									<button type="submit">Subscribe</button>
+								<form id="subscription-form" method="post">
+									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" placeholder="Enter Email" required>
+									<a class="tracer-btn blue" id="email-submit">Subscribe to Mailing list</a>
 								</form>
 							</div>
 						</div>
@@ -297,7 +296,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.min.js" integrity="sha512-UPS93nFm3rHFvozU2gLyVZdwMj38GhGqO/zA5r9UxEd4pIkubkIn8brpvM0DPi6XKiQ6KPrfpK/c8YDC2VglKw==" crossorigin="anonymous"></script>
 
 		<!-- Local scripts -->
-		<script type="module" src="../../media/js/OrbitControls.js"></script>
 		<script type="module" src="../../media/js/icosahedron.js"></script>
 		<script>
 		  document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')

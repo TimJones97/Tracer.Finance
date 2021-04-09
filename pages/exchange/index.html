@@ -46,9 +46,9 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<div class="nav-item">
-								<a class="nav-link" href="#">
-									<img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Exchange">
-									&nbsp;Exchange
+								<a class="nav-link" href="/Tracer.Finance/pages/home/">
+									<img src="../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Home">
+									&nbsp;Home
 								</a>
 							</div>
 							<div class="nav-item">
@@ -88,9 +88,12 @@
 				  	</button>
 				  	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					    <ul class="navbar-nav">
-						    <li class="nav-item main-site">
+						    <li class="nav-item tracer-btn main-site">
 						        <a class="nav-link" href="/Tracer.Finance/pages/home/">Main Site</a>
 						    </li>
+						    <li class="nav-item home">
+					    	    <a class="nav-link" href="/Tracer.Finance/pages/home/">Home</a>
+				    	 	</li>
 						    <li class="bottom-nav">
 						    	<ul>
 						    		<li class="nav-item">
@@ -137,7 +140,8 @@
 	  				<h1>Coming Soon.</h1>
 	  				<p>Tracer’s perpetual swap contracts enable users to go long or short on any underlying asset.</p>
 	  				<div class="button-container">
-	  					<a href="https://tracer-finance.typeform.com/to/CLDvv8H7" class="tracer-btn alpha">Apply for Alpha</a>
+	  					<a href="https://tracer-finance.typeform.com/to/CLDvv8H7" class="tracer-btn alpha-btn">Apply for Alpha</a>
+	  					<span tooltip="Get Down." data-show="false"></span>
 		  			</div>
 		  		</header>
 	  		</div>		
@@ -195,11 +199,10 @@
 					</div>
 					<div class="pull-right">
 						<div class="subscribe inline">
-							<a href="#" class="tracer-btn blue inline">Subscribe to Mailing list</a>
 							<div class="subscribe-box_hidden">
-								<form>
-									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" placeholder="Email" required>
-									<button type="submit">Subscribe</button>
+								<form id="subscription-form" method="post">
+									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" placeholder="Enter Email" required>
+									<a class="tracer-btn blue" id="email-submit">Subscribe to Mailing list</a>
 								</form>
 							</div>
 						</div>
@@ -234,6 +237,10 @@
 		<!-- Local scripts -->
 		<script>
 		  document.write('<script type="text/javascript" src="../../media/js/script.js?v=' + Date.now() + '"\/><\/script>')
+		</script>
+
+		<script>
+			showInfoTextOnAlphaButtonHover();
 		</script>
 	</body>
 </html>

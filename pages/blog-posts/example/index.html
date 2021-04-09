@@ -46,7 +46,13 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<div class="nav-item">
-								<a class="nav-link" href="https://gov.tracer.finance/">
+								<a class="nav-link" href="/Tracer.Finance/pages/home/">
+									<img src="../../../media/images/general/tracer_logo.svg"  alt="Tracer Logo - Home">
+									&nbsp;Home
+								</a>
+							</div>
+							<div class="nav-item">
+								<a class="nav-link" href="/Tracer.Finance/pages/exchange/">
 									<img src="../../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Perpetuals">
 									&nbsp;Perpetuals
 								</a>
@@ -55,12 +61,6 @@
 								<a class="nav-link" href="https://gov.tracer.finance/">
 									<img src="../../../media/images/general/tracer_logo.svg" alt="Tracer Logo - Governance">
 									&nbsp;Governance
-								</a>
-							</div>
-							<div class="nav-item">
-								<a class="nav-link" href="/Tracer.Finance/pages/blog/">
-									<img src="../../../media/images/general/tracer_logo.svg"  alt="Tracer Logo - Blog">
-									&nbsp;Blog
 								</a>
 							</div>
 							<div class="nav-item social-links">
@@ -310,11 +310,10 @@
 					</div>
 					<div class="pull-right">
 						<div class="subscribe inline">
-							<a href="#" class="tracer-btn blue inline">Subscribe to Mailing list</a>
 							<div class="subscribe-box_hidden">
-								<form>
-									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" placeholder="Email" required>
-									<button type="submit">Subscribe</button>
+								<form id="subscription-form" method="post">
+									<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" placeholder="Enter Email" required>
+									<a class="tracer-btn blue" id="email-submit">Subscribe to Mailing list</a>
 								</form>
 							</div>
 						</div>

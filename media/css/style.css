@@ -180,9 +180,6 @@ body.no-anim * {
     padding: 0px 5px;
     border-radius: 50px;
 }
-.nav-item.main-site {
-
-}
 .navbar-collapse .video-bg {
     opacity: 0;
     display: none;
@@ -316,36 +313,36 @@ body.no-anim * {
     left: 420px;
     top: 20px;
     z-index: 2;
-    border-bottom: 1px solid #3DA8F5;
     padding-bottom: 13px;
     transition: all 0.3s ease-in-out;
 }
-.nav-link.dropdown-toggle:hover {
-    border-bottom: 1px solid #fff;
-}
 .dropdown-menu {
     display: block;
-    background: #3372e8;
+    background: transparent;
     position: absolute;
     top: 0;
-    left: 45px;
-    width: 450px;
+    left: 80px;
+    width: 380px;
     z-index: 0; 
     padding-top: 85px;
     padding-bottom: 0px;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease, border-bottom 0.5s ease 0.6s;
     transform: translateZ(0);
     backface-visibility: hidden;
-    opacity: 0;
-    height: 100px;
+    height: 85px;
     overflow: hidden;
+    border: unset;
+    border-radius: 0px;
+    border-bottom: 1px solid #3DA8F5;
 }
+/*Expand the dropdown menu*/
 .dropdown-menu.show {
-    opacity: 1;
+    left: 45px;
+    width: 450px;
+    background: #3372e8;
+    border-radius: 10px;
+    border-bottom: 1px solid transparent;
     height: 427px;
-}
-.dropdown-toggle[aria-expanded="true"] {
-    border-bottom: 1px solid transparent !important;
 }
 .dropdown-toggle[aria-expanded="true"] img {
     transform: rotate(180deg);
@@ -355,7 +352,10 @@ body.no-anim * {
     display: none;
 }
 .dropdown-menu .nav-item {
-    border-top: 1px solid #3998f1;
+    border-top: 1px solid transparent;
+}
+.dropdown-menu.show .nav-item {
+    border-top: 1px solid #3DA8F5;
 }
 .dropdown-menu .nav-item .nav-link img {
     width: 150px;
@@ -485,13 +485,16 @@ body.no-anim * {
 .tracer-btn:hover:after {
     opacity: 1;
 }
+.nav-item.main-site,
 .nav-item.tracer-perpetuals {
     transition: all 0.2s ease-in-out;
 }
+.nav-item.main-site:hover,
 .nav-item.tracer-perpetuals:hover {
     background: #3DA8F5;
     border: 2px solid #3DA8F5;
 }
+.nav-item.main-site:hover a,
 .nav-item.tracer-perpetuals:hover a {
     color: #fff;
 }
@@ -756,11 +759,6 @@ footer.darkblue .wrap-container .subscribe .subscribe-box_hidden input {
     color: #fff;
     border: 2px solid #fff;
 }
-footer.darkblue .wrap-container .subscribe .subscribe-box_hidden button {
-    background: #0000BD;
-    border-color: #0000BD;
-    color: #fff;
-}
 /*---End Darkblue styles---*/
 
 footer .wrap-container {
@@ -854,64 +852,70 @@ footer .wrap-container .subscribe {
 }
 footer .wrap-container .inline {
     display: inline-flex;
-    flex: 0 0 260px;
+    flex: 0 0 306px;
     margin-right: 10px;
 }
 footer .wrap-container .subscribe .subscribe-box_hidden {
-    position: absolute;
-    top: 20px;
+    position: relative;
     width: 100%;
-    height: 0px;
+    height: 60px;
     background: #fff; 
     z-index: 0;
     padding: 0px 0px 0px 0px;
-    border: 2px solid #050CBD;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
     transition: all 0.4s ease;
-    overflow: hidden;
 }
-footer .wrap-container .subscribe .subscribe-box_hidden.show {
-    height: 130px;
-    padding: 15px 0px 15px 0px;
+footer .wrap-container .subscribe.show .subscribe-box_hidden {
+    height: 116px;
+    box-shadow: 0px 2px 10px #00000029;
 }
-footer .wrap-container .subscribe .subscribe-box_hidden input,
-footer .wrap-container .subscribe .subscribe-box_hidden button {
-    display: block;
-    border-radius: 50px;
-    margin: 0 auto;
-    margin-top: 15px;
+footer .wrap-container .subscribe .subscribe-box_hidden form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Label for form validation*/
+footer .wrap-container .subscribe .subscribe-box_hidden form label {
     opacity: 0;
-    transition: all 0.4s ease, opacity 0.25s ease;
+    display: none !important;
+    position: absolute;
+    top: -28px;
+    font-size: 14px;
+    transition: all 0.4s ease
+}
+footer .wrap-container .subscribe.show .subscribe-box_hidden form label {
+    opacity: 1;
 }
 footer .wrap-container .subscribe .subscribe-box_hidden input {
-    border: 2px solid #707070;
-    width: 220px;
+    height: 0px;
+    display: block;
+    border-radius: 50px;
+    width: 260px;
+    opacity: 0;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    transition: all 0.4s ease, opacity 0.25s ease;
+    text-align: center;
     padding: 5px 15px;
     font-size: 14px;
+    margin: 0 auto;
+    border: unset;
 }
-footer .wrap-container .subscribe .subscribe-box_hidden button {
-    padding: 5px 15px;
-    font-size: 14px;
-    color: #3DA8F5;
-    border: 2px solid #3DA8F5;
-    background: transparent;
-    width: 220px;
-}
-footer .wrap-container .subscribe .subscribe-box_hidden button:hover {
-    color: #fff;
-    border: 2px solid #3DA8F5;
-    background: #3DA8F5;
-}
-footer .wrap-container .subscribe .subscribe-box_hidden.show input,
-footer .wrap-container .subscribe .subscribe-box_hidden.show button {
+footer .wrap-container .subscribe.show .subscribe-box_hidden input {
     opacity: 1;
+    height: 42px;
+    margin-top: 13px;
+    margin-bottom: 8px;
+}
+footer .wrap-container .subscribe .subscribe-box_hidden .tracer-btn.blue {
+    cursor: pointer;
 }
 .tracer-btn.blue {
     border: 2px solid #050CBD;
     color: #050CBD;
-    width: 100%;
-    display: inline;
+    width: 260px;
+    display: inline-flex;
+    align-items: center;
     height: 42px;
     z-index: 1;
     background: #fff;
@@ -1202,6 +1206,10 @@ footer .social-icons .social-link:hover {
 }
 .main.trade header {
     top: 100px;
+}
+.main.trade .block-display {
+    display: block;
+    margin-top: 30px;
 }
 /*Tracer Perpetuals image container*/
 .main.trade header .tracer-perpetuals-container {
@@ -2027,15 +2035,105 @@ a.post-link-container {
 /*-------------------EXCHANGE PAGE - COMING SOON-------------------*/
 
 .main.exchange {
-
+    height: 100vh;
+    max-height: unset;
 }
 
-.main.exchange header .tracer-btn.alpha {
+.tracer-btn.alpha-btn {
     width: 180px;
 }
-.main.exchange header .tracer-btn.alpha:hover {
+.tracer-btn.alpha-btn:hover {
     width: 220px;
 }
+
+/*Tooltop popup*/
+
+[tooltip] {
+    position: relative;
+}
+[tooltip]::before,
+[tooltip]::after {
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    opacity: 0;
+}
+[tooltip]::before {
+    content: '';
+    border: 5px solid transparent;
+    z-index: 1001;
+}
+[tooltip]::after {
+    content: attr(tooltip);
+    text-align: center;
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1ch 1.5ch;
+    border-radius: .3ch;
+    box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+    background: #333;
+    color: #fff;
+}
+[tooltip]::before,
+[tooltip]:hover::after {
+    display: block;
+}
+[tooltip]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #333;
+}
+[tooltip]::after {
+    top: calc(100% + 5px);
+}
+[tooltip]::before,
+[tooltip]::after {
+    left: 50%;
+    transform: translate(-50%, .5em);
+}
+[tooltip][data-show^="true"]:hover::before,
+[tooltip][data-show^="true"]:hover::after {
+    animation: tooltips-vert 300ms ease-out forwards;
+}
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+    to {
+        opacity: .9;
+        transform: translate(-50%, 0);
+    }
+}
+
+/*------------------INTEGRATIONS PAGE------------------*/
+
+/*-----MAIN SECTION-----*/
+
+.main.integrations {
+    height: 25vh;
+    min-height: 300px;
+}
+.main.integrations .wrap-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main.integrations .wrap-container h2 {
+    margin-top: 30px;
+}
+
+/*-----INFO SECTION-----*/
+
+.integrations-info {
+    position: relative;
+}
+
 /*-------------------MEDIA QUERIES-------------------*/
 
 @media only screen and (max-width: 1600px){
@@ -2156,6 +2254,7 @@ a.post-link-container {
     .navbar {
         height: 100%;
         max-width: unset;
+        align-items: unset;
     }
     .navbar-brand {
         left: 80px;
@@ -2178,8 +2277,9 @@ a.post-link-container {
     .nav-item.home {
         border-top: unset;
         display: block;
+        border-bottom: 1px solid #3DA8F5;
     }
-    .nav-item.home,
+    .nav-item.main-site,
     .nav-item.tracer-perpetuals {
         display: none;
     }
@@ -2578,11 +2678,6 @@ a.post-link-container {
         width: 600px;
     }
     
-
-    /*---------------BUILD PAGE----------------*/
-
-    
-
     /*---------------LEARN PAGE----------------*/
     .main.learn {
         min-height: 250px;
@@ -2650,8 +2745,8 @@ a.post-link-container {
         width: 40%;
     }
 
-
     /*-----RELATED CONTENT-----*/
+
     .related-content .left-container {
         width: 100%;
         text-align: center;
@@ -2663,6 +2758,13 @@ a.post-link-container {
     .related-content .right-container a.post-link-container {
         width: 49%;
     }
+
+    /*---------------INTEGRATIONS PAGE----------------*/
+    
+    .main.integrations {
+        min-height: 250px;
+    }
+
     /*-------------FOOTER-------------*/
 
     footer .wrap-container .right-container {
@@ -2765,7 +2867,7 @@ a.post-link-container {
 
     .navbar-brand {
         left: 33px;
-        top: 20px;
+        top: 27px;
         width: 120px;
     }
     .nav-item.menu, .nav-item .nav-link {
@@ -2776,6 +2878,14 @@ a.post-link-container {
     }
     .bottom-nav ul .nav-item .nav-link.social {
         padding: 18px 18px 18px 35px;
+    }
+    /*For pages that have text within the navbar brand (exchange and blog)*/
+    .navbar-brand.brand-text img {
+        width: 120px;
+    }
+    .navbar-brand.brand-text p {
+        margin-left: 0;
+        font-size: 20px;
     }
 
     /*-------------HOME PAGE-------------*/
@@ -3091,6 +3201,14 @@ a.post-link-container {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+
+    /*---------------INTEGRATIONS PAGE----------------*/
+
+    /*-----MAIN SECTION-----*/
+
+    .main.integrations .wrap-container h2 {
+        margin-top: 60px;
     }
 }
 @media only screen and (max-width: 479px){

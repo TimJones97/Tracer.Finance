@@ -76,13 +76,6 @@ Ico.add(wireframe);
 
 scene.add(Ico);
 
-const orbit = new OrbitControls( camera, renderer.domElement );
-orbit.enableZoom = false;
-orbit.minPolarAngle = Math.PI * 0.4; // radians
-orbit.maxPolarAngle = Math.PI * 0.6; // radians
-orbit.minAzimuthAngle = - Math.PI / 2 * 0.2 // radians
-orbit.maxAzimuthAngle = (Math.PI / 2) * 0.2; // radians
-
 // sprites
 var txtLoader = new THREE.TextureLoader();
 txtLoader.setCrossOrigin("");
