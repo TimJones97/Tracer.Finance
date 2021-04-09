@@ -531,13 +531,12 @@ section.eco-system p {
     margin-top: 30px;
     margin-bottom: 60px;
 }
-.left-container,
-.right-container {
-    float: left;
+.left-container {
     width: 30%;
 }
 .right-container {
     width: 70%;
+    float: right;
     display: flex;
     justify-content: flex-end;
     padding-left: 50px;
@@ -754,9 +753,6 @@ footer.darkblue .wrap-container .tracer-btn.search {
 footer.darkblue .wrap-container .tracer-btn.search::placeholder {
     color: #e7e7e7;
 }
-footer.darkblue .wrap-container .subscribe .subscribe-box_hidden {
-    background: #03065E;
-}
 footer.darkblue .wrap-container .subscribe.show .subscribe-box_hidden {
     background: #fff;
 }
@@ -865,7 +861,6 @@ footer .wrap-container .subscribe .subscribe-box_hidden {
     position: relative;
     width: 100%;
     height: 60px;
-    background: #fff; 
     z-index: 0;
     padding: 0px 0px 0px 0px;
     border-radius: 10px;
@@ -874,6 +869,7 @@ footer .wrap-container .subscribe .subscribe-box_hidden {
 footer .wrap-container .subscribe.show .subscribe-box_hidden {
     height: 116px;
     box-shadow: 0px 2px 10px #00000029;
+    background: #fff; 
 }
 footer .wrap-container .subscribe .subscribe-box_hidden form {
     display: flex;
@@ -924,7 +920,6 @@ footer .wrap-container .subscribe .subscribe-box_hidden .tracer-btn.blue {
     align-items: center;
     height: 42px;
     z-index: 1;
-    background: #fff;
 }
 .tracer-btn.search {
     flex-basis: 260px;
@@ -1196,6 +1191,12 @@ footer .social-icons .social-link:hover {
     color: #3DA8F5;
     border: 2px solid #3DA8F5;
     margin-top: 10px;
+}
+.governance .wrap-container .flex-container .governance-info .tracer-btn.apply-govern {
+    width: 180px;
+}
+.governance .wrap-container .flex-container .governance-info .tracer-btn.apply-govern:hover {
+    width: 230px;
 }
 .governance .wrap-container .flex-container .governance-info .tracer-btn:hover {
     color: #fff;
@@ -2201,30 +2202,104 @@ a.post-link-container {
     }
 }
 
-/*------------------INTEGRATIONS PAGE------------------*/
+/*------------------INTEGRATE PAGE------------------*/
 
 /*-----MAIN SECTION-----*/
 
-.main.integrations {
+.main.integrate {
     height: 25vh;
-    min-height: 300px;
 }
-.main.integrations .wrap-container {
+.main.integrate .wrap-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.main.integrations .wrap-container h2 {
+.main.integrate .wrap-container h2 {
     margin-top: 30px;
 }
 
 /*-----INFO SECTION-----*/
 
-.integrations-info {
+/*Left*/
+.integrate-info {
     position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+.integrate-info .left-container {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+.integrate-info .left-container .text-middle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: 40%;
+}
+.integrate-info .left-container h2 {
+    color: #0414BD;
+}
+.integrate-info .left-container p {
+    color: #295B5B;
+}
+.integrate-info .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+    margin-top: 10px;
 }
 
+/*Right*/
+.integrate-info .right-container {
+    width: 60%;
+}
+.integrate-info .right-container picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+}
+.integrate-info .right-container picture img {
+    height: 100%;
+}
+
+/*-----BENEFITS SECTION-----*/
+
+.tracer-benefits {
+    background: #F7F7F7;
+}
+.tracer-benefits .wrap-container h2 {
+    color: #050CBD;
+}
+.tracer-benefits .wrap-container .flex-container {
+    padding-bottom: 75px;
+}
+.tracer-benefits .wrap-container .flex-container .tracer-info {
+    width: 33%;
+    padding-right: 80px;
+}
+.tracer-benefits .wrap-container .flex-container .tracer-info img {
+    background: #F7F7F7;
+    border-radius: 50%;
+    padding: 20px;
+    width: 120px;
+}
+.tracer-benefits .wrap-container .flex-container .tracer-info p.title {
+    font-size: 24px;
+    margin-top: 30px;
+}
+.tracer-benefits .wrap-container .flex-container .tracer-info p {
+    color: #2E4848;
+}
+.tracer-benefits .wrap-container .flex-container .tracer-info .tracer-btn {
+    color: #3DA8F5;
+    border: 2px solid #3DA8F5;
+    margin-top: 10px;
+}
+.tracer-benefits .wrap-container .flex-container .tracer-info .tracer-btn:hover {
+    color: #fff;
+}
 /*-------------------MEDIA QUERIES-------------------*/
 
 @media only screen and (max-width: 1600px){
@@ -2311,7 +2386,7 @@ a.post-link-container {
         float: none;
         padding-left: 0px;
         justify-content: flex-start;
-        margin-top: 85px;
+        margin-top: 30px;
     }
 }
 @media only screen and (min-width: 2000px){
@@ -3367,6 +3442,14 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .main.build {
+        min-height: 250px;
+    }
+
+    /*------------------INTEGRATE PAGE------------------*/
+
+    /*-----MAIN SECTION-----*/
+
+    .main.integrate {
         min-height: 250px;
     }
 
