@@ -1569,7 +1569,7 @@ footer .social-icons .social-link:hover {
     justify-content: center;
 }
 .main.learn .wrap-container h2 {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /*-------WHITEPAPERS SECTION-------*/
@@ -1731,7 +1731,7 @@ footer .social-icons .social-link:hover {
     justify-content: center;
 }
 .main.build .wrap-container h2 {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /*-----BUILD INFO SECTION-----*/
@@ -2212,7 +2212,7 @@ a.post-link-container {
     justify-content: center;
 }
 .main.integrate .wrap-container h2 {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /*-----INFO SECTION-----*/
@@ -2859,9 +2859,7 @@ a.post-link-container {
     }
     
     /*---------------LEARN PAGE----------------*/
-    .main.learn {
-        min-height: 250px;
-    }
+
     .whitepapers .wrap-container .right-container article.whitepaper-download {
         width: 50%;
     }
@@ -2902,10 +2900,6 @@ a.post-link-container {
     }
 
     /*---------------BLOG PAGE----------------*/
-
-    .main.blog {
-        min-height: 250px;
-    }
 
     /*-----BLOG POSTS SECTION-----*/
 
@@ -2973,10 +2967,6 @@ a.post-link-container {
 
     /*---------------INTEGRATIONS PAGE----------------*/
     
-    .main.integrations {
-        min-height: 250px;
-    }
-
     /*-------------FOOTER-------------*/
 
     footer .left-container {
@@ -3531,10 +3521,6 @@ a.post-link-container {
 
     /*-----MAIN SECTION-----*/
 
-    .main.learn {
-        min-height: 250px;
-    }
-
     /*-----WHITEPAPERS SECTION-----*/
 
     .scroll-prompt {
@@ -3545,25 +3531,13 @@ a.post-link-container {
 
     /*-----MAIN SECTION-----*/
 
-    .main.build {
-        min-height: 250px;
-    }
-
     /*------------------INTEGRATE PAGE------------------*/
 
     /*-----MAIN SECTION-----*/
 
-    .main.integrate {
-        min-height: 250px;
-    }
-
     /*---------------BLOG PAGE----------------*/
 
     /*-----MAIN SECTION-----*/
-
-    .main.blog {
-        min-height: 250px;
-    }
 
     /*-----BLOG POSTS SECTION-----*/
 
