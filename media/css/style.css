@@ -170,6 +170,7 @@ body.no-anim * {
 /*Hide the home element on desktop*/
 .nav-item.home {
     display: none;
+    color: #3DA8F5;
 }
 .nav-item.home:hover {
     background: unset !important;
@@ -198,7 +199,8 @@ body.no-anim * {
 }
 .navbar-toggler {
     border: none;
-    height: 85px;
+    width: 32px;
+    height: 32px;
     transition: all 0.5s ease;
     z-index: 999;
     padding: 0;
@@ -522,10 +524,10 @@ section.eco-system {
     position: relative;
     width: 100%;
     padding: 40px 80px;
-    overflow: hidden;
     margin: 0 auto;
     height: 100%;
     max-width: 1800px;
+    z-index: 1;
 }
 section.eco-system p {
     margin-top: 30px;
@@ -715,6 +717,8 @@ section.partners figure img {
 footer {
     background: #fff;
     margin-top: -1px;
+    overflow: hidden;
+    padding-bottom: 20px;
 }
 footer.grey {
     background: #F7F7F7;
@@ -766,6 +770,7 @@ footer.darkblue .wrap-container .subscribe.show  .subscribe-box_hidden .tracer-b
 
 footer .wrap-container {
     padding-top: 0px;
+    padding-bottom: 0px;
 }
 footer .wrap-container p,
 footer .wrap-container a {
@@ -777,6 +782,11 @@ footer .wrap-container hr {
     width: 100%;
     margin: 0;
     margin-bottom: 30px;
+}
+footer .left-container {
+    width: 20%;
+    min-width: 400px;
+    margin-bottom: 20px;
 }
 /*Logo container*/
 footer .wrap-container .logo-container {
@@ -868,7 +878,7 @@ footer .wrap-container .subscribe .subscribe-box_hidden {
     transition: all 0.4s ease;
 }
 footer .wrap-container .subscribe.show .subscribe-box_hidden {
-    height: 116px;
+    height: 120px;
     box-shadow: 0px 2px 10px #00000029;
     background: #fff; 
 }
@@ -881,7 +891,6 @@ footer .wrap-container .subscribe .subscribe-box_hidden form {
 /*Label for form validation*/
 footer .wrap-container .subscribe .subscribe-box_hidden form label {
     opacity: 0;
-    display: none !important;
     position: absolute;
     top: -28px;
     font-size: 14px;
@@ -1065,6 +1074,7 @@ footer .social-icons .social-link:hover {
     border: 2px solid transparent;
     transition: all 0.5s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 .proposals .wrap-container .live-proposals .proposal-row:hover {
     transform: scale3d(1.02, 1.02, 1);
@@ -1093,7 +1103,6 @@ footer .social-icons .social-link:hover {
 .proposals .wrap-container .live-proposals th.voting-header {
     color: #333333;
 }
-
 /*Apply border radius to first and last elements in table row*/
 .proposals .wrap-container .live-proposals .proposal-row td:first-of-type {
     border-top-left-radius: 16px;
@@ -1105,7 +1114,6 @@ footer .social-icons .social-link:hover {
     border-bottom-right-radius: 16px;
     text-align: right;
 }
-
 .proposals .wrap-container .live-proposals .proposal-row td {
     border-right: 2px solid #fff;
     border-left: 2px solid #fff;
@@ -1167,9 +1175,6 @@ footer .social-icons .social-link:hover {
 }
 .governance .wrap-container h2 {
     color: #050CBD;
-}
-.governance .wrap-container .flex-container {
-    padding-bottom: 75px;
 }
 .governance .wrap-container .flex-container .governance-info {
     width: 33%;
@@ -1505,10 +1510,6 @@ footer .social-icons .social-link:hover {
 }
 .perpetuals-info .wrap-container h2 {
     color: #050CBD;
-}
-.perpetuals-info .wrap-container .flex-container {
-    margin-top: 25px;
-    padding-bottom: 25px;
 }
 .perpetuals-info .wrap-container .flex-container .info-block {
     width: 33%;
@@ -1905,7 +1906,7 @@ footer .social-icons .social-link:hover {
 
 .blog-posts {
     background: #ffffff;
-    height: 100%;
+    overflow: hidden;
 }
 .tracer-btn.filter,
 .tracer-btn.view-all {
@@ -1972,6 +1973,7 @@ footer .social-icons .social-link:hover {
     flex-wrap: wrap;
     justify-content: right;
     margin-top: 0px;
+    padding-bottom: 20px;
 }
 a.post-link-container {
     width: 32%;
@@ -2176,6 +2178,7 @@ a.post-link-container {
 }
 .related-content .right-container {
     padding-left: 35px;
+    padding-bottom: 20px;
 }
 .related-content .flex-container {
     margin-top: 0px;
@@ -2234,6 +2237,10 @@ a.post-link-container {
     overflow: hidden;
     background: #fff;
 }
+
+.integrate-info .wrap-container {
+    overflow: hidden;
+}
 .integrate-info .left-container {
     width: 40%;
     height: 100%;
@@ -2264,7 +2271,7 @@ a.post-link-container {
 
 /*Right*/
 .integrate-info .right-container {
-    width: 60%;
+    width: 50%;
 }
 .integrate-info .right-container picture {
     display: block;
@@ -2273,7 +2280,7 @@ a.post-link-container {
     max-width: 600px;
 }
 .integrate-info .right-container picture img {
-    height: 100%;
+    width: 100%;
 }
 
 /*-----BENEFITS SECTION-----*/
@@ -2284,15 +2291,12 @@ a.post-link-container {
 .tracer-benefits .wrap-container h2 {
     color: #050CBD;
 }
-.tracer-benefits .wrap-container .flex-container {
-    padding-bottom: 75px;
-}
 .tracer-benefits .wrap-container .flex-container .tracer-info {
     width: 33%;
     padding-right: 80px;
 }
 .tracer-benefits .wrap-container .flex-container .tracer-info img {
-    background: #F7F7F7;
+    background: #ffffff;
     border-radius: 50%;
     padding: 20px;
     width: 120px;
@@ -2585,6 +2589,7 @@ a.post-link-container {
     }
     
     /*-----PERPETUALS-----*/
+
     .perpetuals {
         padding-top: 150px;
     }
@@ -2623,7 +2628,6 @@ a.post-link-container {
     }
     .perpetuals-info .wrap-container .flex-container .info-block {
         width: 50%;
-        margin-bottom: 30px;
     }
     .join .wrap-container .flex-container .info-block p.sign-up-text,
     .perpetuals-info .wrap-container .flex-container .info-block p.perp-text {
@@ -2679,6 +2683,19 @@ a.post-link-container {
         width: 100%;
     }
 
+    /*---------------INTEGRATE PAGE--------------*/
+
+    /*-----INTEGRATE INFO BLOCKS-----*/
+
+    .tracer-benefits .wrap-container .flex-container .tracer-info {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .tracer-benefits .wrap-container .flex-container {
+        flex-wrap: wrap;
+    }
+
+
     /*---------------BLOG POSTS PAGE--------------*/
 
     /*-----BLOG POSTS-----*/
@@ -2701,6 +2718,9 @@ a.post-link-container {
 
     /*---------------FOOTER--------------*/
 
+    footer .left-container {
+        width: 100%;
+    }
     footer .wrap-container .right-container {
         width: 100%;
         float: none;
@@ -2721,7 +2741,7 @@ a.post-link-container {
     }
     
 
-    /*-----HIDDEN EMAIL SUBSCRIPTION-----*/
+    /*-----HIDDEN EMAIL SUBSCRIPTION BOX-----*/
 
     footer .wrap-container .inline {
         margin-right: 10px;
@@ -2872,6 +2892,38 @@ a.post-link-container {
         width: 100%;
     }
 
+    /*---------------INTEGRATE PAGE--------------*/
+
+    /*-----INTEGRATE INFO SECTION-----*/
+
+    .integrate-info .wrap-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .integrate-info .left-container,
+    .integrate-info .right-container {
+        width: 100%;
+        float: none;
+    }
+    .integrate-info .left-container {
+        margin-top: 30px;
+    }
+    .integrate-info .right-container {
+        padding-left: 0px;
+        position: relative;
+    }
+    .integrate-info .right-container picture {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+    }
+    .integrate-info .left-container .text-middle {
+        position: relative;
+        top: unset;
+        transform: unset;
+        width: 100%;
+    }
+
     /*---------------BLOG PAGE----------------*/
 
     .main.blog {
@@ -2950,6 +3002,9 @@ a.post-link-container {
 
     /*-------------FOOTER-------------*/
 
+    footer .left-container {
+        min-width: unset;
+    }
     footer .wrap-container .right-container {
         margin-top: 70px;
         justify-content: flex-end;
@@ -2994,7 +3049,7 @@ a.post-link-container {
     }
     footer .wrap-container .right-container .pull-right {
         width: 100%;
-        display: block;
+        display: flex;
         margin-top: 20px;
     }
     footer .wrap-container .right-container .pull-right .subscribe {
@@ -3007,28 +3062,29 @@ a.post-link-container {
     footer .wrap-container .inline {
         margin-right: 0px; 
     }
+    footer .social-icons {
+        display: flex;
+        justify-content: flex-start;
+        height: 40px;
+        margin-bottom: 30px;
+        width: 50%;
+    }
+    footer .social-icons .social-link {
+        margin: 0px 25px 0px 0px;
+    }
 
-    /*-----HIDDEN EMAIL SUBSCRIPTION-----*/
+    /*-----HIDDEN EMAIL SUBSCRIPTION BOX-----*/
 
+    footer .wrap-container .right-container .pull-right .subscribe {
+        width: 50%;
+        margin-left: -40px;
+    }
     footer .wrap-container .subscribe .subscribe-box_hidden input,
     footer .wrap-container .subscribe .subscribe-box_hidden .tracer-btn.blue {
         width: 220px;
     }
     footer .ellipse-container {
         display: none;
-    }
-    footer .social-icons {
-        display: flex;
-        justify-content: flex-start;
-        height: 40px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding-left: 5px;
-        justify-content: center;
-        align-items: center;
-    }
-    footer .social-icons .social-link {
-        margin: 0px 25px;
     }
 }
 @media only screen and (max-width: 767px){
@@ -3037,7 +3093,7 @@ a.post-link-container {
 
     .navbar-brand {
         left: 33px;
-        top: 27px;
+        top: 21px;
         width: 120px;
     }
     .nav-item.menu, .nav-item .nav-link {
@@ -3055,7 +3111,8 @@ a.post-link-container {
     }
     .navbar-brand.brand-text p {
         margin-left: 0;
-        font-size: 20px;
+        font-size: 24px;
+        padding-top: 1px;
     }
 
     /*-------------HOME PAGE-------------*/
@@ -3265,12 +3322,16 @@ a.post-link-container {
     /*-----PERPETUALS INFO BLOCKS-----*/
 
     .perpetuals-info .wrap-container .flex-container {
+        margin-top: 0px;
         flex-direction: column;
     }
     .perpetuals-info .wrap-container .flex-container .info-block {
         width: 100%;
         padding-right: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+    .perpetuals-info .wrap-container .flex-container .info-block:first-of-type {
+        margin-top: 0px;
     }
     .perpetuals-info .wrap-container .flex-container .info-block p.perp-text {
         max-width: 500px;
@@ -3320,6 +3381,23 @@ a.post-link-container {
         padding-right: 0px;
         margin-bottom: 30px;
     }
+
+    /*---------------INTEGRATE PAGE--------------*/
+
+    /*-----INTEGRATE INFO BLOCKS-----*/
+
+    .tracer-benefits .wrap-container .flex-container {
+        flex-direction: column;
+    }
+    .tracer-benefits .wrap-container .flex-container .tracer-info {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 40px;
+    }
+    .tracer-benefits .wrap-container .flex-container .tracer-info p {
+        max-width: 500px;
+    }
+
 
     /*---------------BLOG PAGE----------------*/
 
@@ -3380,9 +3458,41 @@ a.post-link-container {
     .main.integrations .wrap-container h2 {
         margin-top: 60px;
     }
+
+    /*-------------FOOTER-------------*/
+    footer {
+        padding-bottom: 0px;
+    }
+    footer .wrap-container .right-container .pull-right {
+        display: block;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe {
+        margin-left: unset;
+        width: 100%;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden {
+        width: 290px;
+        margin: 0 auto;
+    }
+    footer .social-icons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    footer .social-icons .social-link {
+        margin: 0px 25px;
+    }
 }
 @media only screen and (max-width: 479px){
 
+    /*-------------NAVBAR-------------*/
+
+    .nav-item.menu, .nav-item .nav-link {
+        padding: 8px 33px;
+    }
+    .bottom-nav ul .nav-item .nav-link {
+        padding: 10px 35px 10px 35px;
+    }
     /*-------------HOME PAGE-------------*/
 
     .main {
@@ -3401,6 +3511,9 @@ a.post-link-container {
     .main.govern {
         height: 30vh;
         min-height: 275px;
+    }
+    .main.govern header {
+        bottom: -165px;
     }
     .main.govern header .tracer-DAO-container picture img,
     .main.trade header .tracer-perpetuals-container picture img {
@@ -3478,18 +3591,18 @@ a.post-link-container {
     /*--BLOG POST--*/
 
     .blog-post {
-        height: 420px;
+        height: auto;
     }
     .blog-post .caption-img,
     .blog-post .text{
         height: 50%;
     }
+    .blog-posts .right-container a.post-link-container {
+        max-width: 360px;
+    }
 
     /*-------------FOOTER-------------*/
 
-    footer .wrap-container {
-        padding: 40px 40px 15px 40px;
-    }
     footer .wrap-container .right-container {
         padding-bottom: 10px;
     }
@@ -3499,8 +3612,18 @@ a.post-link-container {
     footer .social-icons .social-link {
         margin: 0px 40px 0px 0px;
     }
+
+    /*-----HIDDEN EMAIL SUBSCRIPTION BOX-----*/
+    
     footer .wrap-container .subscribe .subscribe-box_hidden.show {
         height: 140px;
         padding: 25px 0px 15px 0px;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden {
+        width: 100%;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden .tracer-btn.blue,
+    footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden input {
+        width: calc(100% - 40px);
     }
 }
