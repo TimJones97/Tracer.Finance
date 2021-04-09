@@ -2460,6 +2460,7 @@ a.post-link-container {
         border-top: unset;
         display: block;
         border-bottom: 1px solid #3DA8F5;
+        margin-bottom: -1px;
     }
     .nav-item.main-site,
     .nav-item.tracer-perpetuals {
@@ -3352,6 +3353,12 @@ a.post-link-container {
     }
 
     /*---------------INTEGRATE PAGE--------------*/
+
+    /*-----INTEGRATE INFO SECTION-----*/
+
+    .integrate-info .button-container {
+        width: 170px;
+    }
 
     /*-----INTEGRATE INFO BLOCKS-----*/
 
