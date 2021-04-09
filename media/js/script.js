@@ -158,9 +158,9 @@ function formatText(post){
 function showInfoTextOnAlphaButtonHover(){
 	$('.alpha-btn').hover(
 	  	function() {
-		    $(this).siblings('span').attr('data-show', 'true');
+		    $(this).parent().children().find('span').attr('data-show', 'true');
 	  	}, function() {
-		    $(this).siblings('span').attr('data-show', 'false');
+		    $(this).parent().children().find('span').attr('data-show', 'false');
 	  	}
 	);
 }
