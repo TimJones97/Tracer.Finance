@@ -1,5 +1,3 @@
-import { OrbitControls } from './OrbitControls.js';
-
 var $container = $('#container');
 var renderer = new THREE.WebGLRenderer({
   antialias: true,
@@ -125,22 +123,8 @@ function onPointerMove( event ) {
 
   pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-  // raycaster.setFromCamera( pointer, camera );
-  // const intersects = raycaster.intersectObject( Ico, true );
-  // if (intersects.length > 0) {
-  //   const res = intersects.filter( function ( res ) {
-  //     return res && res.object;
-  //   } )[0];
-  //   if (res && res.object && res.object.type == 'Sprite') {
-  //     selectedObject = res.object;
-  //     console.log(selectedObject.material);
-  //     // selectedObject.material.color.set( '#f00' );
-  //     // selectedObject.scale.set(100, 100, 100);
-  //   }
-  // }
 }
 
-// Render
 function render() {
   requestAnimationFrame(render);
   renderer.render(scene, camera);

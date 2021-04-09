@@ -515,7 +515,7 @@ body.no-anim * {
     margin-right: 30px;
 }
 
-/*-----MAIN SECTION----*/
+/*-----ECO-SYSTEM SECTION----*/
 
 section.eco-system {
     background: #1026c9;
@@ -528,6 +528,9 @@ section.eco-system {
     height: 100%;
     max-width: 1800px;
     z-index: 1;
+}
+section.eco-system .wrap-container {
+    overflow: hidden;
 }
 section.eco-system p {
     margin-top: 30px;
@@ -631,36 +634,17 @@ section.eco-system .right-container h2 {
 }
 .tracer-icons figure .icon {
     position: relative;
-    height: 60%;
-    width: 60%;
+    height: 100%;
+    width: 100%;
     display: block;
-    margin: 0 auto;
-    margin-top: 10px;
+    padding: 20px; 
 }
 .tracer-icons figure img.tracer-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-}
-.tracer-icons figure figcaption {
-    color: #fff;
-    font-family: 'Akkurat Light', serif;
-    vertical-align: bottom;
-    font-size: 16px;
     width: 100%;
-    text-align: center;
-    margin-top: 10px;
 }
-.tracer-icons figure figcaption img {
-    display: inline;
-    width: 100px;
-    padding-bottom: 7px;
-    margin-top: unset;
-}
+
 /*---ARROW CSS---*/
+
 .arrow-flow {
     height: auto;
     display: flex;
@@ -862,6 +846,7 @@ footer .wrap-container .right-container .pull-right {
 footer .wrap-container .subscribe {
     position: relative;
     z-index: 2;
+    transition: all 0.4s ease;
 }
 footer .wrap-container .inline {
     display: inline-flex;
@@ -1575,7 +1560,7 @@ footer .social-icons .social-link:hover {
 
 .main.learn {
     height: 25vh;
-    min-height: 300px;
+    min-height: 220px;
 }
 .main.learn .wrap-container {
     height: 100%;
@@ -1737,16 +1722,16 @@ footer .social-icons .social-link:hover {
 
 .main.build {
     height: 25vh;
+    min-height: 220px;
 }
 .main.build .wrap-container {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .main.build .wrap-container h2 {
-    position: absolute;
-    top: 50%;
     margin-top: 30px;
-    transform: translate(0%, -50%);
-    font-size: 40px;
 }
 
 /*-----BUILD INFO SECTION-----*/
@@ -1891,6 +1876,7 @@ footer .social-icons .social-link:hover {
 
 .main.blog {
     height: 25vh;
+    min-height: 220px;
 }
 .main.blog .wrap-container {
     height: 100%;
@@ -2445,7 +2431,7 @@ a.post-link-container {
         justify-content: unset;
     }
     .nav-container {
-        height: 85px;
+        height: 70px;
     }
     .navbar {
         height: 100%;
@@ -2531,13 +2517,6 @@ a.post-link-container {
     .tracer-icons figure {
         height: 180px;
         width: 180px;
-    }
-    .tracer-icons figure figcaption img,
-    .tracer-icons figure figcaption p {
-        display: block;
-    }
-    .tracer-icons figure figcaption img {
-        margin: 0 auto;
     }
 
     /*-------------GOVERN PAGE-------------*/
@@ -2818,14 +2797,12 @@ a.post-link-container {
         width: 240px;
     }
     .tracer-icons figure .icon {
-        margin-top: 20px;
+        padding: 10px 0px 0px 0px;
     }
-    .tracer-icons figure figcaption {
-        margin-top: 20px;
-    }
-    .tracer-icons figure figcaption img,
-    .tracer-icons figure figcaption p {
-        display: inline;
+    .tracer-icons figure img.tracer-image {
+        height: 100%;
+        display: block;
+        margin: 0 auto;
     }
 
     /*-----PARTNERS-----*/
@@ -3093,14 +3070,16 @@ a.post-link-container {
 
     .navbar-brand {
         left: 33px;
-        top: 21px;
+        top: 15px;
         width: 120px;
     }
     .nav-item.menu, .nav-item .nav-link {
         padding: 15px 33px;
+        font-size: 24px;
     }
     .bottom-nav ul .nav-item .nav-link {
         padding: 18px 35px 18px 35px;
+        font-size: 22px;
     }
     .bottom-nav ul .nav-item .nav-link.social {
         padding: 18px 18px 18px 35px;
@@ -3488,10 +3467,10 @@ a.post-link-container {
     /*-------------NAVBAR-------------*/
 
     .nav-item.menu, .nav-item .nav-link {
-        padding: 8px 33px;
+        padding: 12px 33px;
     }
     .bottom-nav ul .nav-item .nav-link {
-        padding: 10px 35px 10px 35px;
+        padding: 12px 35px 12px 35px;
     }
     /*-------------HOME PAGE-------------*/
 
@@ -3614,13 +3593,24 @@ a.post-link-container {
     }
 
     /*-----HIDDEN EMAIL SUBSCRIPTION BOX-----*/
-    
+    footer .wrap-container .right-container .pull-right .subscribe {
+        position: relative;
+        height: 60px;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe.show {
+        height: 120px;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        height: 100%;
+        width: calc(100% + 40px);
+    }
     footer .wrap-container .subscribe .subscribe-box_hidden.show {
         height: 140px;
         padding: 25px 0px 15px 0px;
-    }
-    footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden {
-        width: 100%;
     }
     footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden .tracer-btn.blue,
     footer .wrap-container .right-container .pull-right .subscribe .subscribe-box_hidden input {

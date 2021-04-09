@@ -1,3 +1,6 @@
+// 1200px is the breakpoint for the nav collapsing 
+// (hiding the nav elements), return true if resolution
+// is under this value
 function isCollapsed(){
 	if($(window).width() < 1200){
 		return true;
@@ -6,10 +9,14 @@ function isCollapsed(){
 		return false;
 	}
 }
+
+// Obvious
 function setCopyrightYear(){
 	var theDate = new Date(); 
 	$(".year").text(theDate.getFullYear());
 }
+
+// Change the nav background colour on scroll
 function navBGScroll(){
 	var scrollTop = $(document).scrollTop(),
 		navElement = $('.nav-container')
@@ -27,12 +34,16 @@ function navBGScroll(){
 		navElement.removeClass('solid-darkblue');
 	}
 }
+
+// Used to reveal the scroll prompt on the Learn 
+// page for mobile users
 function createScrollReveal(){
 	// Reveals the scroll-prompt when the users 
-	// scrolls it into view on the Learn page
+	// scrolls it into view
 	ScrollReveal({ duration: 1000 });
 	ScrollReveal().reveal('.scroll-prompt', { delay: 1000 });
 }
+
 // For use later for the blog posts for cutting 
 // down the text displayed on the preview
 function truncate(input) {
@@ -41,6 +52,9 @@ function truncate(input) {
    }
    return input;
 };
+
+// Show the large desktop dropdown menu containing 
+// the Tracer links on hover
 function showDropdownOnHover(){
 	// Show when hovering over the general area
 	$('.dropdown-menu').hover(
@@ -73,6 +87,8 @@ function showDropdownOnHover(){
 	  	}
 	);
 }
+// Set the collapsed nav menu (mobile nav) height specifically to the innerheight of 
+// a screen so that the bottom-nav is not hidden underneath the browser elements
 function setNavHeight(){
 	if(isCollapsed()){
 		$('.navbar-nav').css('height', $(window).innerHeight() + 'px');
@@ -82,12 +98,19 @@ function setNavHeight(){
 	}
 }
 function toggleSubscriptionBox(){
+	// If the tracer-btn.blue element is clicked in the footer
 	$('footer .tracer-btn.blue').click(function(e){
+
+		// Prevent the default action from happening (page navigation)
 		e.preventDefault();
 		e.stopPropagation();
+
+		// Show the hidden email subscription modal
 		$('.subscribe').addClass('show');
 		$('.tracer-btn.blue').attr('onclick', 'checkIfValid()');
 	});
+	// If the window is clicked outside of the subscription box,
+	// close the box and clear any error text
 	$(document).click(function(event){
 	    if(event.target != $('.subscribe')[0] &&
 	       event.target != $('.subscribe form')[0] &&
@@ -95,6 +118,7 @@ function toggleSubscriptionBox(){
 	       event.target != $('.subscribe .tracer-btn.blue')[0]) {
 			$('.subscribe').removeClass('show');
 			$('.tracer-btn.blue').removeAttr('onclick');
+			$('#email-error').text('');
 	    }
 	})
 }
@@ -103,6 +127,7 @@ function checkIfValid(){
 	    document.getElementById("subscription-form").submit()
 	}
 }
+
 // Get markdown content  
 function getText(myUrl){
     var result = null;
@@ -121,9 +146,13 @@ function getText(myUrl){
     );
     return result;
 }
+
+// Format markdown content after being converted to html
 function formatText(post){
+
 	// h6 is always date element
 	// This formats the date into a nice readable format
+	// using moment.js
 	var date = post.find('h6'),
 		formatted_date = moment(date.text(), "DD-MM-YYYY"),
 		readable_date  = moment(formatted_date).format('d MMMM YYYY');
@@ -143,7 +172,7 @@ function formatText(post){
 	var title_element = document.getElementsByTagName("title")[0];
 	title_element.innerText = new_title;
 
-	// Add "mins" to end of read time
+	// Add "minutes" to end of read time text
 	var read_time = post.find('h4').first();
 	read_time.text(read_time.text() + ' minutes');
 
@@ -155,15 +184,9 @@ function formatText(post){
 	// Remove the horizontal rule line
 	post.find("hr").remove();
 }
-function showInfoTextOnAlphaButtonHover(){
-	$('.alpha-btn').hover(
-	  	function() {
-		    $(this).parent().children().find('span').attr('data-show', 'true');
-	  	}, function() {
-		    $(this).parent().children().find('span').attr('data-show', 'false');
-	  	}
-	);
-}
+
+// For Build page, toggles the extra text visibility
+// under "Build with the DAO" section
 function toggleReadMore(){
 	$('.read-more-btn').click(function(){
 		var current_text = $(this).text();
@@ -190,15 +213,21 @@ function toggleReadMore(){
 	});
 }
 $(window).scroll(function(){
-	//Check on the navbar on start
+	// Check the user's scroll position to determine
+	// whether to give the nav a background or remove it
 	navBGScroll();
 });
 $(window).resize(function(){
+
+	// If user is going from desktop to mobile width
+	// or vice versa, capture the change and resize 
+	// accordingly
 	setNavHeight();
 });
 $(document).ready(function(){
 	
-	// Wait for page to load before enabling transitions to stop elements from showing too early
+	// Wait for page to load before enabling transitions 
+	// to stop elements from showing too early
 	setTimeout(function(){
   		$("body").removeClass("no-anim");
 	}, 200);
