@@ -2248,6 +2248,11 @@ a.post-link-container {
     color: #3DA8F5;
     border: 2px solid #3DA8F5;
     margin-top: 10px;
+    width: 160px;
+}
+.integrate-info .tracer-btn:hover {
+    color: #fff;
+    width: 195px;
 }
 
 /*Right*/
