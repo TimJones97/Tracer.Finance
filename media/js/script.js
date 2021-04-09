@@ -164,6 +164,19 @@ function showInfoTextOnAlphaButtonHover(){
 	  	}
 	);
 }
+function toggleReadMore(){
+	$('.read-more-btn').click(function(){
+		var current_text = $(this).text();
+		if(current_text == "Read More"){
+			$(this).text('Read Less');
+			$('.build-text .show-more').addClass('full');
+		}
+		else {
+			$(this).text('Read More');
+			$('.build-text .show-more').removeClass('full');
+		}
+	});
+}
 $(window).scroll(function(){
 	//Check on the navbar on start
 	navBGScroll();

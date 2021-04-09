@@ -752,7 +752,6 @@ footer.darkblue .wrap-container .tracer-btn.search::placeholder {
     color: #e7e7e7;
 }
 footer.darkblue .wrap-container .subscribe .subscribe-box_hidden {
-    border: 2px solid #fff;
     background: #03065E;
 }
 footer.darkblue .wrap-container .subscribe .subscribe-box_hidden input {
@@ -1483,41 +1482,6 @@ footer .social-icons .social-link:hover {
     transition: all 0.5s ease;
     display: block;
 }
-/*DOWN*/
-[tooltip]::before {
-    content: '';
-    border: 5px solid transparent;
-    z-index: 1001;
-}
-[tooltip]::after {
-    content: attr(tooltip);
-    text-align: left;
-    width: 200px;
-    height: 65px;
-    overflow: hidden;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px #00000029;
-    background: #000;
-    color: #fff;
-}
-[tooltip]::before,
-[tooltip]::after {
-    display: block;
-}
-[tooltip]::before {
-    top: 100%;
-    border-top-width: 0;
-    border-bottom-color: #000;
-}
-[tooltip][flow="down"]::after {
-    top: calc(100% + 5px);
-}
-[tooltip]::before,
-[tooltip]::after {
-    left: 50%;
-    transform: translate(-50%, .5em);
-}
 
 /*-----PERPETUALS INFO SECTION-----*/
 
@@ -1778,14 +1742,18 @@ footer .social-icons .social-link:hover {
     padding-bottom: 40px;
 }
 .build-info .wrap-container .left-container {
-    width: 40%;
+    width: 60%;
 }
 .build-info .wrap-container .left-container .flex-container {
-    justify-content: flex-start;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .build-info .wrap-container .left-container .flex-container .build-text {
     margin-top: 30px;
+    flex-basis: 100%;
+}
+.build-info .wrap-container .left-container .flex-container .build-text.half-block {
+    flex-basis: 45%;
 }
 .build-info .wrap-container .left-container .flex-container .build-text p.title {
     font-size: 24px;
@@ -1810,7 +1778,7 @@ footer .social-icons .social-link:hover {
 }
 .build-info .wrap-container .right-container {
     padding-top: 30px;
-    width: 60%;
+    width: 40%;
     float: right;
 }
 .build-anim {
@@ -1839,8 +1807,66 @@ footer .social-icons .social-link:hover {
 .tracer-btn.dao-apply:hover {
     width: 230px;
 }
-
+.tracer-btn.job-opportunities {
+    width: 250px;
+}
+.tracer-btn.job-opportunities:hover {
+    width: 290px;
+}
+.build-text .read-more-btn {
+    margin: 20px 0px;
+    display: block;
+    cursor: pointer;
+}
+.build-text .show-more {
+    opacity: 0;
+    transition: unset;
+    line-height: 0px;
+    margin: 0;
+}
+.build-text .show-more.full {
+    line-height: inherit;
+    opacity: 1;
+    margin: inherit;
+    transition: opacity 0.4s ease-in-out;
+}
 /*Tooltip popup*/
+
+/*DOWN*/
+[tooltip]::before {
+    content: '';
+    border: 5px solid transparent;
+    z-index: 1001;
+}
+[tooltip]::after {
+    content: attr(tooltip);
+    text-align: left;
+    width: 200px;
+    height: 65px;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    background: #000;
+    color: #fff;
+}
+[tooltip]::before,
+[tooltip]::after {
+    display: block;
+}
+[tooltip]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #000;
+}
+[tooltip][flow="down"]::after {
+    top: calc(100% + 5px);
+}
+[tooltip]::before,
+[tooltip]::after {
+    left: 50%;
+    transform: translate(-50%, .5em);
+}
 .tracer-btn.dao-apply:hover + [tooltip]::before,
 .tracer-btn.dao-apply:hover + [tooltip]::after {
     animation: tooltips-vert 300ms ease-out forwards;
@@ -2225,7 +2251,18 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .build-info .wrap-container .left-container {
-        width: 30%;
+        width: 40%;
+    }
+    .build-info .wrap-container .left-container .flex-container {
+        flex-wrap: unset;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .build-info .wrap-container .left-container .flex-container .build-text.half-block {
+        flex-basis: 100%;
+    }
+    .build-info .wrap-container .right-container {
+        width: 60%;
     }
 
     /*---------------BLOG PAGE--------------*/
