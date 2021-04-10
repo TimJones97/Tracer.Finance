@@ -1558,17 +1558,17 @@ footer .social-icons .social-link:hover {
 
 /*-----MAIN SECTION-----*/
 
-.main.learn {
+.main.header-sml {
     height: 25vh;
     min-height: 220px;
 }
-.main.learn .wrap-container {
+.main.header-sml .wrap-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.main.learn .wrap-container h2 {
+.main.header-sml .wrap-container h2 {
     margin-top: 60px;
 }
 
@@ -1718,22 +1718,6 @@ footer .social-icons .social-link:hover {
 
 /*------------------BUILD PAGE------------------*/
 
-/*-----MAIN SECTION-----*/
-
-.main.build {
-    height: 25vh;
-    min-height: 220px;
-}
-.main.build .wrap-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.main.build .wrap-container h2 {
-    margin-top: 60px;
-}
-
 /*-----BUILD INFO SECTION-----*/
 
 .build-info {
@@ -1871,22 +1855,6 @@ footer .social-icons .social-link:hover {
     animation: tooltips-vert 300ms ease-out forwards;
 }
 /*------------------BLOG PAGE------------------*/
-
-/*-----MAIN SECTION-----*/
-
-.main.blog {
-    height: 25vh;
-    min-height: 220px;
-}
-.main.blog .wrap-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.main.blog .wrap-container h2 {
-    margin-top: 60px;
-}
 
 /*-----BLOG POSTS SECTION-----*/
 
@@ -2199,21 +2167,6 @@ a.post-link-container {
 }
 
 /*------------------INTEGRATE PAGE------------------*/
-
-/*-----MAIN SECTION-----*/
-
-.main.integrate {
-    height: 25vh;
-}
-.main.integrate .wrap-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.main.integrate .wrap-container h2 {
-    margin-top: 60px;
-}
 
 /*-----INFO SECTION-----*/
 
@@ -3118,9 +3071,9 @@ a.post-link-container {
     .tracer-btn:hover {
         width: 150px;
     }   
-    .tracer-btn:after {
+/*    .tracer-btn:after {
         content: "";
-    }
+    }*/
 
     /*-----PARTNERS-----*/
 
@@ -3309,12 +3262,6 @@ a.post-link-container {
 
     /*---------------LEARN PAGE----------------*/
 
-    /*-----MAIN SECTION-----*/
-
-    .main.learn .wrap-container h2 {
-        margin-top: 60px;
-    }
-
     /*-----RIGHT CONTAINER - WHITEPAPERS-----*/
 
     .whitepapers .wrap-container {
@@ -3357,7 +3304,7 @@ a.post-link-container {
     /*-----INTEGRATE INFO SECTION-----*/
 
     .integrate-info .button-container {
-        width: 170px;
+        width: 190px;
     }
 
     /*-----INTEGRATE INFO BLOCKS-----*/
