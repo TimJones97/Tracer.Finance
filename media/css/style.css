@@ -52,6 +52,7 @@ body {
 html, body {
    height: 100%;
    width: 100%;
+   -webkit-transform: translate3d(0,0,0)
 }
 body.no-anim * {
   transition: none !important;
@@ -1579,9 +1580,6 @@ footer .social-icons .social-link:hover {
     background: #F7F7F7;
     height: 62vh;
     max-height: 550px;
-}
-.whitepapers .wrap-container {
-    overflow: unset;
 }
 
 /*-----LEFT CONTAINER FOR TEXT-----*/
@@ -3476,7 +3474,12 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     /*-----WHITEPAPERS SECTION-----*/
-
+    .whitepapers .wrap-container .right-container {
+        padding-left: 0px;
+    }
+    .whitepapers .wrap-container .right-container .flex-container {
+        padding-left: 33px;
+    }
     .scroll-prompt {
         display: flex;
     }
