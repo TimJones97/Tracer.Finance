@@ -414,7 +414,7 @@ body.no-anim * {
     color: #fff;
 }
 .dropdown-menu.show .nav-item .nav-link.social:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 /*Fade in the social icons one by one*/
 .dropdown-menu.show .social-links .nav-link {
@@ -964,7 +964,7 @@ footer .social-icons .social-link {
     transition: all 0.5s ease;
 }
 footer .social-icons .social-link:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
 }
 /*-------------------GOVERN PAGE-------------------*/
 .fixed-bg {
