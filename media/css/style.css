@@ -962,7 +962,7 @@ footer .social-icons .social-link {
     transition: all 0.5s ease;
 }
 footer .social-icons .social-link:hover {
-    transform: rotate(10deg);
+    transform: scale(1.1, 1.1);
 }
 /*-------------------GOVERN PAGE-------------------*/
 .fixed-bg {
