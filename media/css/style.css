@@ -1381,6 +1381,7 @@ footer .social-icons .social-link:hover {
 .perpetuals .wrap-container .live-perpetual-markets .coin-info-row td.ticker-pair span.pair-text {
     vertical-align: middle;
     display: inline-block;
+    transition: all 0.5s ease;
 }
 
 /*Color the diferent table elements*/
@@ -1426,13 +1427,29 @@ footer .social-icons .social-link:hover {
     width: 100%;
     border: unset !important;
     background: unset !important;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
 }
-.perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover .hidden-tooltip [tooltip] {
-    display: block;
+.perpetuals .wrap-container .live-perpetual-markets .coin-info-row .hidden-tooltip p {
+    background: #f7f7f7;
+    color: #333;
+    margin: 10px;
+    border-radius: 10px;
+    width: 140px;
+    padding-left: 0px;
+    text-align: center;
+    transition: all 0.5s ease;
+    z-index: -1;
+    opacity: 0;
+    box-shadow: 0px 3px 6px #00000029;
+    transform: translateY(10px);
 }
-.perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover .hidden-tooltip [tooltip]::before,
-.perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover .hidden-tooltip [tooltip]::after {
-    animation: tooltips-vert 300ms ease-out forwards;
+
+/*Hover effects*/
+.perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover .hidden-tooltip p {
+    opacity: 1;
+    transform: translateY(0px);
 }
 .perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover td.ticker-pair span.pair-text,
 .perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover td.price {
@@ -1441,50 +1458,6 @@ footer .social-icons .social-link:hover {
 .perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover .time-left,
 .perpetuals .wrap-container .live-perpetual-markets .coin-info-row:hover .proposal-title span.sub-text {
     color: #3DA8F5;   
-}
-
-/*Tooltop popup*/
-
-[tooltip] {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-/*UP*/
-[tooltip]:not([flow])::before,
-[tooltip][flow^="up"]::before {
-  bottom: 100%;
-  border-bottom-width: 0;
-  border-top-color: #333;
-}
-[tooltip]:not([flow])::after,
-[tooltip][flow^="up"]::after {
-  bottom: calc(100% + 5px);
-}
-[tooltip][flow^="up"]::before,
-[tooltip][flow^="up"]::after {
-  left: 50%;
-  transform: translate(-50%, -.5em);
-}
-[tooltip][flow^="up"]::after {
-    content: attr(tooltip);
-    text-align: center;
-    width: 130px;
-    height: 35px;
-}
-
-[tooltip]::before,
-[tooltip]::after {
-    text-transform: none;
-    font-size: 14px;
-    line-height: 1;
-    user-select: none;
-    pointer-events: none;
-    position: absolute;
-    opacity: 0;
-    transition: all 0.5s ease;
-    display: block;
 }
 
 /*-----PERPETUALS INFO SECTION-----*/
@@ -1815,6 +1788,51 @@ footer .social-icons .social-link:hover {
     margin-bottom: 30px;
 }
 /*Tooltip popup*/
+
+
+/*Tooltop popup*/
+
+[tooltip] {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+/*UP*/
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+[tooltip][flow^="up"]::after {
+    content: attr(tooltip);
+    text-align: center;
+    width: 130px;
+    height: 35px;
+}
+
+[tooltip]::before,
+[tooltip]::after {
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease;
+    display: block;
+}
 
 /*DOWN*/
 [tooltip]::before {
