@@ -1430,6 +1430,7 @@ footer .social-icons .social-link:hover {
     display: flex;
     justify-content: center;
     z-index: -1;
+    pointer-events: none;
 }
 .perpetuals .wrap-container .live-perpetual-markets .coin-info-row .hidden-tooltip p {
     background: #f7f7f7;
