@@ -2980,16 +2980,6 @@ a.post-link-container {
         display: flex;
         margin-top: 20px;
     }
-    footer .wrap-container .right-container .pull-right .subscribe {
-        display: block;
-        width: 290px;
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    footer .wrap-container .inline {
-        margin-right: 0px; 
-    }
     footer .social-icons {
         display: flex;
         justify-content: flex-start;
@@ -3004,8 +2994,18 @@ a.post-link-container {
     /*-----HIDDEN EMAIL SUBSCRIPTION BOX-----*/
 
     footer .wrap-container .right-container .pull-right .subscribe {
+        display: block;
+        width: 270px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    footer .wrap-container .inline {
+        margin-right: 0px; 
+        flex: 0 0 270px;
+    }
+    footer .wrap-container .right-container .pull-right .subscribe {
         width: 50%;
-        margin-left: -40px;
+        margin-left: -25px;
     }
     footer .wrap-container .subscribe .subscribe-box_hidden input,
     footer .wrap-container .subscribe .subscribe-box_hidden .tracer-btn.blue {
