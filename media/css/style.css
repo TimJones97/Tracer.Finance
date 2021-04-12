@@ -2367,7 +2367,9 @@ a.post-link-container {
     }
 }
 @media only screen and (min-width: 2000px){
-
+    .perpetuals .tracer-tablet {
+        width: 1100px;
+    }
 }
 /*Only for the Tracer dropdown menu*/
 @media only screen and (max-width: 1350px){
@@ -2555,7 +2557,7 @@ a.post-link-container {
         padding-top: 150px;
     }
     .perpetuals .tracer-tablet {
-        top: -280px;
+        top: -520px;
         width: 50%;
         right: 0px;
     }
@@ -2848,7 +2850,7 @@ a.post-link-container {
         padding-top: 170px;
     }
     .perpetuals .tracer-tablet {
-        top: -205px;
+        top: -440;
         width: 45%;
         right: 0px;
     }
@@ -3055,6 +3057,7 @@ a.post-link-container {
 @media only screen and (max-width: 767px){
 
     /*-------------NAVBAR-------------*/
+
     .nav-container {
         height: 70px;
     }
@@ -3221,6 +3224,12 @@ a.post-link-container {
     }
 
     /*-------------TRADE PAGE-------------*/
+
+    /*-----MAIN SECTION-----*/
+
+    .perpetuals .tracer-tablet {
+        top: -500px;
+    }
 
     /*-----PERPETUALS-----*/
 
@@ -3501,8 +3510,8 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .perpetuals .tracer-tablet {
-        top: -160px;
-        width: 40%;
+        top: -330px;
+        width: 35%;
     }
     .perpetuals .tracer-tablet img {
         width: 500px;
