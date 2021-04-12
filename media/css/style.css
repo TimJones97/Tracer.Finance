@@ -50,9 +50,8 @@ body {
     background: #03065E;
 }
 html, body {
-   height: 100%;
-   width: 100%;
-   -webkit-transform: translate3d(0,0,0)
+    height: 100%;
+    width: 100%;
 }
 body.no-anim * {
   transition: none !important;
@@ -1580,6 +1579,7 @@ footer .social-icons .social-link:hover {
     background: #F7F7F7;
     height: 62vh;
     max-height: 550px;
+    -webkit-transform: translate3d(0,0,0)
 }
 
 /*-----LEFT CONTAINER FOR TEXT-----*/
