@@ -66,8 +66,7 @@ loader.load( image, function ( texture ) {
 var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(125, 1), greyMat);
 Ico.rotation.z = 0.5;
 
-const wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x3DA8F5, wireframe: true, transparent: true } );
-
+const wireframeMaterial = new THREE.MeshBasicMaterial( { color: 0x3DA8F5, wireframe: true, transparent: true} );
 let wireframe = new THREE.Mesh( new THREE.IcosahedronGeometry(125, 1), wireframeMaterial );
 
 Ico.add(wireframe);
