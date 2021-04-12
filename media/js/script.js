@@ -231,7 +231,7 @@ $(document).ready(function(){
 	// to stop elements from showing too early
 	setTimeout(function(){
   		$("body").removeClass("no-anim");
-	}, 200);
+	}, 10);
 
 	setCopyrightYear();
 
