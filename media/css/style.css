@@ -2505,7 +2505,7 @@ a.post-link-container {
 
     .governance .wrap-container .flex-container .governance-info {
         width: 50%;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
     .governance .wrap-container .flex-container {
         flex-wrap: wrap;
@@ -2683,6 +2683,20 @@ a.post-link-container {
 
     footer .wrap-container .inline {
         margin-right: 10px;
+    }
+}
+
+/*For all landscape mobile devices*/
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+
+    /*-------------NAVBAR-------------*/
+
+    .navbar-nav {
+        overflow: scroll;
+        height: 100vh !important;
+    }
+    .bottom-nav {
+        position: relative;
     }
 }
 /*---TABLET SCREEN WIDTH---*/
