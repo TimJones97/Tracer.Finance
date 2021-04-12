@@ -2383,15 +2383,18 @@ a.post-link-container {
         justify-content: unset;
     }
     .nav-container {
-        height: 70px;
+        height: 85px;
     }
     .navbar {
         height: 100%;
         max-width: unset;
         align-items: unset;
     }
+    .nav-item.menu, .nav-item .nav-link {
+        padding: 15px 33px;
+    }
     .navbar-brand {
-        left: 80px;
+        left: 33px;
         top: 20px;
         width: 120px;
     }
@@ -2402,7 +2405,7 @@ a.post-link-container {
     .nav-item .nav-link {
         font-size: 36px;
         margin: unset;
-        padding: 15px 80px;
+        padding: 15px 33px;
     }
     .nav-item {
         border-top: 1px solid #3DA8F5;
@@ -2463,6 +2466,9 @@ a.post-link-container {
     .main header {
         top: 50%;
         transform: translate(0%, -50%);
+    }
+    .wrap-container {
+        padding: 40px 33px;
     }
 
     /*-----ECO-SYSTEM SECTION-----*/
@@ -2681,6 +2687,8 @@ a.post-link-container {
 }
 /*---TABLET SCREEN WIDTH---*/
 @media only screen and (max-width: 991px){
+
+    /*-------------NAVBAR-------------*/
 
     /*---------------HOME PAGE--------------*/
 
@@ -3010,7 +3018,9 @@ a.post-link-container {
 @media only screen and (max-width: 767px){
 
     /*-------------NAVBAR-------------*/
-
+    .nav-container {
+        height: 70px;
+    }
     .navbar-brand {
         left: 33px;
         top: 15px;
@@ -3055,9 +3065,6 @@ a.post-link-container {
     }
     h1 {
         font-size: 36px !important;
-    }
-    .wrap-container {
-        padding: 40px 33px;
     }
     .button-container {
         width: 156px;
