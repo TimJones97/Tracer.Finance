@@ -361,7 +361,7 @@ body.no-anim * {
 }
 .dropdown-menu .nav-item .nav-link img {
     width: 150px;
-    padding-right: 10px;
+    margin-right: 5px;
 }
 .dropdown-menu .nav-item .nav-link.social img {
     width: 37px;
