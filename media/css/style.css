@@ -1496,6 +1496,9 @@ footer .social-icons .social-link:hover {
 .perpetuals-info .wrap-container h2 {
     color: #050CBD;
 }
+.perpetuals-info .wrap-container .flex-container {
+    margin-top: 0px;
+}
 .perpetuals-info .wrap-container .flex-container .info-block {
     width: 33%;
     padding-right: 80px;
