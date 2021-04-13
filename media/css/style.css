@@ -1266,7 +1266,8 @@ footer .social-icons .social-link:hover {
     z-index: 1;
     width: 900px;
     height: 100%;
-    /* overflow: hidden; */
+    min-height: 660px;
+    overflow: hidden; 
     transition: all 0.5s ease;
     backface-visibility: hidden;
     transform: translateZ(0);
@@ -1275,12 +1276,13 @@ footer .social-icons .social-link:hover {
     transform: translateZ(0) scale3d(1.03, 1.03, 1);
 }
 .perpetuals .tracer-tablet img {
-    width: 100%;
+    width: 100vw;
+    max-width: 1000px;
     transition: all 0.5s ease;
     position: absolute;
     top: 0;
+    left: 0;
     height: auto;
-    right: -100px;
 }
 .perpetuals .wrap-container {
     padding: 0px 45px 40px 45px;
@@ -2565,6 +2567,8 @@ a.post-link-container {
         top: -520px;
         width: 50%;
         right: 0px;
+        height: 460px;
+        min-height: unset;
     }
     .perpetuals .tracer-tablet img {
         width: 700px;
@@ -2860,7 +2864,7 @@ a.post-link-container {
         right: 0px;
     }
     .perpetuals .tracer-tablet img {
-        width: 600px;
+        width: 560px
     }
     
     /*---------------LEARN PAGE----------------*/
@@ -3230,11 +3234,11 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .perpetuals .tracer-tablet {
-        top: -430px;
+        top: -360px;
+        height: 315px;
     }
     .perpetuals .tracer-tablet img {
         width: 480px;
-        right: -200px;
     }
 
     /*-----PERPETUALS-----*/
@@ -3522,7 +3526,6 @@ a.post-link-container {
     .perpetuals .tracer-tablet img {
         width: 500px;
         width: 400px;
-        right: -250px;
     }
 
     /*-----PERPETUALS SECTION-----*/
