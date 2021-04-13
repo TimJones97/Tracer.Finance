@@ -2855,7 +2855,7 @@ a.post-link-container {
         padding-top: 170px;
     }
     .perpetuals .tracer-tablet {
-        top: -440;
+        top: -440px;
         width: 45%;
         right: 0px;
     }
@@ -3122,9 +3122,6 @@ a.post-link-container {
     .tracer-btn:hover {
         width: 150px;
     }   
-/*    .tracer-btn:after {
-        content: "";
-    }*/
 
     /*-----PARTNERS-----*/
 
@@ -3233,7 +3230,11 @@ a.post-link-container {
     /*-----MAIN SECTION-----*/
 
     .perpetuals .tracer-tablet {
-        top: -500px;
+        top: -430px;
+    }
+    .perpetuals .tracer-tablet img {
+        width: 480px;
+        right: -200px;
     }
 
     /*-----PERPETUALS-----*/
@@ -3520,6 +3521,8 @@ a.post-link-container {
     }
     .perpetuals .tracer-tablet img {
         width: 500px;
+        width: 400px;
+        right: -250px;
     }
 
     /*-----PERPETUALS SECTION-----*/
