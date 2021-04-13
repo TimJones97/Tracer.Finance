@@ -1262,10 +1262,11 @@ footer .social-icons .social-link:hover {
 .perpetuals .tracer-tablet {
     position: absolute;
     top: -750px;
-    right: -100px;
+    right: 0px;
     z-index: 1;
     width: 900px;
-    overflow: hidden;
+    height: 100%;
+    /* overflow: hidden; */
     transition: all 0.5s ease;
     backface-visibility: hidden;
     transform: translateZ(0);
@@ -1276,6 +1277,10 @@ footer .social-icons .social-link:hover {
 .perpetuals .tracer-tablet img {
     width: 100%;
     transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    height: auto;
+    right: -100px;
 }
 .perpetuals .wrap-container {
     padding: 0px 45px 40px 45px;
