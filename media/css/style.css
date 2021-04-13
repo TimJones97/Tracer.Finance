@@ -752,6 +752,9 @@ footer.darkblue .wrap-container .subscribe.show  .subscribe-box_hidden .tracer-b
     color: inherit; 
     background: inherit;
 }
+footer.darkblue .wrap-container .subscribe.show .subscribe-box_hidden form label {
+    color: #fff;
+}
 
 /*---End Darkblue styles---*/
 
